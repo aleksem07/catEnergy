@@ -86,57 +86,63 @@
 
             <fieldset class="form-section form-section--program">
               <legend class="vilually-hidden">Программа</legend>
-              <input
-                class="form__input"
-                type="radio"
-                name="program"
-                id="loss"
-                value="slim"
-                checked
-              />
-              <label class="form__label" for="loss">Похудение</label>
-              <input
-                class="form__input"
-                type="radio"
-                name="program"
-                id="gain"
-                value="pro"
-              />
-              <label class="form__label" for="gain">Набор массы</label>
-              <input
-                class="form__input"
-                type="radio"
-                name="program"
-                id="dont"
-                value="need-help"
-              />
-              <label class="form__label" for="dont"
-                >Не знаю (Нужен ваш совет)</label
-              >
+
+              <label class="form__item">
+                <span class="form__label">Похудение</span>
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="program"
+                  value="slim"
+                  checked
+                />
+              </label>
+              <label class="form__item">
+                <span class="form__label">Набор массы</span>
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="program"
+                  value="pro"
+                />
+              </label>
+              <label class="form__item">
+                <span class="form__label">Не знаю (Нужен ваш совет)</span>
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="program"
+                  value="need-help"
+                />
+              </label>
             </fieldset>
 
             <fieldset class="form-section form-section--owner">
               <legend class="form__legend">
                 Контактные данные (владельца кота)
               </legend>
-              <label class="form__label" for="email">E-mail:*</label>
-              <input
-                class="form__input"
-                type="email"
-                name="contact-email"
-                id="email"
-                placeholder="kuklachev@gmail.com"
-                required
-              />
-              <label class="form__label" for="tel">Телефон:*</label>
-              <input
-                class="form__input"
-                type="tel"
-                name="contact-phone"
-                id="tel"
-                placeholder="8 (960) 900-60-90"
-                required
-              />
+
+              <label class="form__item">
+                <span class="form__label">E-mail:*</span>
+                <input
+                  class="form__input"
+                  type="email"
+                  name="contact-email"
+                  placeholder="kuklachev@gmail.com"
+                  required
+                />
+              </label>
+
+              <label class="form__item">
+                <span class="form__label">Телефон:*</span>
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="contact-phone"
+                  placeholder="8 (960) 900-60-90"
+                  required
+                />
+              </label>
             </fieldset>
 
             <fieldset class="form-section form-section--comment">
@@ -151,39 +157,49 @@
 
             <fieldset class="form-section form-section--additionally">
               <legend class="form__legend">Дополнительно</legend>
-              <input
-                class="form__input"
-                type="checkbox"
-                name="add"
-                id="sugar"
-                value="sweetener"
-                checked
-              />
-              <label class="form__label" for="sugar">сахарозаменитель</label>
-              <input
-                class="form__input"
-                type="checkbox"
-                name="add"
-                id="water"
-                value="water"
-              />
-              <label class="form__label" for="water">питьевая вода</label>
-              <input
-                class="form__input"
-                type="checkbox"
-                name="add"
-                id="milk"
-                value="milk"
-              />
-              <label class="form__label" for="milk">молоко</label>
-              <input
-                class="form__input"
-                type="checkbox"
-                name="add"
-                id="vitamins"
-                value="vitamins"
-              />
-              <label class="form__label" for="vitamins">витамины</label>
+
+              <label class="form__item">
+                <input
+                  class="form__input"
+                  type="checkbox"
+                  name="add"
+                  value="sweetener"
+                  checked
+                />
+                <span class="form__label">сахарозаменитель</span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input"
+                  type="checkbox"
+                  name="add"
+                  value="water"
+                />
+                <span class="form__label">питьевая вода</span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input"
+                  type="checkbox"
+                  name="add"
+                  value="milk"
+                />
+                <span class="form__label">молоко</span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input"
+                  type="checkbox"
+                  name="add"
+                  value="vitamins"
+                />
+                <span class="">
+                  <span class="form__label">витамины</span>
+                </span>
+              </label>
             </fieldset>
 
             <button class="forn__button button button--green" type="submit">
