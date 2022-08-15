@@ -1,8 +1,5 @@
 <meta http-equiv="refresh" content="0; url=https://aleksem07.github.io/catEnergy/source/index.html">
 
-<<<<<<< HEAD
-#Заголовок 1
-=======
 [Опубликованная версия](https://aleksem07.github.io/catEnergy/source/index.html "Опубликованная версия")
 
 ---
@@ -26,4 +23,3 @@
 ### Структура
 
 - source - каталог исходников.
-  > > > > > > > 9aec78981531c9d58bbf63732fe7466467087762
