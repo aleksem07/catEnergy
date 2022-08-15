@@ -1,0 +1,1 @@
+{"version":3,"sources":["_style-mobile.scss","style.css"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,cAAA;ACCF","file":"style.css","sourcesContent":[".page__body {\r\n  width: 320px;\r\n  margin: 0 auto;\r\n}",".page__body {\n  width: 320px;\n  margin: 0 auto;\n}"]}
