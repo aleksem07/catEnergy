@@ -1,3 +1,25 @@
 .main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $basic_color;
+  text-align: center;
+  text-transform: uppercase;
   list-style: none;
+}
+
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid $grey_line;
+  font-weight: 500;
+}
+
+.site-list__item:first-child {
+  border-top: 1px solid $grey_line;
 }

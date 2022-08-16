@@ -8,19 +8,29 @@
 
   <body class="page__body">
     <header class="page-header">
-      <a href="" class="page-header__logo">
-        <img
-          src="img/logo-desktop.png"
-          width="202"
-          height="59"
-          alt="Логотип Cat Energy"
-        />
-      </a>
-
-      <nav class="main-nav">
+      <div class="logo__wrapper">
+        <a href="" class="page-header__logo">
+          <img
+            src="img/logo/logo-mobile.png"
+            width="33"
+            height="37"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a href="" class="page-header__logo">
+          <img
+            src="img/logo/catEnergyText.png"
+            width="101"
+            height="18"
+            alt="Логотип Cat Energy"
+          />
+        </a>
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
+
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -37,7 +47,7 @@
       </nav>
 
       <section class="main-intro">
-        <div class="main-intro__wrapper">
+        <div class="main-intro__wrapper main-intro--bg">
           <h1 class="main-intro__title">
             Функциональное <br />
             питание для котов
