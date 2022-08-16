@@ -1,26 +1,68 @@
-@charset "UTF-8";
-:root {
-  /* все цвета --basic-black: #000000;
-    вставить текст color: var(--basic-black); */
-  --basic_green:#68B738;
-  --basic_green-2: #5EAA2F;
-  --basic_grey: #F2F2F2;
-  --basic_grey-2: #EBEBEB;
-  --special_grey: #CDCDCD;
-  --special_grey-2: #666;
-  --special_dark-grey: #444;
-  --special_dark-grey-2: #222;
-  --status_error: #FF8282;
-  --shadow: #C4C4C4;
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
 }
-
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
 .button {
   width: 100%;
   background-color: var(--basic_green);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .page__body {
-  width: 320px;
+  min-width: 320px;
+  min-height: 100%;
   margin: 0 auto;
+  color: #000000;
+}
+
+.main-nav__list {
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */

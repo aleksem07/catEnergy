@@ -1,8 +1,15 @@
+//global
 @import 'color';
+@import 'fonts';
 @import 'button';
-@import 'style-mobile';
-@import 'nav';
+@import 'global';
 
-
-
-
+//blocks
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/main-nav';
+@import 'blocks/main-intro';
+@import 'blocks/catalog';
+@import 'blocks/how-it-works';
+@import 'blocks/before-after';
+@import 'blocks/footer';

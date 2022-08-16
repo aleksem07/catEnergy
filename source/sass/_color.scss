@@ -1,14 +1,14 @@
-:root {
-    /* все цвета --basic-black: #000000;
-      вставить текст color: var(--basic-black); */
-  --basic_green:#68B738;
-  --basic_green-2: #5EAA2F;
-  --basic_grey: #F2F2F2;
-  --basic_grey-2: #EBEBEB;
-  --special_grey: #CDCDCD;
-  --special_grey-2: #666;
-  --special_dark-grey: #444;
-  --special_dark-grey-2: #222;
-  --status_error: #FF8282;
-  --shadow: #C4C4C4;
-}
+$basic_color: #000000;
+$background: #FFFFFF;
+$basic_green:#68B738;
+$basic_green-2: #5EAA2F;
+$basic_grey: #F2F2F2;
+$basic_grey-2: #EBEBEB;
+$basic_grey-3: #EAEAEA;
+$special_grey: #CDCDCD;
+$special_grey-2: #666666;
+$special_dark-grey: #444444;
+$special_dark-grey-2: #222222;
+$status_error: #FF8282;
+$shadow: #C4C4C4;
+
