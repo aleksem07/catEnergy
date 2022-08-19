@@ -1,4 +1,18 @@
 .button {
+  padding: 7px 44px;
+  background-color: $basic_green;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+a.button--intro {
+  display: block;
   width: 100%;
-  background-color: var(--basic_green);
+  color: $basic_white;
+}
+
+.main-nav__toogle {
+  background: transparent;
+  border: 0;
 }

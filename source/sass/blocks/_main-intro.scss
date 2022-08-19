@@ -1,11 +1,33 @@
-.main-intro--bg {
-  width: 320px;
-  height: 302px;
-  padding: 0;
-  margin: 0;
-  background-image: url(../../img/bg/cat.jpg);
+.main-intro {
+  text-align: center;
+  margin-bottom: 22px;
 }
 
-.main-intro__wrapper {
-  background-color: $opacity_green;
+.main-intro .main-intro--bg {
+  width: 320px;
+  margin-left: -20px;
+  background-image: linear-gradient($opacity_green, $opacity_green), url(../../img/bg/cat.jpg);
+  background-size: 320px 302px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.main-intro__title {
+  color: $basic_white;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-intro__text {
+  color: $basic_white;
+  margin-bottom: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 }

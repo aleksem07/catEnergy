@@ -18,8 +18,8 @@
   padding: 22px 0;
   border-bottom: 1px solid $grey_line;
   font-weight: 500;
-}
 
-.site-list__item:first-child {
+  &:first-child {
   border-top: 1px solid $grey_line;
+  }
 }

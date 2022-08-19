@@ -1,0 +1,49 @@
+.how-it-works {
+  padding-bottom: 4px;
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+}
+
+.how-it-works__list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works__item {
+  min-height: 60px;
+  margin-bottom: 20px;
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+.how-it-works__item::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.how-it-works__item-description {
+  padding-left: 80px;
+}
+
+.how-it-works__item--useful::before {
+  background: url("../../img/icon/how-it-works-useful.png");
+}
+
+.how-it-works__item--form::before {
+  background: url("../../img/icon/how-it-works-form.png");
+}
+
+.how-it-works__item--change::before {
+  background: url("../../img/icon/how-it-works-change.png");
+}
+
+.how-it-works__item--result::before {
+  background: url("../../img/icon/how-it-works-result.png");
+}
