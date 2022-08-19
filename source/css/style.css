@@ -124,7 +124,7 @@ a.button--intro {
 .main-intro .main-intro--bg {
   width: 320px;
   margin-left: -20px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(img/bg/cat.jpg);
   background-size: 320px 302px;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -173,11 +173,11 @@ a.button--intro {
 
 .catalog__title--slim::before {
   left: 20px;
-  background: url(../img/icon/cat_back--slim.svg) no-repeat;
+  background: url(img/icon/cat_back--slim.svg) no-repeat;
 }
 
 .catalog__title--pro::before {
-  background: url(../img/icon/cat_back--pro.svg) no-repeat;
+  background: url(img/icon/cat_back--pro.svg) no-repeat;
 }
 
 .catalog__text {
@@ -202,7 +202,7 @@ a.button--intro {
   height: 10px;
   margin-left: 15px;
   margin-bottom: 4px;
-  background: url(../img/icon/arrow__right.svg) no-repeat;
+  background: url(img/icon/arrow__right.svg) no-repeat;
 }
 
 .how-it-works {
@@ -239,19 +239,19 @@ a.button--intro {
 }
 
 .how-it-works__item--useful::before {
-  background: url("../img/icon/how-it-works-useful.png");
+  background: url("img/icon/how-it-works-useful.png");
 }
 
 .how-it-works__item--form::before {
-  background: url("../img/icon/how-it-works-form.png");
+  background: url("img/icon/how-it-works-form.png");
 }
 
 .how-it-works__item--change::before {
-  background: url("../img/icon/how-it-works-change.png");
+  background: url("img/icon/how-it-works-change.png");
 }
 
 .how-it-works__item--result::before {
-  background: url("../img/icon/how-it-works-result.png");
+  background: url("img/icon/how-it-works-result.png");
 }
 
 .before-after {
