@@ -1,0 +1,141 @@
+.program-select__title {
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-select__text {
+  margin-bottom: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form-section {
+  margin-bottom: 26px;
+}
+
+.form-section--program {
+  border-top: 1px solid $catalog_line;
+  border-bottom: 1px solid $catalog_line;
+}
+
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.form__item:last-child  {
+  margin-bottom: 0;
+}
+
+.form__label {
+  flex-shrink: 2;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  flex-shrink: 0;
+}
+
+.form__input {
+  padding: 13px 0 15px 14px;
+  border: 1px solid $border_input;
+
+  &::placeholder{
+    text-transform: uppercase;
+    color: $special_dark-grey;
+  }
+}
+
+.form-section--program {
+  padding-bottom: 19px;
+}
+
+.form__input + .form__radio::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid $special_grey;
+  border-radius: 50%;
+  top: 8px;
+  left: 0;
+  margin-right: 15px;
+}
+
+.form__input:checked + .form__radio:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  display: block;
+  background-color: $basic_green;
+  border-radius: 50%;
+  top: 16px;
+  left: 8px;
+  margin-right: 15px;
+}
+
+
+.form__legend {
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 26px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.form__legend span {
+  display: inline-block;
+  padding-right: 14px;
+  background-color: #fff;
+}
+
+.form-section--comment {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-section--comment>textarea {
+  resize: none;
+  border: 1px solid $border_input;
+}
+
+.form-section--comment > textarea::placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__input + .additionally::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid $border_input;
+  margin-right: 16px;
+  top: 7px;
+  left: 0;
+}
+
+.form__input:checked + .additionally::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  background-image: url(../../img/icon/check.svg);
+  background-repeat: no-repeat;
+  top: 13px;
+  left: 7px;
+}

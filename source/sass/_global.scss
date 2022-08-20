@@ -29,3 +29,17 @@ a:visited {
  *::after {
   box-sizing: border-box;
 }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2 px solid $special_dark-grey;
+}

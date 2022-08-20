@@ -3,9 +3,17 @@
 }
 
 .footer-top__contacts {
-  padding-top: 28px;
   display: flex;
   gap: 25px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+
+.footer-top__contacts--form {
+  margin-left: -20px;
+  padding: 26px 20px;
+  width: 320px;
+  background-color: $basic_grey;
 }
 
 .footer-top__contacts-slogan {
@@ -38,10 +46,10 @@
 .footer-bottom__item {
   width: 100%;
   border-bottom: 1px solid $catalog_line;
-}
 
-.footer-bottom__item:last-child{
-  border-bottom: 0;
+  &:last-child{
+    border-bottom: 0;
+  }
 }
 
 .social__list {

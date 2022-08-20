@@ -1,5 +1,7 @@
 .button {
   padding: 7px 44px;
+  cursor: pointer;
+  border: 0;
   background-color: $basic_green;
   font-size: 14px;
   line-height: 18px;
@@ -15,4 +17,15 @@ a.button--intro {
 .main-nav__toogle {
   background: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+.form__button {
+  width: 100%;
+  color: $basic_white;
+}
+
+.program-select__need {
+  text-align: center;
+  margin-bottom: 32px;
 }
