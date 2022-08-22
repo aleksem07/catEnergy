@@ -92,6 +92,25 @@ a.button--intro {
   margin-bottom: 32px;
 }
 
+a.button--product {
+  width: 280px;
+  padding-top: 10px;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.button--view-all {
+  background-color: #F2F2F2;
+  width: 280px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
 .page {
   height: 100%;
   font-family: Oswald;
@@ -469,7 +488,7 @@ a.button--intro {
   position: absolute;
   background-color: #68B738;
   border-radius: 50%;
-  top: 4px;
+  top: 10%;
   left: 8px;
 }
 
@@ -488,7 +507,7 @@ a.button--intro {
 .form__legend span {
   display: inline-block;
   padding-right: 14px;
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
 .form-section--comment {
@@ -540,7 +559,7 @@ a.button--intro {
   width: 30px;
   height: 30px;
   position: absolute;
-  background-image: url(../../img/icon/check.svg);
+  background-image: url(../img/icon/check.svg);
   background-repeat: no-repeat;
   top: 0;
   left: 7px;
@@ -548,6 +567,162 @@ a.button--intro {
 
 .form__input:focus + .additionally::before {
   outline: 2px solid #222222;
+}
+
+.products-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.product__feature--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  padding: 11px;
+}
+
+.products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.products__item {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+.products__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 25px;
+}
+.products__item:last-child .product__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+.products__item:last-child .product__text {
+  margin-bottom: 21px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__icon {
+  padding-top: 25px;
+}
+
+.product__img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 68px;
+  height: 86px;
+  margin: auto;
+}
+
+.product__description {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+
+.product__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product__feature {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__feature-title,
+.product__feature-text {
+  display: inline-block;
+}
+
+.product__feature-text {
+  margin: 0;
+}
+
+.add-products__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.add-products__title > span {
+  display: inline-block;
+  padding-right: 22px;
+  background-color: #FFFFFF;
+}
+
+.add-products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.add-products__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.add__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.add__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.add__feature {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.gift__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  height: 289px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.gift__img {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.gift__text {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
 }
 
 .footer {
@@ -561,7 +736,7 @@ a.button--intro {
   padding-bottom: 26px;
 }
 
-.footer-top__contacts--form {
+.footer-top__contacts--grey {
   margin-left: -20px;
   padding: 26px 20px;
   width: 320px;

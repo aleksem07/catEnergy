@@ -29,3 +29,22 @@ a.button--intro {
   text-align: center;
   margin-bottom: 32px;
 }
+
+a.button--product {
+  width: 280px;
+  padding-top: 10px;
+  grid-column: 1 / -1;
+  grid-row: 3/ 4;
+  color: $basic_white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.button--view-all {
+  background-color: $basic_grey ;
+  width: 280px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: $special_dark-grey;
+}

@@ -1,0 +1,70 @@
+.add-products__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.add-products__title > span {
+  display: inline-block;
+  padding-right: 22px;
+  background-color: $background;
+}
+
+.add-products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.add-products__item {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.add__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding-bottom: 19px;
+  border-bottom: 1px solid $special_grey;
+}
+
+.add__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.add__feature {
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.gift__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  height: 289px;
+  background-image: linear-gradient($opacity_green, $opacity_green),
+  url(../img/bg/cat-bag.jpg);
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.gift__img {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.gift__text {
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic_white
+}
