@@ -1,19 +1,55 @@
 .main-intro {
   text-align: center;
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    // margin-inline: auto;
+  }
 }
 
 .main-intro .main-intro--bg {
-  width: 320px;
+  position: relative;
+  min-width: 320px;
   margin-left: -20px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    margin-left: 0;
+  }
+}
+
+.main-intro__picture {
+  position: absolute;
+  width: 320px;
+  height: 320px;
   background-image: linear-gradient($opacity_green, $opacity_green),
-  url(../img/bg/cat.jpg);
+                    url(../img/bg/cat.jpg);
   background-size: 320px 302px;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-attachment: local;
+
+  @media (min-width: $tablet-width) {
+          display: none;
+  }
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin-top: -50px;
+    order: -10;
+    background-size: 720px 694px;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
+  }
 }
 
 .main-intro__title {
+  position: relative;
   color: $basic_white;
   padding-top: 27px;
   margin: 0;
@@ -21,9 +57,15 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .main-intro__text {
+  position: relative;
   color: $basic_white;
   margin-bottom: 29px;
   font-style: normal;
@@ -32,3 +74,48 @@
   line-height: 14px;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .main-intro__title,
+  .main-intro__text {
+    display: block;
+    margin-left: 117px;
+    min-width: 414px;
+    text-align: left;
+    color: $basic_color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-intro__picture-chiken-pro {
+    // position: relative;
+    display: block;
+    width: 709px;
+    height: 609px;
+    background-image: url("../../img/chiken-pro.png");
+    background-size: 709px 609px;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-intro__picture-chiken-pro {
+  position: relative;
+  width: 280px;
+  height: 270px;
+  background-image: url("../../img/chiken-pro.png");
+  background-size: 280px 270px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 650px;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
+}
+

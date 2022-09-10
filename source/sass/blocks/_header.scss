@@ -1,7 +1,114 @@
+@media (min-width: $tablet-width) {
+  .page-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 52px auto;
+  align-items: center;
+
+  }
+}
+
 .logo__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 12px;
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+  // padding: 30px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header__logo--tablet,
+  .page-header__logo--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo,
+  .page-header__logo--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo,
+  .page-header__logo--tablet {
+    display: none;
+  }
+  .page-header__logo--desktop {
+    display: inline-flex;
+    // margin-top: 53px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toogle {
+    display: none;
+  }
+}
+
+.current {
+  border-bottom: 2px solid $basic_green;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: max-content;
+    margin-left: auto;
+  }
+}
+
+.main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  color: $basic_color;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid $grey_line;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    width: max-content;
+    border-bottom: 0;
+    margin-right: 35px;
+    align-content: flex-end;
+  }
+}
+
+  @media (min-width: $tablet-width) {
+  .site-list__item:last-child {
+  margin-right: 0;
+  }
+}
+
+  @media (max-width: $mobile-width-only) {
+    .site-list__item:first-child {
+    border-top: 1px solid $grey_line;
+  }
 }

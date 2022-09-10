@@ -1,3 +1,8 @@
+//viewports
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
+
 //global
 @import 'color';
 @import 'fonts';
@@ -7,7 +12,6 @@
 //blocks
 @import 'blocks/page';
 @import 'blocks/header';
-@import 'blocks/main-nav';
 @import 'blocks/main-intro';
 @import 'blocks/catalog';
 @import 'blocks/how-it-works';

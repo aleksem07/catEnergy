@@ -14,4 +14,16 @@
   margin: 0 auto;
   color: $basic_color;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    outline: 5px solid rgba(31, 12, 112, 0.589);
+    outline-offset: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
+  }
 }
