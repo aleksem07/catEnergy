@@ -2,8 +2,8 @@
   .page-header {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 52px auto;
-  align-items: center;
+  grid-template-rows: 52px max-content;
+  // align-items: center;
 
   }
 }
@@ -53,6 +53,10 @@
 
 .current {
   border-bottom: 2px solid $basic_green;
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $basic_white;
+    }
 }
 
 @media (min-width: $tablet-width) {
@@ -99,6 +103,10 @@
     margin-right: 35px;
     align-content: flex-end;
   }
+
+  @media (min-width: $desktop-width) {
+    color: white;
+  }
 }
 
   @media (min-width: $tablet-width) {
@@ -110,5 +118,11 @@
   @media (max-width: $mobile-width-only) {
     .site-list__item:first-child {
     border-top: 1px solid $grey_line;
+  }
+}
+
+.site-list__item a {
+  @media (min-width: $desktop-width) {
+  color: $basic_white;
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);
 @font-face {
   font-family: "Oswald";
@@ -89,6 +90,11 @@ a.button--intro {
     line-height: 20px;
   }
 }
+@media (min-width: 1440px) {
+  a.button--intro {
+    top: -500px;
+  }
+}
 
 .main-nav__toogle {
   background: transparent;
@@ -136,7 +142,7 @@ a.button--view-all {
 .page__body {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
   color: #000000;
@@ -144,7 +150,8 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .page__body {
-    width: 768px;
+    min-width: 768px;
+    max-width: 1440px;
     outline: 5px solid rgba(31, 12, 112, 0.589);
     outline-offset: -5px;
   }
@@ -161,8 +168,8 @@ a.button--view-all {
   .page-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 52px auto;
-    align-items: center;
+    grid-template-rows: 52px -webkit-max-content;
+    grid-template-rows: 52px max-content;
   }
 }
 .logo__wrapper {
@@ -200,6 +207,11 @@ a.button--view-all {
 }
 .current {
   border-bottom: 2px solid #68B738;
+}
+@media (min-width: 1440px) {
+  .current {
+    border-bottom: 2px solid #FFFFFF;
+  }
 }
 
 @media (min-width: 768px) {
@@ -251,6 +263,11 @@ a.button--view-all {
     align-content: flex-end;
   }
 }
+@media (min-width: 1440px) {
+  .site-list__item {
+    color: white;
+  }
+}
 
 @media (min-width: 768px) {
   .site-list__item:last-child {
@@ -262,6 +279,12 @@ a.button--view-all {
     border-top: 1px solid #E6E6E6;
   }
 }
+@media (min-width: 1440px) {
+  .site-list__item a {
+    color: #FFFFFF;
+  }
+}
+
 .main-intro {
   text-align: center;
   margin-bottom: 22px;
@@ -302,16 +325,14 @@ a.button--view-all {
 @media (min-width: 1440px) {
   .main-intro__picture {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -50px;
+    right: -15px;
     display: block;
     width: 50%;
-    height: 100%;
-    margin-top: -50px;
-    order: -10;
-    background-size: 720px 694px;
-    outline: 5px solid rgba(247, 9, 9, 0.589);
-    outline-offset: -5px;
+    height: 696px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/cat-desktop.jpg);
+    background-size: cover;
+    z-index: -1;
   }
 }
 
@@ -353,16 +374,6 @@ a.button--view-all {
     color: #000000;
   }
 }
-@media (min-width: 768px) {
-  .main-intro__picture-chiken-pro {
-    display: block;
-    width: 709px;
-    height: 609px;
-    background-image: url("../../img/chiken-pro.png");
-    background-size: 709px 609px;
-    background-repeat: no-repeat;
-  }
-}
 .main-intro__picture-chiken-pro {
   position: relative;
   width: 280px;
@@ -373,16 +384,24 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .main-intro__picture-chiken-pro {
+    display: block;
     width: 100%;
-    height: 650px;
-    background-size: 100%;
+    height: 609px;
+    background-image: url("../../img/chiken-pro.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     margin: 0 auto;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
   }
 }
 @media (min-width: 1440px) {
   .main-intro__picture-chiken-pro {
-    width: 552px;
+    max-width: 100%;
     height: 499px;
+    top: -100px;
+    background-size: 552px 499px;
+    background-position: 65% 50%;
   }
 }
 
@@ -392,6 +411,15 @@ a.button--view-all {
   background-color: #F2F2F2;
 }
 
+@media (min-width: 1440px) {
+  .catalog-selection__wrapper {
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+}
 .catalog__title {
   padding-top: 30px;
   font-size: 24px;
@@ -405,17 +433,33 @@ a.button--view-all {
   width: 70px;
   height: 53px;
 }
+@media (min-width: 768px) {
+  .catalog__title::before {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .catalog__title::before {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 270px;
+    height: 200px;
+  }
+}
 
 .catalog__title--slim::before {
-  left: 20px;
-  background: url(../img/icon/cat_back--slim.svg) no-repeat;
+  background: url(../img/icon/cat_back--slim.svg) 0 0/contain no-repeat;
 }
 
 .catalog__title--pro::before {
-  background: url(../img/icon/cat_back--pro.svg) no-repeat;
+  left: 50%;
+  background: url(../img/icon/cat_back--pro.svg) 0 0/cover no-repeat;
 }
 
 .catalog__text {
+  position: relative;
   padding-bottom: 23px;
   margin-bottom: 15px;
   border-bottom: 1px solid #D9D9D9;
@@ -423,8 +467,17 @@ a.button--view-all {
   font-size: 14px;
   line-height: 18px;
 }
+@media (min-width: 768px) {
+  .catalog__text {
+    position: relative;
+    max-width: 45%;
+    display: inline-block;
+    border-bottom: 0;
+  }
+}
 
 .catalog__link {
+  display: block;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
@@ -446,21 +499,54 @@ a.button--view-all {
 .how-it-works__title {
   margin-bottom: 38px;
 }
+@media (min-width: 768px) {
+  .how-it-works__title {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+}
 
 .how-it-works__list {
   position: relative;
   list-style: none;
+  counter-reset: point; /* задаем переменную для счетчика */
   padding: 0;
+}
+@media (min-width: 768px) {
+  .how-it-works__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 37px;
+  }
 }
 
 .how-it-works__item {
+  position: relative;
   min-height: 60px;
   margin-bottom: 20px;
   font-family: "Arial";
   font-size: 14px;
   line-height: 18px;
 }
+@media (min-width: 768px) {
+  .how-it-works__item {
+    width: 230px;
+    height: 280px;
+  }
+}
 
+@media (min-width: 768px) {
+  .how-it-works__item:nth-child(even) {
+    margin-right: 79px;
+  }
+}
+@media (min-width: 1440px) {
+  .how-it-works__item:last-child {
+    margin-right: 0;
+  }
+}
 .how-it-works__item::before {
   content: "";
   position: absolute;
@@ -468,8 +554,29 @@ a.button--view-all {
   height: 60px;
 }
 
+@media (min-width: 768px) {
+  .how-it-works__list li::after {
+    content: counter(point); /* выводим значение переменной */
+    counter-increment: point 1; /* увеличваем счетчик на 1 */
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: -1;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+  }
+}
 .how-it-works__item-description {
   padding-left: 80px;
+}
+@media (min-width: 768px) {
+  .how-it-works__item-description {
+    padding: 0;
+    margin-top: 100px;
+  }
 }
 
 .how-it-works__item--useful::before {

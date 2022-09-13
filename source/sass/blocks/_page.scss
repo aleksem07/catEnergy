@@ -9,14 +9,15 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
   color: $basic_color;
   padding: 0 20px;
 
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
+  @media  (min-width: $tablet-width)  {
+    min-width: $tablet-width;
+    max-width: $desktop-width;
     outline: 5px solid rgba(31, 12, 112, 0.589);
     outline-offset: -5px;
   }
