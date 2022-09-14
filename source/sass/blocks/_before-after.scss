@@ -1,11 +1,17 @@
 .before-after {
-  width: 320px;
-  margin-left: -20px;
+  min-width: 320px;
+  margin-inline: -20px;
   background-color: $basic_grey-3;
 }
 
 .before-after__wrapper {
-  padding: 0 20px;
+  // padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    background-color: $background;
+    // padding-inline: 0;
+  }
 }
 
 .before-after__title {
@@ -13,12 +19,23 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+    padding-block: 40px;
+  }
 }
 
 .fieldset__wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    gap: 42px;
+    padding-left: 20px;
+  }
 }
 
 .before-after__text {
@@ -26,6 +43,10 @@
   font-family: 'Arial';
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
 }
 
 .before-after__result-box {
@@ -61,10 +82,30 @@
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    width: 174px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.before-after__image-box {
+  position: relative;
+  margin: 0 auto;
+  width: 311px;
+  height: 300px;
+}
+
+.before-after__before {
+  width: 311px;
+  height: 232px;
 }
 
 .before-after--image{
-  position: relative;
+  position: absolute;
 }
 
 .range-controls__wrapper {
