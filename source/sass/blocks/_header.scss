@@ -53,10 +53,12 @@
 
 .current {
   border-bottom: 2px solid $basic_green;
+}
 
-  @media (min-width: $desktop-width) {
-    border-bottom: 2px solid $basic_white;
-    }
+@media (min-width: $desktop-width) {
+  .current--index {
+  border-bottom: 2px solid $basic_white;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -121,8 +123,9 @@
   }
 }
 
-.site-list__item a {
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .main-nav--index a {
   color: $basic_white;
   }
 }
+

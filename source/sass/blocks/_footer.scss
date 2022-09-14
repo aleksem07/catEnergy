@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
+  // width: 100%;
   padding-top: 28px;
   padding-bottom: 26px;
 
@@ -19,14 +20,13 @@
     width: 570px;
     background-color: $background;
     padding: 66px 99.5px 51px 76px;
-    box-sizing: border-box;
   }
 }
 
 .footer-top__contacts--grey {
   margin-left: -20px;
   padding: 26px 20px;
-  width: 320px;
+  min-width: 320px;
   background-color: $basic_grey;
 }
 
