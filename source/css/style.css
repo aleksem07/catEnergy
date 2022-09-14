@@ -610,7 +610,18 @@ a.button--view-all {
     background-color: #FFFFFF;
   }
 }
+@media (min-width: 1440px) {
+  .before-after__wrapper {
+    display: flex;
+  }
+}
 
+@media (min-width: 1440px) {
+  .before-after__text-box {
+    width: 436px;
+    margin-right: 134px;
+  }
+}
 .before-after__title {
   padding-top: 27px;
   font-weight: 400;
@@ -684,13 +695,18 @@ a.button--view-all {
   font-size: 14px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .before-after__cost {
     display: inline-flex;
     width: 174px;
     text-align: right;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .before-after__cost {
+    text-align: left;
   }
 }
 
