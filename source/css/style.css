@@ -117,7 +117,7 @@ a.button--intro {
 }
 
 a.button--product {
-  width: 280px;
+  width: 100%;
   padding-top: 10px;
   grid-column: 1/-1;
   grid-row: 3/4;
@@ -939,14 +939,40 @@ a.button--view-all {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .product__feature--item {
+    border-bottom: 1px solid #CDCDCD;
+  }
+}
 
 .product {
   padding: 11px;
 }
 
+@media (min-width: 768px) {
+  .product:not(:last-child):before {
+    content: "";
+    position: absolute;
+    width: 324px;
+    height: 430px;
+    background-color: #F2F2F2;
+    z-index: -1;
+  }
+  .product:last-child {
+    border: 1px solid red;
+  }
+}
 .products__list {
+  position: relative;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .products__item {
@@ -975,6 +1001,19 @@ a.button--view-all {
   font-size: 12px;
   line-height: 16px;
 }
+@media (min-width: 768px) {
+  .products__item {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 511px;
+  }
+}
+@media (min-width: 1440px) {
+  .products__item {
+    width: 245px;
+  }
+}
 
 .product__icon {
   padding-top: 25px;
@@ -999,11 +1038,17 @@ a.button--view-all {
   font-size: 16px;
   line-height: 20px;
 }
+@media (min-width: 768px) {
+  .product__title {
+    text-align: center;
+  }
+}
 
 .product__feature {
   font-family: "Arial";
   font-size: 12px;
   line-height: 16px;
+  margin-bottom: 33px;
 }
 
 .product__feature-title,
@@ -1063,11 +1108,12 @@ a.button--view-all {
 .gift__wrapper {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  min-width: 320px;
   height: 289px;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);
   background-size: 280px 289px;
   background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 35px;
 }
 

@@ -47,12 +47,13 @@
 .gift__wrapper {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  min-width: 320px;
   height: 289px;
   background-image: linear-gradient($opacity_green, $opacity_green),
   url(../img/bg/cat-bag.jpg);
   background-size: 280px 289px;
   background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 35px;
 }
 
