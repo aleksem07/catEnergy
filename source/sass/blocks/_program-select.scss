@@ -1,3 +1,18 @@
+@media (min-width: $desktop-width) {
+  .form-section--desktop__wrapper {
+    display: flex;
+    gap: 80px;
+  }
+  .form-section--desktop__wrapper .form-section {
+    flex-basis: 50%;
+  }
+
+    .form-section--desktop__wrapper .form-section--program {
+      padding-left: 30px;
+      border-left: 1px solid $catalog_line;
+    }
+}
+
 .program-select__title {
   margin-bottom: 37px;
   font-weight: 400;
@@ -19,6 +34,10 @@
 .form-section--program {
   border-top: 1px solid $catalog_line;
   border-bottom: 1px solid $catalog_line;
+
+  @media (min-width: $tablet-width) {
+    border-right: 1px solid $catalog_line;
+  }
 }
 
 
@@ -27,10 +46,24 @@
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .form__item:last-child  {
   margin-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .program-select__need {
+  width: 50%;
+  text-align: left;
+  font-family: 'Arial';
+  font-size: 16px;
+  line-height: 16px;
+}
 }
 
 .form__label {
@@ -42,6 +75,7 @@
 }
 
 .form__input {
+  width: 100%;
   padding: 13px 0 15px 14px;
   border: 1px solid $border_input;
 
@@ -50,6 +84,42 @@
     color: $special_dark-grey;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form-section--owner {
+    display: flex;
+    gap: 78px;
+  }
+
+  .form-section--owner .form__item {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .form-section--additionally {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-section--additionally .form__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-section--additionally {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+  .form__item {
+    flex-basis: 25%;
+  }
+}
+
 
 .form-section--program {
   padding-bottom: 19px;
@@ -115,6 +185,7 @@
 }
 
 .form-section--comment>textarea {
+  width: 100%;
   resize: none;
   border: 1px solid $border_input;
 }

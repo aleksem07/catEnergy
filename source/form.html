@@ -96,85 +96,81 @@
           </p>
 
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form-section form-section--cat">
-              <legend class="visually-hidden">Информация о коте</legend>
-
-              <label class="form__item">
-                <span class="form__label">Имя:*</span>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="cat-name"
-                  placeholder="Барсик"
-                  required
-                  autofocus
-                />
-              </label>
-
-              <label class="form__item">
-                <span class="form__label">Вес (кг):*</span>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="cat-weight"
-                  placeholder="7"
-                  pattern="^[ 0-9]+$"
-                  required
-                />
-              </label>
-
-              <label class="form__item">
-                <span class="form__label">Возраст (лет):</span>
-                <input
-                  class="form__input"
-                  type="text"
-                  name="cat-age"
-                  placeholder="7"
-                />
-              </label>
-            </fieldset>
-
-            <fieldset class="form-section form-section--program">
-              <legend class="visually-hidden">Программа</legend>
-
-              <div class="radio__wrapper">
+            <div class="form-section--desktop__wrapper">
+              <fieldset class="form-section form-section--cat">
+                <legend class="visually-hidden">Информация о коте</legend>
                 <label class="form__item">
+                  <span class="form__label">Имя:*</span>
                   <input
-                    class="form__input visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="slim"
-                    checked
+                    class="form__input"
+                    type="text"
+                    name="cat-name"
+                    placeholder="Барсик"
+                    required
+                    autofocus
                   />
-                  <span class="form__label form__radio">Похудение</span>
                 </label>
                 <label class="form__item">
+                  <span class="form__label">Вес (кг):*</span>
                   <input
-                    class="form__input visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="pro"
+                    class="form__input"
+                    type="text"
+                    name="cat-weight"
+                    placeholder="7"
+                    pattern="^[ 0-9]+$"
+                    required
                   />
-                  <span class="form__label form__radio">Набор массы</span>
                 </label>
                 <label class="form__item">
+                  <span class="form__label">Возраст (лет):</span>
                   <input
-                    class="form__input visually-hidden"
-                    type="radio"
-                    name="program"
-                    value="need-help"
+                    class="form__input"
+                    type="text"
+                    name="cat-age"
+                    placeholder="7"
                   />
-                  <span class="form__label form__radio"
-                    >Не знаю (Нужен ваш совет)</span
-                  >
                 </label>
-              </div>
-            </fieldset>
+              </fieldset>
+              <fieldset class="form-section form-section--program">
+                <legend class="visually-hidden">Программа</legend>
+                <div class="radio__wrapper">
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="slim"
+                      checked
+                    />
+                    <span class="form__label form__radio">Похудение</span>
+                  </label>
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="pro"
+                    />
+                    <span class="form__label form__radio">Набор массы</span>
+                  </label>
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="need-help"
+                    />
+                    <span class="form__label form__radio"
+                      >Не знаю (Нужен ваш совет)</span
+                    >
+                  </label>
+                </div>
+              </fieldset>
+            </div>
 
             <fieldset class="form-section form-section--owner">
               <legend class="form__legend">
-                <span>Контактные данные</span> <br />
-                (владельца кота)
+                <span>Контактные данные (владельца кота)</span>
               </legend>
 
               <label class="form__item">
@@ -257,12 +253,11 @@
                 />
                 <span class="form__label additionally">витамины</span>
               </label>
+              <button class="form__button button button--green" type="submit">
+                отправить заявку
+              </button>
+              <p class="program-select__need">* — Обязательные поля</p>
             </fieldset>
-
-            <button class="form__button button button--green" type="submit">
-              отправить заявку
-            </button>
-            <p class="program-select__need">* — Обязательные поля</p>
           </form>
         </div>
       </section>

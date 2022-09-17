@@ -40,6 +40,17 @@ a.button--intro {
 .form__button {
   width: 100%;
   color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    max-width: 282px;
+    max-height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .program-select__need {
