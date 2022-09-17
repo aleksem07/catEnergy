@@ -56,12 +56,32 @@ a.button--product {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 248px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width){
+  .add .button--product {
+    width: 100%;
+  }
 }
 
 a.button--view-all {
   background-color: $basic_grey ;
-  width: 280px;
+  width: 100%;
   padding-top: 10px;
   font-size: 16px;
   color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 249px;
+    margin: 0 auto;
+  }
 }

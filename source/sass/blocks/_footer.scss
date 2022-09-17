@@ -10,9 +10,13 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  // width: 100%;
+  min-width: 320px;
+  margin-inline: -20px;
   padding-top: 28px;
+  padding-inline: 19px;
   padding-bottom: 26px;
+  background-color: $basic_grey;
+
 
   @media (min-width: $desktop-width) {
     position: absolute;

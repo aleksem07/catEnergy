@@ -1,3 +1,23 @@
+@media (min-width: $desktop-width) {
+
+  .add-products__wrapper {
+    width: 896px;
+  }
+
+  .gift {
+    position: relative;
+    top: -300px;
+    left: 1000px;
+    margin-bottom: -100px;
+    width: 245px;
+    height: 289px;
+  }
+}
+
+.add-products {
+  min-width: 320px;
+}
+
 .add-products__title {
   font-weight: 400;
   font-size: 24px;
@@ -20,11 +40,29 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 41px;
+  }
 }
 
 .add__feature {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    // width: 285px;
+    flex-basis: 285px;
+    justify-content: space-between;;
+  }
 }
 
 .add {
@@ -36,6 +74,10 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+  }
 }
 
 .add__feature {
@@ -55,6 +97,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
 }
 
 .gift__img {
