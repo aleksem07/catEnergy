@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/main-nav--toggle.js" defer></script>
+
     <title>HTML Academy: Cat Energy</title>
   </head>
 
   <body class="page__body">
     <header class="page-header">
-      <div class="logo__wrapper">
-        <a href="" class="page-header__logo">
+      <div class="page-header__wrapper">
+        <a href="" class="page-header__logo page-header__logo--mobile">
           <img
             src="img/logo/logo-mobile.png"
             width="33"
@@ -18,7 +21,7 @@
             alt="Логотип Cat Energy"
           />
         </a>
-        <a href="" class="page-header__logo--tablet">
+        <a href="" class="page-header__logo page-header__logo--tablet">
           <img
             src="img/logo/logo-tablet.png"
             width="174"
@@ -26,7 +29,7 @@
             alt="Логотип Cat Energy"
           />
         </a>
-        <a href="" class="page-header__logo--desktop">
+        <a href="" class="page-header__logo page-header__logo--desktop">
           <img
             src="img/logo/logo-desktop.png"
             width="202"
@@ -34,7 +37,7 @@
             alt="Логотип Cat Energy"
           />
         </a>
-        <a href="" class="page-header__logo">
+        <a href="" class="page-header__logo page-header__logo--mobile">
           <img
             src="img/logo/catEnergyText.png"
             width="101"
@@ -42,32 +45,12 @@
             alt="Логотип Cat Energy"
           />
         </a>
-        <button class="main-nav__toogle" type="button">
+        <button
+          class="main-nav__toogle main-nav--closed"
+          type="button"
+          aria-expanded="false"
+        >
           <span class="visually-hidden">Открыть меню</span>
-          <svg
-            width="19"
-            height="20"
-            viewBox="0 0 19 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              y1="-0.75"
-              x2="24.7577"
-              y2="-0.75"
-              transform="matrix(0.686589 -0.727046 0.686589 0.727046 1.16248 19.805)"
-              stroke="black"
-              stroke-width="1.5"
-            />
-            <line
-              y1="-0.75"
-              x2="24.7577"
-              y2="-0.75"
-              transform="matrix(0.686589 0.727046 -0.686589 0.727046 0.160767 1.80499)"
-              stroke="black"
-              stroke-width="1.5"
-            />
-          </svg>
         </button>
       </div>
 

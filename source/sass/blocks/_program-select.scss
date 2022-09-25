@@ -76,6 +76,7 @@
 
 .form__input {
   width: 100%;
+  min-width: 320px;
   padding: 13px 0 15px 14px;
   border: 1px solid $border_input;
 
@@ -84,6 +85,14 @@
     color: $special_dark-grey;
   }
 }
+
+.form__input--email,
+.form__input--phone{
+  min-width: 20px;
+  position: absolute;
+  right: 20px;
+}
+
 
 @media (min-width: $desktop-width) {
   .form-section--owner {
@@ -116,6 +125,7 @@
     }
 
   .form__item {
+
     flex-basis: 25%;
   }
 }
@@ -160,8 +170,9 @@
   left: 8px;
 }
 
-.form__input:focus+.form__radio::before {
-  outline: 2px solid $special_dark-grey-2;
+.form__input:focus + .form__radio::before {
+  // outline: 2px solid $special_dark-grey-2;
+  outline: 2px solid $basic_green;
 }
 
 
@@ -177,6 +188,13 @@
   display: inline-block;
   padding-right: 14px;
   background-color: $background;
+
+}
+
+@media (max-width: $mobile-width-only) {
+  .form__legend--title  {
+  max-width: 200px;
+  }
 }
 
 .form-section--comment {
@@ -192,7 +210,6 @@
 
 .form-section--comment > textarea::placeholder {
   padding-top: 9px;
-  text-align: center;
   text-transform: uppercase;
   font-family: 'Oswald';
   font-size: 16px;

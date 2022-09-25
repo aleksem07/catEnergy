@@ -28,3 +28,5 @@
 
 - fonts
 - адаптив
+- styleguide
+- pixelperfect
