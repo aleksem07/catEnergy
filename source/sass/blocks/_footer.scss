@@ -1,9 +1,10 @@
 .footer {
-  margin-top: auto;
+  margin: 0 -20px;
 }
 
 .footer-top__wrapper {
   position: relative;
+  min-width: 320px;
 }
 
 .footer-top__contacts {
@@ -11,7 +12,6 @@
   justify-content: space-between;
   gap: 25px;
   min-width: 320px;
-  margin-inline: -20px;
   padding-top: 28px;
   padding-inline: 19px;
   padding-bottom: 26px;
@@ -54,18 +54,16 @@
 }
 
 .footer-top__map {
-  margin-left: -20px;
+
 }
 
 .footer-bottom {
   min-width: 320px;
-  margin-left: -20px;
   padding-top: 40px;
   background-color: $basic_grey;
-  margin-inline: -20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 0 20px;
   }
 }
 
@@ -86,7 +84,11 @@
   border-bottom: 1px solid $catalog_line;
 
   &:last-child{
-    border-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
   }
 }
 

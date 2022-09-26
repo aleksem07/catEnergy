@@ -27,6 +27,7 @@
 ### ToDo
 
 - fonts
+- width
 - адаптив
 - styleguide
 - pixelperfect

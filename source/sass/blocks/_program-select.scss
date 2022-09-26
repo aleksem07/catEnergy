@@ -93,6 +93,12 @@
   right: 20px;
 }
 
+// svg line,
+// svg path {
+//     stroke: red;
+//     fill: red;
+// }
+
 
 @media (min-width: $desktop-width) {
   .form-section--owner {
@@ -191,9 +197,9 @@
 
 }
 
-@media (max-width: $mobile-width-only) {
-  .form__legend--title  {
-  max-width: 200px;
+@media (min-width: $tablet-width) {
+  .form__legend--title br{
+  display: none;
   }
 }
 

@@ -5,6 +5,7 @@
 }
 
 .before-after__wrapper {
+  padding-inline: 20px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -30,8 +31,10 @@
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 20px;
     padding-block: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
   }
 }
 
@@ -52,10 +55,6 @@
   font-family: 'Arial';
   font-size: 14px;
   line-height: 18px;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 20px;
-  }
 }
 
 .before-after__result-box {
