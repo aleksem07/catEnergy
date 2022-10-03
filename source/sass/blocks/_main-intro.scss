@@ -1,6 +1,5 @@
 .main-intro {
   text-align: center;
-  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
@@ -11,8 +10,7 @@
 
 .main-intro .main-intro--bg {
   position: relative;
-  min-width: 320px;
-  margin-left: -20px;
+  min-width: 280px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -23,13 +21,14 @@
 .main-intro__picture {
   position: absolute;
   width: 320px;
-  height: 320px;
+  height: 302px;
   top: 0;
   left: 50%;
   transform:translate(-50%, 0);
   background-image: linear-gradient($opacity_green, $opacity_green),
                     url(../img/bg/cat.jpg);
-  background-size: 320px 302px;
+  background-color: $basic_green;
+                    background-size: 320px 302px;
   background-repeat: no-repeat;
   background-attachment: local;
 
@@ -38,14 +37,15 @@
   }
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -52px;
+    left: 699px;
     transform: translate(0, 0);
     display: block;
-    width: 50%;
+    width: 50vw;
     height: 696px;
       background-image: linear-gradient($opacity_green, $opacity_green),
           url(../img/cat-desktop.jpg);
+          background-color: $basic_green;
     background-size: cover;
     z-index: -1;
 
@@ -96,6 +96,7 @@
   height: 270px;
   background-image: url("../img/chiken-pro.png");
   background-size: 280px 270px;
+  background-position: -10px 0;
   background-repeat: no-repeat;
   margin-inline: auto;
 

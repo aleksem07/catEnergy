@@ -76,7 +76,6 @@
 
 .form__input {
   width: 100%;
-  min-width: 320px;
   padding: 13px 0 15px 14px;
   border: 1px solid $border_input;
 
@@ -146,6 +145,7 @@
 }
 
 .form__radio {
+  margin-top: 5px;
   margin-left: 40px;
   padding-bottom: 13px;
 }
@@ -161,7 +161,7 @@
   position: absolute;
   border: 1px solid $special_grey;
   border-radius: 50%;
-  top: -5px;
+  top: 0;
   left: 0;
 }
 
@@ -172,7 +172,7 @@
   position: absolute;
   background-color: $basic_green;
   border-radius: 50%;
-  top: 10%;
+  top: 8px;
   left: 8px;
 }
 

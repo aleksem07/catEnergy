@@ -1,5 +1,5 @@
 .page-header {
-  min-width: 320px;
+  min-width: 280px;
 }
 
 @media (min-width: $tablet-width) {
@@ -53,7 +53,7 @@
   }
   .page-header__logo--desktop {
     display: inline-flex;
-    // margin-top: 53px;
+    margin-top: 45px;
   }
 }
 
@@ -104,6 +104,7 @@
     width: max-content;
     margin-left: auto;
   }
+
 }
 
 @media (max-width: $mobile-width-only) {
@@ -127,6 +128,10 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
   }
 }
 

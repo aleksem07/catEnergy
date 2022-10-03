@@ -78,8 +78,15 @@ iframe {
 
 a.button--intro {
   display: block;
-  width: 100%;
+  min-width: 280px;
+  margin-inline: auto;
+  padding-block: 10px;
   color: #FFFFFF;
+}
+@media (max-width: 320px) {
+  a.button--intro {
+    max-width: 280px;
+  }
 }
 @media (min-width: 768px) {
   a.button--intro {
@@ -214,7 +221,7 @@ a.button--view-all {
 .page__body {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: 280px;
   max-width: 767px;
   min-height: 100%;
   margin: 0 auto;
@@ -229,12 +236,13 @@ a.button--view-all {
 }
 @media (min-width: 1440px) {
   .page__body {
-    width: 1440px;
+    max-width: 1220px;
+    margin-inline: 110px;
   }
 }
 
 .page-header {
-  min-width: 320px;
+  min-width: 280px;
 }
 
 @media (min-width: 768px) {
@@ -285,6 +293,7 @@ a.button--view-all {
   }
   .page-header__logo--desktop {
     display: inline-flex;
+    margin-top: 45px;
   }
 }
 @media (min-width: 768px) {
@@ -355,6 +364,11 @@ a.button--view-all {
     flex-direction: row;
   }
 }
+@media (min-width: 1440px) {
+  .main-nav__list {
+    margin-top: 50px;
+  }
+}
 
 @media (min-width: 768px) {
   .site-list {
@@ -402,7 +416,6 @@ a.button--view-all {
 }
 .main-intro {
   text-align: center;
-  margin-bottom: 22px;
 }
 @media (min-width: 768px) {
   .main-intro {
@@ -413,8 +426,7 @@ a.button--view-all {
 
 .main-intro .main-intro--bg {
   position: relative;
-  min-width: 320px;
-  margin-left: -20px;
+  min-width: 280px;
 }
 @media (min-width: 768px) {
   .main-intro .main-intro--bg {
@@ -426,11 +438,12 @@ a.button--view-all {
 .main-intro__picture {
   position: absolute;
   width: 320px;
-  height: 320px;
+  height: 302px;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-color: #68B738;
   background-size: 320px 302px;
   background-repeat: no-repeat;
   background-attachment: local;
@@ -443,13 +456,14 @@ a.button--view-all {
 @media (min-width: 1440px) {
   .main-intro__picture {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -52px;
+    left: 699px;
     transform: translate(0, 0);
     display: block;
-    width: 50%;
+    width: 50vw;
     height: 696px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/cat-desktop.jpg);
+    background-color: #68B738;
     background-size: cover;
     z-index: -1;
   }
@@ -499,6 +513,7 @@ a.button--view-all {
   height: 270px;
   background-image: url("../img/chiken-pro.png");
   background-size: 280px 270px;
+  background-position: -10px 0;
   background-repeat: no-repeat;
   margin-inline: auto;
 }
@@ -524,7 +539,7 @@ a.button--view-all {
 }
 
 .catalog {
-  min-width: 320px;
+  min-width: 280px;
   position: relative;
   padding: 0 20px 18px 20px;
   background-color: #F2F2F2;
@@ -628,7 +643,7 @@ a.button--view-all {
 
 .how-it-works__list {
   position: relative;
-  min-width: 320px;
+  min-width: 280px;
   list-style: none;
   counter-reset: point; /* задаем переменную для счетчика */
   padding: 0;
@@ -945,7 +960,6 @@ a.button--view-all {
 
 .form__input {
   width: 100%;
-  min-width: 320px;
   padding: 13px 0 15px 14px;
   border: 1px solid #E7E7E7;
 }
@@ -1003,6 +1017,7 @@ a.button--view-all {
 }
 
 .form__radio {
+  margin-top: 5px;
   margin-left: 40px;
   padding-bottom: 13px;
 }
@@ -1018,7 +1033,7 @@ a.button--view-all {
   position: absolute;
   border: 1px solid #CDCDCD;
   border-radius: 50%;
-  top: -5px;
+  top: 0;
   left: 0;
 }
 
@@ -1029,7 +1044,7 @@ a.button--view-all {
   position: absolute;
   background-color: #68B738;
   border-radius: 50%;
-  top: 10%;
+  top: 8px;
   left: 8px;
 }
 
@@ -1429,7 +1444,6 @@ a.button--view-all {
   padding-top: 28px;
   padding-inline: 19px;
   padding-bottom: 26px;
-  background-color: #F2F2F2;
 }
 @media (min-width: 1440px) {
   .footer-top__contacts {

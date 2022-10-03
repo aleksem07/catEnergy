@@ -9,7 +9,7 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: 280px;
   max-width: $mobile-width-only;
   min-height: 100%;
   margin: 0 auto;
@@ -22,6 +22,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: 1220px;
+    margin-inline: 110px;
   }
 }

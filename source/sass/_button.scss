@@ -10,8 +10,14 @@
 
 a.button--intro {
   display: block;
-  width: 100%;
+  min-width: 280px;
+  margin-inline: auto;
+  padding-block: 10px;
   color: $basic_white;
+
+  @media (max-width: 320px) {
+    max-width: 280px;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
