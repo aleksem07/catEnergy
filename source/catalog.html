@@ -34,43 +34,41 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a
-          href="index.html"
-          class="page-header__logo page-header__logo--mobile"
-        >
-          <img
-            src="img/logo/logo-mobile.png"
-            width="33"
-            height="37"
-            alt="Логотип Cat Energy"
-          />
+        <a href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                img/logo/logo-desktop.png    1x,
+                img/logo/logo-desktop@2x.png 2x
+              "
+              sizes="280px"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img/logo/logo-tablet.png    1x,
+                img/logo/logo-tablet@2x.png 2x
+              "
+            />
+            <img
+              class="page-header__logo"
+              src="img/logo/logo-mobile.png"
+              srcset="
+                img/logo/logo-mobile.png    1x,
+                img/logo/logo-mobile@2x.png 2x
+              "
+              width="33"
+              height="37"
+              alt="Логотип Cat Energy"
+            />
+          </picture>
         </a>
-        <a
-          href="index.html"
-          class="page-header__logo page-header__logo--tablet"
-        >
-          <img
-            src="img/logo/logo-tablet.png"
-            width="174"
-            height="52"
-            alt="Логотип Cat Energy"
-          />
-        </a>
-        <a
-          href="index.html"
-          class="page-header__logo page-header__logo--desktop"
-        >
-          <img
-            src="img/logo/logo-desktop.png"
-            width="202"
-            height="59"
-            alt="Логотип Cat Energy"
-          />
-        </a>
-        <a href="" class="page-header__logo page-header__logo--mobile">
+
+        <a href="index.html" class="page-header__logo--text-mobile">
           <img
             src="img/logo/catEnergyText.png"
-            width="101"
+            min-width="101"
             height="18"
             alt="Логотип Cat Energy"
           />

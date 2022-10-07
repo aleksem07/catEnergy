@@ -26,11 +26,20 @@
   left: 50%;
   transform:translate(-50%, 0);
   background-image: linear-gradient($opacity_green, $opacity_green),
-                    url(../img/bg/cat.jpg);
+                    url(../img/bg/cat-desktop.jpg);
   background-color: $basic_green;
-                    background-size: 320px 302px;
+                    background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient($opacity_green, $opacity_green),
+                      url(../img/bg/cat-desktop@2x.jpg);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    background-position: 0 0, -90px 0;
+  }
 
   @media (min-width: $tablet-width) {
           display: none;
@@ -41,10 +50,11 @@
     left: 699px;
     transform: translate(0, 0);
     display: block;
-    width: 50vw;
+    // width: 50vw;
+    min-width: 720px;
     height: 696px;
       background-image: linear-gradient($opacity_green, $opacity_green),
-          url(../img/cat-desktop.jpg);
+          url(../img/bg/cat-desktop.jpg);
           background-color: $basic_green;
     background-size: cover;
     z-index: -1;
@@ -100,12 +110,14 @@
   background-repeat: no-repeat;
   margin-inline: auto;
 
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/chiken-pro@2x.png");
+    }
+
   @media (min-width: $tablet-width) {
     display: block;
     width: 100%;
     height: 609px;
-    background-image: url("../img/chiken-pro.png");
-    background-repeat: no-repeat;
     background-size: contain;
     margin: 0 auto;
   }

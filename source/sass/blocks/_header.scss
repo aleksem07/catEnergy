@@ -24,12 +24,33 @@
   }
 }
 
+.page-header__logo--size {
+  width: 33.5px;
+  height: 37.5px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 51.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .page-header__logo:hover {
   opacity: 0.8;
 }
 
 .page-header__logo:active {
   opacity: 0.6;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-text {
+  display: none;
+}
 }
 
 @media (max-width: $mobile-width-only) {
@@ -132,6 +153,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 50px;
+    z-index: 2;
   }
 }
 

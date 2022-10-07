@@ -21,8 +21,4 @@
     max-width: $desktop-width;
   }
 
-  @media (min-width: $desktop-width) {
-    max-width: 1220px;
-    margin-inline: 110px;
-  }
 }

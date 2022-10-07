@@ -1,0 +1,3550 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link rel="icon" href="img/favicon/favicon-32.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/manifest.webmanifest" />
+
+    <script src="js/main-nav--toggle.js" defer></script>
+
+    <title>HTML Academy: Cat Energy</title>
+  </head>
+
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a
+          href="index.html"
+          class="page-header__logo page-header__logo--mobile"
+        >
+          <img
+            src="img/logo/logo-mobile.png"
+            width="33"
+            height="37"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a
+          href="index.html"
+          class="page-header__logo page-header__logo--tablet"
+        >
+          <img
+            src="img/logo/logo-tablet.png"
+            width="174"
+            height="52"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a
+          href="index.html"
+          class="page-header__logo page-header__logo--desktop"
+        >
+          <img
+            src="img/logo/logo-desktop.png"
+            width="202"
+            height="59"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a href="" class="page-header__logo page-header__logo--mobile">
+          <img
+            src="img/logo/catEnergyText.png"
+            width="101"
+            height="18"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <button
+          class="main-nav__toogle main-nav--closed"
+          type="button"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+
+      <nav class="main-nav main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="current current--index">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="program-select">
+        <div class="program-select__wrapper">
+          <h1 class="program-select__title">Подбор программы</h1>
+          <p class="program-select__text">
+            Заполните анкету, и мы подберем<br />
+            программу питания для вашего кота
+          </p>
+
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form-section--desktop__wrapper">
+              <fieldset class="form-section form-section--cat">
+                <legend class="visually-hidden">Информация о коте</legend>
+                <label class="form__item">
+                  <span class="form__label">Имя:*</span>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="cat-name"
+                    placeholder="Барсик"
+                    required
+                    autofocus
+                  />
+                </label>
+                <label class="form__item">
+                  <span class="form__label">Вес (кг):*</span>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="cat-weight"
+                    placeholder="7"
+                    pattern="^[ 0-9]+$"
+                    required
+                  />
+                </label>
+                <label class="form__item">
+                  <span class="form__label">Возраст (лет):</span>
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="cat-age"
+                    placeholder="7"
+                  />
+                </label>
+              </fieldset>
+              <fieldset class="form-section form-section--program">
+                <legend class="visually-hidden">Программа</legend>
+                <div class="radio__wrapper">
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="slim"
+                      checked
+                    />
+                    <span class="form__label form__radio">Похудение</span>
+                  </label>
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="pro"
+                    />
+                    <span class="form__label form__radio">Набор массы</span>
+                  </label>
+                  <label class="form__item">
+                    <input
+                      class="form__input visually-hidden"
+                      type="radio"
+                      name="program"
+                      value="need-help"
+                    />
+                    <span class="form__label form__radio"
+                      >Не знаю (Нужен ваш совет)</span
+                    >
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <fieldset class="form-section form-section--owner">
+              <legend class="form__legend">
+                <span class="form__legend--title"
+                  >Контактные данные <br />
+                  (владельца кота)
+                </span>
+              </legend>
+
+              <label class="form__item">
+                <span class="form__label">E-mail:*</span>
+                <input
+                  class="form__input"
+                  type="email"
+                  name="contact-email"
+                  placeholder="kuklachev@gmail.com"
+                  required
+                />
+                <svg
+                  class="form__input--email"
+                  width="19"
+                  height="14"
+                  viewBox="0 0 19 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0.65"
+                    y1="5.84766"
+                    x2="0.65"
+                    y2="13.8477"
+                    stroke="#222222"
+                    stroke-width="1.3"
+                  />
+                  <line
+                    x1="17.65"
+                    y1="5.84766"
+                    x2="17.65"
+                    y2="13.8477"
+                    stroke="#222222"
+                    stroke-width="1.3"
+                  />
+                  <line
+                    y1="13.1977"
+                    x2="18"
+                    y2="13.1977"
+                    stroke="#222222"
+                    stroke-width="1.3"
+                  />
+                  <line
+                    y1="1.19766"
+                    x2="18"
+                    y2="1.19766"
+                    stroke="#222222"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z"
+                    stroke="#222222"
+                    stroke-width="1.3"
+                  />
+                </svg>
+              </label>
+              <label class="form__item">
+                <span class="form__label">Телефон:*</span>
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="contact-phone"
+                  placeholder="8 (960) 900-60-90"
+                  required
+                />
+                <svg
+                  class="form__input--phone"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2403_1829)">
+                    <path
+                      d="M17.9 9.4H9.40002V10.6H17.9L15.8 12.7L16.7 13.6L19.8 10.5C19.8974 10.3702 19.95 10.2123 19.95 10.05C19.95 9.88772 19.8974 9.72982 19.8 9.6L16.7 6.5L15.8 7.4L17.9 9.4Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M8.09995 19.4V13.2C8.0884 13.0447 8.02148 12.8987 7.91136 12.7886C7.80125 12.6785 7.65525 12.6116 7.49995 12.6H3.09995C3.1051 12.9167 3.23318 13.2189 3.45712 13.4428C3.68106 13.6668 3.9833 13.7949 4.29995 13.8H6.79995V18.8H3.09995C2.86319 18.8149 2.62585 18.7825 2.4017 18.7048C2.17756 18.6271 1.97109 18.5057 1.7943 18.3475C1.61751 18.1893 1.47393 17.9976 1.37189 17.7834C1.26986 17.5693 1.21142 17.337 1.19995 17.1V3.10001C1.19175 2.6373 1.3651 2.18977 1.68286 1.85331C2.00062 1.51686 2.43752 1.31824 2.89995 1.30001H6.79995V6.30001H4.39995C4.0833 6.30516 3.78106 6.43324 3.55712 6.65718C3.33318 6.88112 3.2051 7.18336 3.19995 7.50001H7.59995C7.75525 7.48846 7.90125 7.42154 8.01136 7.31142C8.12148 7.2013 8.1884 7.05531 8.19995 6.90001V0.600012C8.15226 0.443872 8.06111 0.304534 7.93715 0.198285C7.81319 0.0920352 7.66155 0.0232649 7.49995 1.23734e-05H3.09995C2.70593 -0.0133408 2.31315 0.0511002 1.94405 0.189651C1.57495 0.328202 1.23678 0.538145 0.948872 0.807477C0.660965 1.07681 0.428969 1.40025 0.266146 1.7593C0.103324 2.11835 0.0128689 2.50598 -4.64045e-05 2.90001V16.8C-0.0290254 17.1977 0.0245894 17.597 0.157426 17.9729C0.290263 18.3489 0.499448 18.6932 0.771825 18.9844C1.0442 19.2756 1.37388 19.5072 1.74012 19.6648C2.10637 19.8224 2.50126 19.9024 2.89995 19.9H7.49995C7.57344 19.915 7.64937 19.9133 7.7221 19.895C7.79484 19.8767 7.86253 19.8423 7.92015 19.7942C7.97777 19.7462 8.02385 19.6859 8.05497 19.6176C8.0861 19.5494 8.10147 19.475 8.09995 19.4Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2403_1829">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </label>
+            </fieldset>
+
+            <fieldset class="form-section form-section--comment">
+              <legend class="form__legend">
+                <span>Комментарий</span>
+              </legend>
+              <textarea
+                name="comment"
+                cols="35"
+                rows="10"
+                placeholder="Расскажите обо всех повадках кота"
+              ></textarea>
+            </fieldset>
+
+            <fieldset class="form-section form-section--additionally">
+              <legend class="form__legend">
+                <span>Дополнительно</span>
+              </legend>
+
+              <label class="form__item">
+                <input
+                  class="form__input visually-hidden"
+                  type="checkbox"
+                  name="add"
+                  value="sweetener"
+                  checked
+                />
+                <span class="form__label additionally">сахарозаменитель </span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input visually-hidden"
+                  type="checkbox"
+                  name="add"
+                  value="water"
+                />
+                <span class="form__label additionally">питьевая вода</span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input visually-hidden"
+                  type="checkbox"
+                  name="add"
+                  value="milk"
+                />
+                <span class="form__label additionally">молоко</span>
+              </label>
+
+              <label class="form__item">
+                <input
+                  class="form__input visually-hidden"
+                  type="checkbox"
+                  name="add"
+                  value="vitamins"
+                />
+                <span class="form__label additionally">витамины</span>
+              </label>
+              <button class="form__button button button--green" type="submit">
+                отправить заявку
+              </button>
+              <p class="program-select__need">* — Обязательные поля</p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer-top">
+        <h2 class="visually-hidden">Карта</h2>
+        <div class="footer-top__wrapper">
+          <div class="footer-top__contacts">
+            <p class="footer-top__contacts-slogan">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="footer-top__contacts-address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
+          <div class="footer-top__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.7579922910186!2d30.320285995991988!3d59.938658601340784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1655817395363!5m2!1sru!2sru"
+              width="100%"
+              height="362"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <h2 class="visually-hidden">Ссылки</h2>
+        <div class="footer-bottom__wrapper">
+          <div class="footer-bottom__logo footer-bottom__item logo">
+            <a class="logo__title-link" href="">
+              <img
+                class="logo__title"
+                src="img/footer-logo.svg"
+                width="128"
+                height="24"
+                alt="Логотип CAT ENERGY"
+              />
+            </a>
+          </div>
+          <div class="footer-bottom__social footer-bottom__item social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="">
+                  <span class="visually-hidden">Мы в Вконтакте</span>
+                  <svg
+                    width="23"
+                    height="16"
+                    viewBox="0 0 23 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.0700912 3.99266C0.0700912 3.37082 0.493211 3.03552 1.33945 2.98675L4.60039 3.00503C4.81925 3.00503 4.96515 3.09648 5.0381 3.27938C5.37368 4.19385 5.74938 4.98334 6.16521 5.64785C6.58103 6.31237 7.12452 7.07747 7.79568 7.94317C7.85404 8.05291 7.94888 8.10778 8.08019 8.10778C8.18232 8.10778 8.26257 8.0651 8.32093 7.97975L8.38659 7.77857L8.40848 4.6145C8.40848 4.39503 8.34647 4.24871 8.22245 4.17556C8.09843 4.1024 7.86863 4.04753 7.53305 4.01095C7.27043 3.97437 7.13911 3.84025 7.13911 3.60859C7.13911 3.55981 7.14641 3.52323 7.161 3.49885C7.4674 2.70631 8.34282 2.31004 9.78726 2.31004L11.0129 2.29175C11.5673 2.29175 12.0269 2.40758 12.3916 2.63925C12.7564 2.87091 12.9388 3.2367 12.9388 3.73661V7.88831C13.0409 7.94927 13.1357 7.97975 13.2233 7.97975C13.4421 7.97975 13.6318 7.87002 13.7923 7.65054C15.3973 5.77283 16.2654 4.51696 16.3967 3.88293C16.3967 3.87073 16.4113 3.84025 16.4405 3.79148C16.5426 3.60859 16.7104 3.45008 16.9438 3.31595C17.1773 3.18183 17.3815 3.09039 17.5566 3.04161C17.615 3.01723 17.6806 3.00503 17.7536 3.00503H21.1458L21.3647 3.02332C21.6565 3.02332 21.8827 3.13916 22.0432 3.37082C22.1015 3.44398 22.1416 3.52323 22.1635 3.60859C22.1854 3.69394 22.2 3.77929 22.2073 3.86464C22.2146 3.94999 22.2182 3.99876 22.2182 4.01095V4.13898C22.1161 4.63889 21.8571 5.17233 21.4413 5.7393C21.0255 6.30627 20.4966 6.91897 19.8546 7.57739C19.2126 8.2358 18.8114 8.66865 18.6509 8.87593C18.5196 9.02225 18.4539 9.15637 18.4539 9.2783C18.4539 9.37584 18.5123 9.48558 18.629 9.60751L21.8243 12.9728C21.9994 13.1678 22.0869 13.3812 22.0869 13.6129C22.0869 13.8933 21.9556 14.125 21.693 14.3079C21.4304 14.4908 21.1167 14.5944 20.7519 14.6188L20.3799 14.6371H17.0533C17.0387 14.6371 17.0095 14.6401 16.9657 14.6462C16.9219 14.6523 16.8928 14.6554 16.8782 14.6554C16.5572 14.6554 16.2581 14.5396 15.9809 14.3079C15.8787 14.2103 15.193 13.491 13.9236 12.1497C13.8507 12.0644 13.7485 11.9851 13.6172 11.912C13.5589 12.1071 13.4823 12.3875 13.3874 12.7533C13.2926 13.1191 13.2233 13.3812 13.1795 13.5397L13.1139 13.8507C12.968 14.2774 12.6616 14.5335 12.1947 14.6188L11.8883 14.6371H9.74349C8.53249 14.6371 7.32514 14.1738 6.12144 13.2471C4.91773 12.3204 3.8344 11.1225 2.87144 9.65323C1.90848 8.18398 1.01117 6.47392 0.179519 4.52306C0.106567 4.36455 0.0700912 4.18775 0.0700912 3.99266ZM13.2233 8.72962C12.9169 8.72962 12.6397 8.65951 12.3916 8.51929C12.1436 8.37907 12.0196 8.18703 12.0196 7.94317V3.73661C12.0196 3.49275 11.9466 3.319 11.8007 3.21536C11.6548 3.11172 11.3995 3.0599 11.0347 3.0599L9.78726 3.09648C9.15988 3.09648 8.68569 3.18793 8.3647 3.37082C9.00668 3.62687 9.32767 4.04143 9.32767 4.6145V7.83344C9.29849 8.13826 9.15258 8.39126 8.88996 8.59245C8.62733 8.79363 8.33552 8.89422 8.01454 8.89422C7.57683 8.89422 7.24125 8.71742 7.0078 8.36383C5.86975 6.92506 5.02351 5.55945 4.46908 4.267L4.27211 3.79148L1.36134 3.77319C1.17166 3.77319 1.06588 3.78233 1.044 3.80062C1.02211 3.81891 1.01117 3.87073 1.01117 3.95608C1.01117 4.06582 1.02576 4.18165 1.05494 4.30358L1.51454 5.32779C2.74012 7.97366 4.07149 10.0586 5.50864 11.5828C6.94579 13.1069 8.35741 13.8689 9.74349 13.8689H11.932C12.0196 13.8689 12.0852 13.8476 12.129 13.8049C12.1728 13.7623 12.2093 13.6799 12.2384 13.558L12.2822 13.3751L12.698 11.7657C12.8148 11.5462 12.9169 11.3999 13.0044 11.3267C13.1649 11.1926 13.3546 11.1255 13.5735 11.1255C13.9236 11.1255 14.2811 11.3023 14.6458 11.6559L16.5061 13.6312C16.6228 13.7897 16.7469 13.8689 16.8782 13.8689H20.4893C20.927 13.8689 21.1458 13.7775 21.1458 13.5946C21.1458 13.5336 21.124 13.4727 21.0802 13.4117L17.9068 10.1013C17.6588 9.84527 17.5347 9.57093 17.5347 9.2783C17.5347 8.98567 17.6515 8.70523 17.8849 8.43699C18.0746 8.19313 18.443 7.78771 18.9901 7.22074C19.5373 6.65377 20.0151 6.12338 20.4236 5.62956C20.8322 5.13575 21.1021 4.68766 21.2334 4.28529L21.299 4.04753C21.2845 4.02314 21.2772 3.98352 21.2772 3.92865C21.2772 3.87378 21.2699 3.82806 21.2553 3.79148H17.8192C17.6004 3.86464 17.4253 3.97437 17.294 4.12069L17.1627 4.46819C16.7979 5.3095 15.8423 6.60805 14.2957 8.36383C13.9893 8.60769 13.6318 8.72962 13.2233 8.72962Z"
+                      fill="#666666"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="">
+                  <span class="visually-hidden">Мы в Инстаграме</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.98438 0.0625C9.31771 0.0625 10.4062 0.078125 11.25 0.109375C11.9688 0.140625 12.6094 0.265625 13.1719 0.484375C13.7135 0.692708 14.1823 0.994792 14.5781 1.39062C14.974 1.78646 15.276 2.25521 15.4844 2.79687C15.7031 3.35937 15.8281 4 15.8594 4.71875C15.8906 5.5625 15.9062 6.65104 15.9062 7.98437C15.9062 9.31771 15.8906 10.4062 15.8594 11.25C15.8281 11.9687 15.7031 12.6094 15.4844 13.1719C15.276 13.7135 14.974 14.1823 14.5781 14.5781C14.1823 14.974 13.7135 15.276 13.1719 15.4844C12.6094 15.7031 11.9688 15.8281 11.25 15.8594C10.4062 15.8906 9.31771 15.9062 7.98438 15.9062C6.65104 15.9062 5.5625 15.8906 4.71875 15.8594C4 15.8281 3.35938 15.7031 2.79688 15.4844C2.25521 15.276 1.78646 14.974 1.39062 14.5781C0.994792 14.1823 0.692708 13.7135 0.484375 13.1719C0.265625 12.6094 0.140625 11.9687 0.109375 11.25C0.078125 10.4062 0.0625 9.31771 0.0625 7.98437C0.0625 6.65104 0.078125 5.5625 0.109375 4.71875C0.140625 4 0.265625 3.35937 0.484375 2.79687C0.692708 2.25521 0.994792 1.78646 1.39062 1.39062C1.78646 0.994792 2.25521 0.692708 2.79688 0.484375C3.35938 0.265625 4 0.140625 4.71875 0.109375C5.5625 0.078125 6.65104 0.0625 7.98438 0.0625ZM7.98438 1.09375C6.59896 1.09375 5.46875 1.10937 4.59375 1.14062C4.03125 1.16146 3.51042 1.26042 3.03125 1.4375C2.28125 1.75 1.75 2.28125 1.4375 3.03125C1.26042 3.51042 1.16146 4.03125 1.14062 4.59375C1.10938 5.46875 1.09375 6.59896 1.09375 7.98437C1.09375 9.36979 1.10938 10.5 1.14062 11.375C1.16146 11.9375 1.26042 12.4583 1.4375 12.9375C1.75 13.6875 2.28125 14.2187 3.03125 14.5312C3.51042 14.7083 4.03125 14.8073 4.59375 14.8281C5.46875 14.8594 6.59896 14.875 7.98438 14.875C9.36979 14.875 10.5 14.8594 11.375 14.8281C11.9375 14.8073 12.4583 14.7083 12.9375 14.5312C13.6875 14.2187 14.2188 13.6875 14.5312 12.9375C14.7083 12.4583 14.8073 11.9375 14.8281 11.375C14.8594 10.5 14.875 9.36979 14.875 7.98437C14.875 6.59896 14.8594 5.46875 14.8281 4.59375C14.8073 4.03125 14.7083 3.51042 14.5312 3.03125C14.2188 2.28125 13.6875 1.75 12.9375 1.4375C12.4583 1.26042 11.9375 1.16146 11.375 1.14062C10.5 1.10937 9.36979 1.09375 7.98438 1.09375ZM7.98438 11.1562C8.85938 11.1562 9.60677 10.8464 10.2266 10.2266C10.8464 9.60677 11.1562 8.85937 11.1562 7.98437C11.1562 7.10937 10.8464 6.36198 10.2266 5.74219C9.60677 5.1224 8.85938 4.8125 7.98438 4.8125C7.10938 4.8125 6.36198 5.1224 5.74219 5.74219C5.1224 6.36198 4.8125 7.10937 4.8125 7.98437C4.8125 8.85937 5.1224 9.60677 5.74219 10.2266C6.36198 10.8464 7.10938 11.1562 7.98438 11.1562ZM7.98438 3.92187C9.10938 3.92187 10.0677 4.31771 10.8594 5.10937C11.651 5.90104 12.0469 6.85937 12.0469 7.98437C12.0469 9.10937 11.651 10.0677 10.8594 10.8594C10.0677 11.651 9.10938 12.0469 7.98438 12.0469C6.85938 12.0469 5.90104 11.651 5.10938 10.8594C4.31771 10.0677 3.92188 9.10937 3.92188 7.98437C3.92188 6.85937 4.31771 5.90104 5.10938 5.10937C5.90104 4.31771 6.85938 3.92187 7.98438 3.92187ZM13.1719 3.76562C13.1719 4.02604 13.0781 4.2474 12.8906 4.42969C12.7031 4.61198 12.474 4.70312 12.2031 4.70312C11.9427 4.70312 11.7214 4.61198 11.5391 4.42969C11.3568 4.2474 11.2656 4.02604 11.2656 3.76562C11.2656 3.49479 11.3568 3.26562 11.5391 3.07812C11.7214 2.89062 11.9427 2.79687 12.2031 2.79687C12.4635 2.79687 12.6901 2.89323 12.8828 3.08594C13.0755 3.27865 13.1719 3.50521 13.1719 3.76562Z"
+                      fill="#666666"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="">
+                  <span class="visually-hidden">Мы в Фэйсбуке</span>
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z"
+                      stroke="#666666"
+                      stroke-width="1.1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom__copyright footer-bottom__item copyright">
+            <a class="copyright__link" href=""
+              >HTML Academy
+              <span class="visually-hidden">Ссылка HTML Academy</span>
+              <svg
+                width="27"
+                height="34"
+                viewBox="0 0 27 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+                  fill="#666666"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link rel="icon" href="img/favicon/favicon-32.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/manifest.webmanifest" />
+
+    <script src="js/main-nav--toggle.js" defer></script>
+
+    <title>HTML Academy: Cat Energy</title>
+  </head>
+
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo page-header__logo--mobile">
+          <img
+            src="img/logo/logo-mobile.png"
+            width="33"
+            height="37"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a class="page-header__logo page-header__logo--tablet">
+          <img
+            src="img/logo/logo-tablet.png"
+            width="174"
+            height="52"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a class="page-header__logo page-header__logo--desktop">
+          <img
+            src="img/logo/logo-desktop.png"
+            width="202"
+            height="59"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <a class="page-header__logo page-header__logo--mobile">
+          <img
+            src="img/logo/catEnergyText.png"
+            width="101"
+            height="18"
+            alt="Логотип Cat Energy"
+          />
+        </a>
+        <button
+          class="main-nav__toogle main-nav--closed"
+          type="button"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+
+      <nav class="main-nav main-nav__wrapper">
+        <ul class="main-nav__list site-list main-nav--index">
+          <li class="site-list__item site-list__item--active">
+            <a class="current current--index current--index-main">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="main-intro">
+        <div class="main-intro__wrapper main-intro--bg">
+          <div class="main-intro__picture"></div>
+          <h1 class="main-intro__title">
+            Функциональное <br />
+            питание для котов
+          </h1>
+          <p class="main-intro__text">Занялся собой? Займись котом!</p>
+          <div class="main-intro__picture-chiken-pro"></div>
+          <!-- <div class="main-intro__background"></div> -->
+          <a class="button button--intro" href="">Подобрать программу</a>
+        </div>
+      </section>
+    </header>
+
+    <main class="page-main">
+      <section class="catalog-selection">
+        <div class="catalog-selection__wrapper">
+          <h2 class="visually-hidden">Выбор программы</h2>
+
+          <div class="catalog catalog-slim">
+            <h3 class="catalog__title catalog__title--slim">Похудение</h3>
+            <p class="catalog__text">
+              Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+              сбросить лишний вес.
+            </p>
+            <a class="catalog__link" href="catalog.html">Каталог slim</a>
+          </div>
+
+          <div class="catalog catalog-pro">
+            <h3 class="catalog__title catalog__title--pro">Набор массы</h3>
+            <p class="catalog__text">
+              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+              Energy Pro поможет вашему коту нарастить необходимые мышцы!
+            </p>
+            <a class="catalog__link" href="catalog.html">Каталог pro</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <div class="how-it-works__wrapper">
+          <h2 class="how-it-works__title">Как это работает</h2>
+          <ol class="how-it-works__list">
+            <li class="how-it-works__item how-it-works__item--useful">
+              <p class="how-it-works__item-description">
+                Функциональное питание содержит только полезные питательные
+                вещества.
+              </p>
+            </li>
+
+            <li class="how-it-works__item how-it-works__item--form">
+              <p class="how-it-works__item-description">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
+              </p>
+            </li>
+
+            <li class="how-it-works__item how-it-works__item--change">
+              <p class="how-it-works__item-description">
+                Замените один-два приема обычной еды на наше функциональное
+                питание.
+              </p>
+            </li>
+
+            <li class="how-it-works__item how-it-works__item--result">
+              <p class="how-it-works__item-description">
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                питомца!
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="before-after">
+        <div class="before-after__wrapper">
+          <div class="before-after__text-box">
+            <h2 class="before-after__title">Живой пример</h2>
+            <p class="before-after__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <div class="fieldset__wrapper">
+              <fieldset class="before-after__result-box">
+                <legend class="before-after__result-text">
+                  Снижение<br />
+                  веса
+                </legend>
+                <p class="before-after__result-title">5 кг</p>
+              </fieldset>
+              <fieldset class="before-after__result-box">
+                <legend class="before-after__result-text">
+                  Затрачено<br />
+                  времени
+                </legend>
+                <p class="before-after__result-title">60 дней</p>
+              </fieldset>
+            </div>
+            <p class="before-after__cost">Затраты на питание: 15000 руб.</p>
+          </div>
+          <div class="before-after__example">
+            <div class="before-after__image-box">
+              <img
+                class="before-after__before before-after--image"
+                src="img/before-after/before-cat--mobile.png"
+                width="405"
+                height="536"
+                alt="Пример кота до снижения веса"
+              />
+              <img
+                class="before-after__after before-after--image"
+                src="img/before-after/after-cat--mobile.png"
+                width="325"
+                height="654"
+                alt="Пример кота после снижения веса"
+              />
+            </div>
+            <div class="range-controls__wrapper">
+              <p>было</p>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 35%"></div>
+                </div>
+              </div>
+              <p>стало</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer-top">
+        <h2 class="visually-hidden">Карта</h2>
+        <div class="footer-top__wrapper">
+          <div class="footer-top__contacts">
+            <p class="footer-top__contacts-slogan">
+              приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="footer-top__contacts-address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
+          <div class="footer-top__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.7579922910186!2d30.320285995991988!3d59.938658601340784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1655817395363!5m2!1sru!2sru"
+              width="100%"
+              height="362"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <h2 class="visually-hidden">Ссылки</h2>
+        <div class="footer-bottom__wrapper">
+          <div class="footer-bottom__logo footer-bottom__item logo">
+            <a class="logo__title-link" href="">
+              <img
+                class="logo__title"
+                src="img/footer-logo.svg"
+                width="128"
+                height="24"
+                alt="Логотип CAT ENERGY"
+              />
+            </a>
+          </div>
+          <div class="footer-bottom__social footer-bottom__item social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="">
+                  <span class="visually-hidden">Мы в Вконтакте</span>
+                  <svg
+                    width="23"
+                    height="16"
+                    viewBox="0 0 23 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.0700912 3.99266C0.0700912 3.37082 0.493211 3.03552 1.33945 2.98675L4.60039 3.00503C4.81925 3.00503 4.96515 3.09648 5.0381 3.27938C5.37368 4.19385 5.74938 4.98334 6.16521 5.64785C6.58103 6.31237 7.12452 7.07747 7.79568 7.94317C7.85404 8.05291 7.94888 8.10778 8.08019 8.10778C8.18232 8.10778 8.26257 8.0651 8.32093 7.97975L8.38659 7.77857L8.40848 4.6145C8.40848 4.39503 8.34647 4.24871 8.22245 4.17556C8.09843 4.1024 7.86863 4.04753 7.53305 4.01095C7.27043 3.97437 7.13911 3.84025 7.13911 3.60859C7.13911 3.55981 7.14641 3.52323 7.161 3.49885C7.4674 2.70631 8.34282 2.31004 9.78726 2.31004L11.0129 2.29175C11.5673 2.29175 12.0269 2.40758 12.3916 2.63925C12.7564 2.87091 12.9388 3.2367 12.9388 3.73661V7.88831C13.0409 7.94927 13.1357 7.97975 13.2233 7.97975C13.4421 7.97975 13.6318 7.87002 13.7923 7.65054C15.3973 5.77283 16.2654 4.51696 16.3967 3.88293C16.3967 3.87073 16.4113 3.84025 16.4405 3.79148C16.5426 3.60859 16.7104 3.45008 16.9438 3.31595C17.1773 3.18183 17.3815 3.09039 17.5566 3.04161C17.615 3.01723 17.6806 3.00503 17.7536 3.00503H21.1458L21.3647 3.02332C21.6565 3.02332 21.8827 3.13916 22.0432 3.37082C22.1015 3.44398 22.1416 3.52323 22.1635 3.60859C22.1854 3.69394 22.2 3.77929 22.2073 3.86464C22.2146 3.94999 22.2182 3.99876 22.2182 4.01095V4.13898C22.1161 4.63889 21.8571 5.17233 21.4413 5.7393C21.0255 6.30627 20.4966 6.91897 19.8546 7.57739C19.2126 8.2358 18.8114 8.66865 18.6509 8.87593C18.5196 9.02225 18.4539 9.15637 18.4539 9.2783C18.4539 9.37584 18.5123 9.48558 18.629 9.60751L21.8243 12.9728C21.9994 13.1678 22.0869 13.3812 22.0869 13.6129C22.0869 13.8933 21.9556 14.125 21.693 14.3079C21.4304 14.4908 21.1167 14.5944 20.7519 14.6188L20.3799 14.6371H17.0533C17.0387 14.6371 17.0095 14.6401 16.9657 14.6462C16.9219 14.6523 16.8928 14.6554 16.8782 14.6554C16.5572 14.6554 16.2581 14.5396 15.9809 14.3079C15.8787 14.2103 15.193 13.491 13.9236 12.1497C13.8507 12.0644 13.7485 11.9851 13.6172 11.912C13.5589 12.1071 13.4823 12.3875 13.3874 12.7533C13.2926 13.1191 13.2233 13.3812 13.1795 13.5397L13.1139 13.8507C12.968 14.2774 12.6616 14.5335 12.1947 14.6188L11.8883 14.6371H9.74349C8.53249 14.6371 7.32514 14.1738 6.12144 13.2471C4.91773 12.3204 3.8344 11.1225 2.87144 9.65323C1.90848 8.18398 1.01117 6.47392 0.179519 4.52306C0.106567 4.36455 0.0700912 4.18775 0.0700912 3.99266ZM13.2233 8.72962C12.9169 8.72962 12.6397 8.65951 12.3916 8.51929C12.1436 8.37907 12.0196 8.18703 12.0196 7.94317V3.73661C12.0196 3.49275 11.9466 3.319 11.8007 3.21536C11.6548 3.11172 11.3995 3.0599 11.0347 3.0599L9.78726 3.09648C9.15988 3.09648 8.68569 3.18793 8.3647 3.37082C9.00668 3.62687 9.32767 4.04143 9.32767 4.6145V7.83344C9.29849 8.13826 9.15258 8.39126 8.88996 8.59245C8.62733 8.79363 8.33552 8.89422 8.01454 8.89422C7.57683 8.89422 7.24125 8.71742 7.0078 8.36383C5.86975 6.92506 5.02351 5.55945 4.46908 4.267L4.27211 3.79148L1.36134 3.77319C1.17166 3.77319 1.06588 3.78233 1.044 3.80062C1.02211 3.81891 1.01117 3.87073 1.01117 3.95608C1.01117 4.06582 1.02576 4.18165 1.05494 4.30358L1.51454 5.32779C2.74012 7.97366 4.07149 10.0586 5.50864 11.5828C6.94579 13.1069 8.35741 13.8689 9.74349 13.8689H11.932C12.0196 13.8689 12.0852 13.8476 12.129 13.8049C12.1728 13.7623 12.2093 13.6799 12.2384 13.558L12.2822 13.3751L12.698 11.7657C12.8148 11.5462 12.9169 11.3999 13.0044 11.3267C13.1649 11.1926 13.3546 11.1255 13.5735 11.1255C13.9236 11.1255 14.2811 11.3023 14.6458 11.6559L16.5061 13.6312C16.6228 13.7897 16.7469 13.8689 16.8782 13.8689H20.4893C20.927 13.8689 21.1458 13.7775 21.1458 13.5946C21.1458 13.5336 21.124 13.4727 21.0802 13.4117L17.9068 10.1013C17.6588 9.84527 17.5347 9.57093 17.5347 9.2783C17.5347 8.98567 17.6515 8.70523 17.8849 8.43699C18.0746 8.19313 18.443 7.78771 18.9901 7.22074C19.5373 6.65377 20.0151 6.12338 20.4236 5.62956C20.8322 5.13575 21.1021 4.68766 21.2334 4.28529L21.299 4.04753C21.2845 4.02314 21.2772 3.98352 21.2772 3.92865C21.2772 3.87378 21.2699 3.82806 21.2553 3.79148H17.8192C17.6004 3.86464 17.4253 3.97437 17.294 4.12069L17.1627 4.46819C16.7979 5.3095 15.8423 6.60805 14.2957 8.36383C13.9893 8.60769 13.6318 8.72962 13.2233 8.72962Z"
+                      fill="#666666"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="">
+                  <span class="visually-hidden">Мы в Инстаграме</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.98438 0.0625C9.31771 0.0625 10.4062 0.078125 11.25 0.109375C11.9688 0.140625 12.6094 0.265625 13.1719 0.484375C13.7135 0.692708 14.1823 0.994792 14.5781 1.39062C14.974 1.78646 15.276 2.25521 15.4844 2.79687C15.7031 3.35937 15.8281 4 15.8594 4.71875C15.8906 5.5625 15.9062 6.65104 15.9062 7.98437C15.9062 9.31771 15.8906 10.4062 15.8594 11.25C15.8281 11.9687 15.7031 12.6094 15.4844 13.1719C15.276 13.7135 14.974 14.1823 14.5781 14.5781C14.1823 14.974 13.7135 15.276 13.1719 15.4844C12.6094 15.7031 11.9688 15.8281 11.25 15.8594C10.4062 15.8906 9.31771 15.9062 7.98438 15.9062C6.65104 15.9062 5.5625 15.8906 4.71875 15.8594C4 15.8281 3.35938 15.7031 2.79688 15.4844C2.25521 15.276 1.78646 14.974 1.39062 14.5781C0.994792 14.1823 0.692708 13.7135 0.484375 13.1719C0.265625 12.6094 0.140625 11.9687 0.109375 11.25C0.078125 10.4062 0.0625 9.31771 0.0625 7.98437C0.0625 6.65104 0.078125 5.5625 0.109375 4.71875C0.140625 4 0.265625 3.35937 0.484375 2.79687C0.692708 2.25521 0.994792 1.78646 1.39062 1.39062C1.78646 0.994792 2.25521 0.692708 2.79688 0.484375C3.35938 0.265625 4 0.140625 4.71875 0.109375C5.5625 0.078125 6.65104 0.0625 7.98438 0.0625ZM7.98438 1.09375C6.59896 1.09375 5.46875 1.10937 4.59375 1.14062C4.03125 1.16146 3.51042 1.26042 3.03125 1.4375C2.28125 1.75 1.75 2.28125 1.4375 3.03125C1.26042 3.51042 1.16146 4.03125 1.14062 4.59375C1.10938 5.46875 1.09375 6.59896 1.09375 7.98437C1.09375 9.36979 1.10938 10.5 1.14062 11.375C1.16146 11.9375 1.26042 12.4583 1.4375 12.9375C1.75 13.6875 2.28125 14.2187 3.03125 14.5312C3.51042 14.7083 4.03125 14.8073 4.59375 14.8281C5.46875 14.8594 6.59896 14.875 7.98438 14.875C9.36979 14.875 10.5 14.8594 11.375 14.8281C11.9375 14.8073 12.4583 14.7083 12.9375 14.5312C13.6875 14.2187 14.2188 13.6875 14.5312 12.9375C14.7083 12.4583 14.8073 11.9375 14.8281 11.375C14.8594 10.5 14.875 9.36979 14.875 7.98437C14.875 6.59896 14.8594 5.46875 14.8281 4.59375C14.8073 4.03125 14.7083 3.51042 14.5312 3.03125C14.2188 2.28125 13.6875 1.75 12.9375 1.4375C12.4583 1.26042 11.9375 1.16146 11.375 1.14062C10.5 1.10937 9.36979 1.09375 7.98438 1.09375ZM7.98438 11.1562C8.85938 11.1562 9.60677 10.8464 10.2266 10.2266C10.8464 9.60677 11.1562 8.85937 11.1562 7.98437C11.1562 7.10937 10.8464 6.36198 10.2266 5.74219C9.60677 5.1224 8.85938 4.8125 7.98438 4.8125C7.10938 4.8125 6.36198 5.1224 5.74219 5.74219C5.1224 6.36198 4.8125 7.10937 4.8125 7.98437C4.8125 8.85937 5.1224 9.60677 5.74219 10.2266C6.36198 10.8464 7.10938 11.1562 7.98438 11.1562ZM7.98438 3.92187C9.10938 3.92187 10.0677 4.31771 10.8594 5.10937C11.651 5.90104 12.0469 6.85937 12.0469 7.98437C12.0469 9.10937 11.651 10.0677 10.8594 10.8594C10.0677 11.651 9.10938 12.0469 7.98438 12.0469C6.85938 12.0469 5.90104 11.651 5.10938 10.8594C4.31771 10.0677 3.92188 9.10937 3.92188 7.98437C3.92188 6.85937 4.31771 5.90104 5.10938 5.10937C5.90104 4.31771 6.85938 3.92187 7.98438 3.92187ZM13.1719 3.76562C13.1719 4.02604 13.0781 4.2474 12.8906 4.42969C12.7031 4.61198 12.474 4.70312 12.2031 4.70312C11.9427 4.70312 11.7214 4.61198 11.5391 4.42969C11.3568 4.2474 11.2656 4.02604 11.2656 3.76562C11.2656 3.49479 11.3568 3.26562 11.5391 3.07812C11.7214 2.89062 11.9427 2.79687 12.2031 2.79687C12.4635 2.79687 12.6901 2.89323 12.8828 3.08594C13.0755 3.27865 13.1719 3.50521 13.1719 3.76562Z"
+                      fill="#666666"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="">
+                  <span class="visually-hidden">Мы в Фэйсбуке</span>
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z"
+                      stroke="#666666"
+                      stroke-width="1.1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom__copyright footer-bottom__item copyright">
+            <a class="copyright__link" href=""
+              >HTML Academy
+              <span class="visually-hidden">Ссылка HTML Academy</span>
+              <svg
+                width="27"
+                height="34"
+                viewBox="0 0 27 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+                  fill="#666666"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        g) no-repeat;\n}\n\n.catalog__text {\n  padding-bottom: 23px;\n  margin-bottom: 15px;\n  border-bottom: 1px solid $catalog_line;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.catalog__link {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n\n  &::after {\n    content: '';\n    display: inline-block;\n    width: 40px;\n    height: 10px;\n    margin-left: 15px;\n    margin-bottom: 4px;\n    background: url(../img/icon/arrow__right.svg) no-repeat;\n  }\n}\n",".how-it-works {\n  padding-bottom: 4px;\n}\n\n.how-it-works__title {\n  margin-bottom: 38px;\n}\n\n.how-it-works__list {\n  position: relative;\n  list-style: none;\n  padding: 0;\n}\n\n.how-it-works__item {\n  min-height: 60px;\n  margin-bottom: 20px;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n\n.how-it-works__item::before {\n  content: '';\n  position: absolute;\n  width: 60px;\n  height: 60px;\n}\n\n.how-it-works__item-description {\n  padding-left: 80px;\n}\n\n.how-it-works__item--useful::before {\n  background: url(\"../img/icon/how-it-works-useful.png\");\n}\n\n.how-it-works__item--form::before {\n  background: url(\"../img/icon/how-it-works-form.png\");\n}\n\n.how-it-works__item--change::before {\n  background: url(\"../img/icon/how-it-works-change.png\");\n}\n\n.how-it-works__item--result::before {\n  background: url(\"../img/icon/how-it-works-result.png\");\n}\n",".before-after {\n  width: 320px;\n  margin-left: -20px;\n  background-color: $basic_grey-3;\n}\n\n.before-after__wrapper {\n  padding: 0 20px;\n}\n\n.before-after__title {\n  padding-top: 27px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 40px;\n}\n\n.fieldset__wrapper {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 25px;\n}\n\n.before-after__text {\n  margin-bottom: 25px;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.before-after__result-box {\n  width: 124px;\n  border: 1px solid $special_grey;\n  transform: rotate(180deg);\n}\n\n.before-after__result-title {\n  margin: 0;\n  height: min-content;\n  text-align: center;\n  transform: rotate(180deg);\n  text-transform: uppercase;\n  font-size: 24px;\n    line-height: 24px;\n}\n\n.before-after__result-text {\n  display: inline-block;\n  padding: 0 10px;\n  text-transform: lowercase;\n  transform: rotate(180deg);\n  text-align: center;\n  font-family: 'Arial';\n  font-size: 12px;\n  line-height: 12px;\n}\n\n\n.before-after__cost {\n  margin-bottom: 42px;\n  text-align: center;\n  font-size: 14px;\n  text-transform: uppercase;\n}\n\n.before-after--image{\n  position: relative;\n}\n\n.range-controls__wrapper {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  align-content: center;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n\n.range-controls {\n  position: relative;\n  background-color: $basic_grey;\n  width: 84px;\n  height: 14px;\n  border: 1px solid $special_grey;\n  border-radius: 6px;\n  padding: 0 6px;\n}\n\n.range-controls .bar {\n  margin-top: 3px;\n  height: 6px;\n  border-radius: 6px;\n  background: $basic-green;\n}\n",".program-select__title {\n  margin-bottom: 37px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.program-select__text {\n  margin-bottom: 39px;\n  text-transform: uppercase;\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.form-section {\n  margin-bottom: 26px;\n}\n\n.form-section--program {\n  border-top: 1px solid $catalog_line;\n  border-bottom: 1px solid $catalog_line;\n}\n\n\n.form__item {\n  position: relative;\n  display: flex;\n  align-items: center;\n  margin-bottom: 13px;\n}\n\n.form__item:last-child  {\n  margin-bottom: 0;\n}\n\n.form__label {\n  flex-shrink: 0;\n  margin-right: 15px;\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.form__input {\n  padding: 13px 0 15px 14px;\n  border: 1px solid $border_input;\n\n  &::placeholder{\n    text-transform: uppercase;\n    color: $special_dark-grey;\n  }\n}\n\n.form-section--program {\n  padding-bottom: 19px;\n}\n\n.radio__wrapper {\n  padding-top: 20px;\n}\n\n.form__radio {\n  margin-left: 40px;\n  padding-bottom: 13px;\n}\n\n.form__item:last-child .form__radio {\n  padding: 0;\n}\n\n.form__input + .form__radio::before {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid $special_grey;\n  border-radius: 50%;\n  top: -5px;\n  left: 0;\n}\n\n.form__input:checked + .form__radio:after {\n  content: '';\n  width: 14px;\n  height: 14px;\n  position: absolute;\n  background-color: $basic_green;\n  border-radius: 50%;\n  top: 10%;\n  left: 8px;\n}\n\n.form__input:focus+.form__radio::before {\n  outline: 2px solid $special_dark-grey-2;\n}\n\n\n.form__legend {\n  width: 100%;\n  margin-bottom: 35px;\n  font-size: 24px;\n  line-height: 26px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.form__legend span {\n  display: inline-block;\n  padding-right: 14px;\n  background-color: $background;\n}\n\n.form-section--comment {\n  width: 100%;\n  margin-bottom: 22px;\n}\n\n.form-section--comment>textarea {\n  resize: none;\n  border: 1px solid $border_input;\n}\n\n.form-section--comment > textarea::placeholder {\n  padding-top: 9px;\n  text-align: center;\n  text-transform: uppercase;\n  font-family: 'Oswald';\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.additionally {\n  width: auto;\n  height: 30px;\n  margin-left: 40px;\n}\n\n.form__input + .additionally::before {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid $border_input;\n  top: -8px;\n  left: 0;\n}\n\n.form__input:checked + .additionally::after {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  background-image: url(../img/icon/check.svg);\n  background-repeat: no-repeat;\n  top: 0;\n  left: 7px;\n}\n\n.form__input:focus + .additionally::before{\n  outline: 2px solid $special_dark-grey-2;\n}\n",".products-title {\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.product__feature--item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.product {\n  padding: 11px;\n}\n\n.products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.products__item {\n  display: grid;\n  grid-template-columns: 50% 1fr 1fr;\n  grid-template-rows: 1fr 1fr 40px;\n  justify-content: center;\n  border-bottom: 1px solid $basic_grey-2;\n\n  &:last-child {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    border-bottom: 1px solid $basic_grey-2;\n    text-align: center;\n    padding: 0;\n    padding-bottom: 25px;\n\n      & .product__title {\n        font-size: 16px;\n        line-height: 20px;\n      }\n\n      & .product__text {\n        margin-bottom: 21px;\n        font-family: 'Arial';\n        font-size: 12px;\n        line-height: 16px;\n      }\n  }\n}\n\n.product__icon {\n  padding-top: 25px;\n}\n\n.product__img {\n  grid-column: 1 / 2;\n  grid-row: 1 / 3;\n  width: 68px;\n  height: 86px;\n  margin: auto;\n}\n\n.product__description {\n  grid-column: 2 / 4;\n  grid-row: 1 / 3;\n}\n\n.product__title {\n  text-transform: uppercase;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 20px;\n}\n\n.product__feature {\n  font-family: 'Arial';\n  font-size: 12px;\n  line-height: 16px;\n}\n\n.product__feature-title,\n.product__feature-text {\n  display: inline-block;\n}\n\n.product__feature-text {\n  margin: 0;\n}\n",".add-products__title {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 24px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.add-products__title > span {\n  display: inline-block;\n  padding-right: 22px;\n  background-color: $background;\n}\n\n.add-products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.add-products__item {\n  display: flex;\n  flex-direction: column;\n\n}\n\n.add__feature {\n  display: flex;\n  justify-content: space-between;\n}\n\n.add {\n  padding-bottom: 19px;\n  border-bottom: 1px solid $special_grey;\n}\n\n.add__title {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n}\n\n.add__feature {\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 14px;\n}\n\n.gift__wrapper {\n  display: flex;\n  flex-direction: column;\n  min-width: 280px;\n  height: 289px;\n  background-image: linear-gradient($opacity_green, $opacity_green),\n  url(../img/bg/cat-bag.jpg);\n  background-size: 280px 289px;\n  background-repeat: no-repeat;\n  margin-bottom: 35px;\n}\n\n.gift__img {\n  padding: 48px 0;\n  text-align: center;\n}\n\n.gift__text {\n  text-align: center;\n  font-family: 'Arial';\n  font-size: 16px;\n  line-height: 20px;\n  color: $basic_white\n}\n",".footer {\n  margin-top: auto;\n}\n\n.footer-top__contacts {\n  display: flex;\n  gap: 25px;\n  padding-top: 28px;\n  padding-bottom: 26px;\n}\n\n.footer-top__contacts--grey {\n  margin-left: -20px;\n  padding: 26px 20px;\n  width: 320px;\n  background-color: $basic_grey;\n}\n\n.footer-top__contacts-slogan {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.footer-top__contacts-address {\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 20px;\n}\n\n.footer-top__map {\n  margin-left: -20px;\n}\n\n.footer-bottom {\n  width: 320px;\n  margin-left: -20px;\n  padding-top: 40px;\n  background-color: $basic_grey;\n}\n\n.footer-bottom__wrapper {\n  text-align: center;\n}\n\n.footer-bottom__item {\n  width: 100%;\n  border-bottom: 1px solid $catalog_line;\n\n  &:last-child{\n    border-bottom: 0;\n  }\n}\n\n.social__list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 35px;\n  justify-content: center;\n  align-items: center;\n  list-style: none;\n  padding: 0;\n}\n\n.social__item {\n  width: 23px;\n  height: 23px;\n}\n\n.logo {\n  padding-bottom: 32px;\n}\n\n.footer-bottom__copyright {\n  padding: 32px 0;\n}\n\n.footer-bottom__copyright {\n  text-align: left;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.copyright__link {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: center;\n}\n"]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       .current {
+  border-bottom: 2px solid $basic_green;
+}
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: inline-block;
+    width: 440px;
+  }
+}
+
+.main-nav__list {
+  position: relative;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $basic_color;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    height: 24px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid $grey_line;
+  font-weight: 500;
+
+  &:first-child {
+  border-top: 1px solid $grey_line;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: max-content;
+  }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       .current {
+  border-bottom: 2px solid $basic_green;
+}
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: inline-block;
+    width: 440px;
+  }
+}
+
+.main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $basic_color;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    height: 24px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid $grey_line;
+  font-weight: 500;
+
+  &:first-child {
+  border-top: 1px solid $grey_line;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: max-content;
+  }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2 px solid #444444;
+}
+
+.button {
+  padding: 7px 44px;
+  cursor: pointer;
+  border: 0;
+  background-color: #68B738;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+a.button--intro {
+  display: block;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.main-nav__toogle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.form__button {
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.program-select__need {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+a.button--product {
+  width: 280px;
+  padding-top: 10px;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.button--view-all {
+  background-color: #F2F2F2;
+  width: 280px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
+.page {
+  height: 100%;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  color: #000000;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .page__body {
+    width: 768px;
+    outline: 5px solid rgba(31, 12, 112, 0.589);
+    outline-offset: -5px;
+  }
+}
+@media (min-width: 1440px) {
+  .page__body {
+    width: 1440px;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
+  }
+}
+
+.logo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .logo__wrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    gap: 20px;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav__toogle {
+    display: none;
+  }
+}
+.current {
+  border-bottom: 2px solid #68B738;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: inline-block;
+    width: 440px;
+  }
+}
+.main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .main-nav__list {
+    flex-direction: row;
+    width: 100%;
+    height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid #E6E6E6;
+  font-weight: 500;
+}
+.site-list__item:first-child {
+  border-top: 1px solid #E6E6E6;
+}
+@media (min-width: 768px) {
+  .site-list__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-bottom: 0;
+  }
+}
+
+.main-intro {
+  text-align: center;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .main-intro {
+    display: block;
+  }
+}
+
+.main-intro .main-intro--bg {
+  width: 320px;
+  margin-left: -20px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-size: 320px 302px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.main-intro__title {
+  color: #FFFFFF;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-intro__text {
+  color: #FFFFFF;
+  margin-bottom: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.catalog {
+  position: relative;
+  padding: 0 20px 18px 20px;
+  background-color: #F2F2F2;
+}
+
+.catalog__title {
+  padding-top: 30px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.catalog__title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 53px;
+}
+
+.catalog__title--slim::before {
+  left: 20px;
+  background: url(../img/icon/cat_back--slim.svg) no-repeat;
+}
+
+.catalog__title--pro::before {
+  background: url(../img/icon/cat_back--pro.svg) no-repeat;
+}
+
+.catalog__text {
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D9D9D9;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog__link {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+.catalog__link::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-left: 15px;
+  margin-bottom: 4px;
+  background: url(../img/icon/arrow__right.svg) no-repeat;
+}
+
+.how-it-works {
+  padding-bottom: 4px;
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+}
+
+.how-it-works__list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works__item {
+  min-height: 60px;
+  margin-bottom: 20px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.how-it-works__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.how-it-works__item-description {
+  padding-left: 80px;
+}
+
+.how-it-works__item--useful::before {
+  background: url("../img/icon/how-it-works-useful.png");
+}
+
+.how-it-works__item--form::before {
+  background: url("../img/icon/how-it-works-form.png");
+}
+
+.how-it-works__item--change::before {
+  background: url("../img/icon/how-it-works-change.png");
+}
+
+.how-it-works__item--result::before {
+  background: url("../img/icon/how-it-works-result.png");
+}
+
+.before-after {
+  width: 320px;
+  margin-left: -20px;
+  background-color: #EAEAEA;
+}
+
+.before-after__wrapper {
+  padding: 0 20px;
+}
+
+.before-after__title {
+  padding-top: 27px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.fieldset__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.before-after__text {
+  margin-bottom: 25px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.before-after__result-box {
+  width: 124px;
+  border: 1px solid #CDCDCD;
+  transform: rotate(180deg);
+}
+
+.before-after__result-title {
+  margin: 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: center;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.before-after__result-text {
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: lowercase;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.before-after__cost {
+  margin-bottom: 42px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.before-after--image {
+  position: relative;
+}
+
+.range-controls__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.range-controls {
+  position: relative;
+  background-color: #F2F2F2;
+  width: 84px;
+  height: 14px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+.range-controls .bar {
+  margin-top: 3px;
+  height: 6px;
+  border-radius: 6px;
+  background: #68B738;
+}
+
+.program-select__title {
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-select__text {
+  margin-bottom: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form-section {
+  margin-bottom: 26px;
+}
+
+.form-section--program {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
+}
+
+.form__label {
+  flex-shrink: 0;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__input {
+  padding: 13px 0 15px 14px;
+  border: 1px solid #E7E7E7;
+}
+.form__input::-moz-placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+.form__input::placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.form-section--program {
+  padding-bottom: 19px;
+}
+
+.radio__wrapper {
+  padding-top: 20px;
+}
+
+.form__radio {
+  margin-left: 40px;
+  padding-bottom: 13px;
+}
+
+.form__item:last-child .form__radio {
+  padding: 0;
+}
+
+.form__input + .form__radio::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+}
+
+.form__input:checked + .form__radio:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background-color: #68B738;
+  border-radius: 50%;
+  top: 10%;
+  left: 8px;
+}
+
+.form__input:focus + .form__radio::before {
+  outline: 2px solid #222222;
+}
+
+.form__legend {
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 26px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.form__legend span {
+  display: inline-block;
+  padding-right: 14px;
+  background-color: #FFFFFF;
+}
+
+.form-section--comment {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-section--comment > textarea {
+  resize: none;
+  border: 1px solid #E7E7E7;
+}
+
+.form-section--comment > textarea::-moz-placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-section--comment > textarea::placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.additionally {
+  width: auto;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.form__input + .additionally::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #E7E7E7;
+  top: -8px;
+  left: 0;
+}
+
+.form__input:checked + .additionally::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url(../img/icon/check.svg);
+  background-repeat: no-repeat;
+  top: 0;
+  left: 7px;
+}
+
+.form__input:focus + .additionally::before {
+  outline: 2px solid #222222;
+}
+
+.products-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.product__feature--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  padding: 11px;
+}
+
+.products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.products__item {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+.products__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 25px;
+}
+.products__item:last-child .product__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+.products__item:last-child .product__text {
+  margin-bottom: 21px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__icon {
+  padding-top: 25px;
+}
+
+.product__img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 68px;
+  height: 86px;
+  margin: auto;
+}
+
+.product__description {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+
+.product__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product__feature {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__feature-title,
+.product__feature-text {
+  display: inline-block;
+}
+
+.product__feature-text {
+  margin: 0;
+}
+
+.add-products__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.add-products__title > span {
+  display: inline-block;
+  padding-right: 22px;
+  background-color: #FFFFFF;
+}
+
+.add-products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.add-products__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.add__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.add__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.add__feature {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.gift__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  height: 289px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.gift__img {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.gift__text {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.footer-top__contacts {
+  display: flex;
+  gap: 25px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+
+.footer-top__contacts--grey {
+  margin-left: -20px;
+  padding: 26px 20px;
+  width: 320px;
+  background-color: #F2F2F2;
+}
+
+.footer-top__contacts-slogan {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-top__contacts-address {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-top__map {
+  margin-left: -20px;
+}
+
+.footer-bottom {
+  width: 320px;
+  margin-left: -20px;
+  padding-top: 40px;
+  background-color: #F2F2F2;
+}
+
+.footer-bottom__wrapper {
+  text-align: center;
+}
+
+.footer-bottom__item {
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+.footer-bottom__item:last-child {
+  border-bottom: 0;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social__item {
+  width: 23px;
+  height: 23px;
+}
+
+.logo {
+  padding-bottom: 32px;
+}
+
+.footer-bottom__copyright {
+  padding: 32px 0;
+}
+
+.footer-bottom__copyright {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.copyright__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2 px solid #444444;
+}
+
+.button {
+  padding: 7px 44px;
+  cursor: pointer;
+  border: 0;
+  background-color: #68B738;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+a.button--intro {
+  display: block;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.main-nav__toogle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.form__button {
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.program-select__need {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+a.button--product {
+  width: 280px;
+  padding-top: 10px;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.button--view-all {
+  background-color: #F2F2F2;
+  width: 280px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
+.page {
+  height: 100%;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  color: #000000;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .page__body {
+    width: 768px;
+    outline: 5px solid rgba(31, 12, 112, 0.589);
+    outline-offset: -5px;
+  }
+}
+@media (min-width: 1440px) {
+  .page__body {
+    width: 1440px;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
+  }
+}
+
+.logo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .logo__wrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    gap: 20px;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav__toogle {
+    display: none;
+  }
+}
+.current {
+  border-bottom: 2px solid #68B738;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: inline-block;
+    width: 440px;
+  }
+}
+.main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .main-nav__list {
+    flex-direction: row;
+    width: 100%;
+    height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid #E6E6E6;
+  font-weight: 500;
+}
+.site-list__item:first-child {
+  border-top: 1px solid #E6E6E6;
+}
+@media (min-width: 768px) {
+  .site-list__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-bottom: 0;
+  }
+}
+
+.main-intro {
+  text-align: center;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .main-intro {
+    display: block;
+  }
+}
+
+.main-intro .main-intro--bg {
+  width: 320px;
+  margin-left: -20px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-size: 320px 302px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.main-intro__title {
+  color: #FFFFFF;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-intro__text {
+  color: #FFFFFF;
+  margin-bottom: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.catalog {
+  position: relative;
+  padding: 0 20px 18px 20px;
+  background-color: #F2F2F2;
+}
+
+.catalog__title {
+  padding-top: 30px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.catalog__title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 53px;
+}
+
+.catalog__title--slim::before {
+  left: 20px;
+  background: url(../img/icon/cat_back--slim.svg) no-repeat;
+}
+
+.catalog__title--pro::before {
+  background: url(../img/icon/cat_back--pro.svg) no-repeat;
+}
+
+.catalog__text {
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D9D9D9;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog__link {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+.catalog__link::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-left: 15px;
+  margin-bottom: 4px;
+  background: url(../img/icon/arrow__right.svg) no-repeat;
+}
+
+.how-it-works {
+  padding-bottom: 4px;
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+}
+
+.how-it-works__list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works__item {
+  min-height: 60px;
+  margin-bottom: 20px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.how-it-works__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.how-it-works__item-description {
+  padding-left: 80px;
+}
+
+.how-it-works__item--useful::before {
+  background: url("../img/icon/how-it-works-useful.png");
+}
+
+.how-it-works__item--form::before {
+  background: url("../img/icon/how-it-works-form.png");
+}
+
+.how-it-works__item--change::before {
+  background: url("../img/icon/how-it-works-change.png");
+}
+
+.how-it-works__item--result::before {
+  background: url("../img/icon/how-it-works-result.png");
+}
+
+.before-after {
+  width: 320px;
+  margin-left: -20px;
+  background-color: #EAEAEA;
+}
+
+.before-after__wrapper {
+  padding: 0 20px;
+}
+
+.before-after__title {
+  padding-top: 27px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.fieldset__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.before-after__text {
+  margin-bottom: 25px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.before-after__result-box {
+  width: 124px;
+  border: 1px solid #CDCDCD;
+  transform: rotate(180deg);
+}
+
+.before-after__result-title {
+  margin: 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: center;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.before-after__result-text {
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: lowercase;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.before-after__cost {
+  margin-bottom: 42px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.before-after--image {
+  position: relative;
+}
+
+.range-controls__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.range-controls {
+  position: relative;
+  background-color: #F2F2F2;
+  width: 84px;
+  height: 14px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+.range-controls .bar {
+  margin-top: 3px;
+  height: 6px;
+  border-radius: 6px;
+  background: #68B738;
+}
+
+.program-select__title {
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-select__text {
+  margin-bottom: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form-section {
+  margin-bottom: 26px;
+}
+
+.form-section--program {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
+}
+
+.form__label {
+  flex-shrink: 0;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__input {
+  padding: 13px 0 15px 14px;
+  border: 1px solid #E7E7E7;
+}
+.form__input::-moz-placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+.form__input::placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.form-section--program {
+  padding-bottom: 19px;
+}
+
+.radio__wrapper {
+  padding-top: 20px;
+}
+
+.form__radio {
+  margin-left: 40px;
+  padding-bottom: 13px;
+}
+
+.form__item:last-child .form__radio {
+  padding: 0;
+}
+
+.form__input + .form__radio::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+}
+
+.form__input:checked + .form__radio:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background-color: #68B738;
+  border-radius: 50%;
+  top: 10%;
+  left: 8px;
+}
+
+.form__input:focus + .form__radio::before {
+  outline: 2px solid #222222;
+}
+
+.form__legend {
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 26px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.form__legend span {
+  display: inline-block;
+  padding-right: 14px;
+  background-color: #FFFFFF;
+}
+
+.form-section--comment {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-section--comment > textarea {
+  resize: none;
+  border: 1px solid #E7E7E7;
+}
+
+.form-section--comment > textarea::-moz-placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-section--comment > textarea::placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.additionally {
+  width: auto;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.form__input + .additionally::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #E7E7E7;
+  top: -8px;
+  left: 0;
+}
+
+.form__input:checked + .additionally::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url(../img/icon/check.svg);
+  background-repeat: no-repeat;
+  top: 0;
+  left: 7px;
+}
+
+.form__input:focus + .additionally::before {
+  outline: 2px solid #222222;
+}
+
+.products-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.product__feature--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  padding: 11px;
+}
+
+.products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.products__item {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+.products__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 25px;
+}
+.products__item:last-child .product__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+.products__item:last-child .product__text {
+  margin-bottom: 21px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__icon {
+  padding-top: 25px;
+}
+
+.product__img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 68px;
+  height: 86px;
+  margin: auto;
+}
+
+.product__description {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+
+.product__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product__feature {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__feature-title,
+.product__feature-text {
+  display: inline-block;
+}
+
+.product__feature-text {
+  margin: 0;
+}
+
+.add-products__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.add-products__title > span {
+  display: inline-block;
+  padding-right: 22px;
+  background-color: #FFFFFF;
+}
+
+.add-products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.add-products__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.add__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.add__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.add__feature {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.gift__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  height: 289px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.gift__img {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.gift__text {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.footer-top__contacts {
+  display: flex;
+  gap: 25px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+
+.footer-top__contacts--grey {
+  margin-left: -20px;
+  padding: 26px 20px;
+  width: 320px;
+  background-color: #F2F2F2;
+}
+
+.footer-top__contacts-slogan {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-top__contacts-address {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-top__map {
+  margin-left: -20px;
+}
+
+.footer-bottom {
+  width: 320px;
+  margin-left: -20px;
+  padding-top: 40px;
+  background-color: #F2F2F2;
+}
+
+.footer-bottom__wrapper {
+  text-align: center;
+}
+
+.footer-bottom__item {
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+.footer-bottom__item:last-child {
+  border-bottom: 0;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social__item {
+  width: 23px;
+  height: 23px;
+}
+
+.logo {
+  padding-bottom: 32px;
+}
+
+.footer-bottom__copyright {
+  padding: 32px 0;
+}
+
+.footer-bottom__copyright {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.copyright__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       587617812                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       {"version":3,"sources":["_fonts.scss","style.css","_global.scss","_color.scss","_button.scss","blocks/_page.scss","style.scss","blocks/_header.scss","blocks/_main-intro.scss","blocks/_catalog.scss","blocks/_how-it-works.scss","blocks/_before-after.scss","blocks/_program-select.scss","blocks/_products.scss","blocks/_add-products.scss","blocks/_footer.scss"],"names":[],"mappings":"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","file":"style.css","sourcesContent":["//Подключение шрифтов ================================================================================================================================================================\n//&display=swap - добавить при подключении через плагин\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);\n\n@font-face {\n  font-family: 'Oswald';\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n  src:\n    url('../fonts/oswaldregular.woff2') format('woff2'),\n    url('../fonts/oswaldregular.woff') format('woff');\n}\n\n@font-face {\n  font-family: 'Oswald';\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n  src:\n    url('../fonts/oswaldmedium.woff2') format('woff2'),\n    url('../fonts/oswaldmedium.woff') format('woff');\n}\n","@import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);\n@font-face {\n  font-family: \"Oswald\";\n  font-weight: 400;\n  font-style: normal;\n  font-display: swap;\n  src: url(\"../fonts/oswaldregular.woff2\") format(\"woff2\"), url(\"../fonts/oswaldregular.woff\") format(\"woff\");\n}\n@font-face {\n  font-family: \"Oswald\";\n  font-weight: 500;\n  font-style: normal;\n  font-display: swap;\n  src: url(\"../fonts/oswaldmedium.woff2\") format(\"woff2\"), url(\"../fonts/oswaldmedium.woff\") format(\"woff\");\n}\nimg {\n  max-width: 100%;\n  height: auto;\n}\n\na {\n  color: #000000;\n  text-decoration: none;\n}\n\na:visited {\n  color: #000000;\n}\n\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  border: 0;\n  padding: 0;\n  white-space: nowrap;\n  clip-path: inset(100%);\n  clip: rect(0 0 0 0);\n  overflow: hidden;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nfieldset {\n  border: 0;\n  margin: 0;\n  padding: 0;\n}\n\nlabel {\n  cursor: pointer;\n}\n\ninput:focus {\n  border: 2 px solid #444444;\n}\n\n.button {\n  padding: 7px 44px;\n  cursor: pointer;\n  border: 0;\n  background-color: #68B738;\n  font-size: 14px;\n  line-height: 18px;\n  text-transform: uppercase;\n}\n\na.button--intro {\n  display: block;\n  width: 100%;\n  color: #FFFFFF;\n}\n\n.main-nav__toogle {\n  background: transparent;\n  border: 0;\n  cursor: pointer;\n}\n\n.form__button {\n  width: 100%;\n  color: #FFFFFF;\n}\n\n.program-select__need {\n  text-align: center;\n  margin-bottom: 32px;\n}\n\na.button--product {\n  width: 280px;\n  padding-top: 10px;\n  grid-column: 1/-1;\n  grid-row: 3/4;\n  color: #FFFFFF;\n  text-align: center;\n  font-size: 16px;\n  line-height: 20px;\n}\n\na.button--view-all {\n  background-color: #F2F2F2;\n  width: 280px;\n  padding-top: 10px;\n  font-size: 16px;\n  color: #444444;\n}\n\n.page {\n  height: 100%;\n  font-family: Oswald;\n  font-size: 20px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\n.page__body {\n  display: flex;\n  flex-direction: column;\n  width: 320px;\n  min-height: 100%;\n  margin: 0 auto;\n  color: #000000;\n  padding: 0 20px;\n}\n@media (min-width: 768px) {\n  .page__body {\n    width: 768px;\n    outline: 5px solid rgba(31, 12, 112, 0.589);\n    outline-offset: -5px;\n  }\n}\n@media (min-width: 1440px) {\n  .page__body {\n    width: 1440px;\n    outline: 5px solid rgba(247, 9, 9, 0.589);\n    outline-offset: -5px;\n  }\n}\n\n.logo__wrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 12px;\n  margin-bottom: 22px;\n}\n@media (min-width: 768px) {\n  .logo__wrapper {\n    width: max-content;\n    gap: 20px;\n    display: inline-flex;\n  }\n}\n\n@media (min-width: 768px) {\n  .main-nav__toogle {\n    display: none;\n  }\n}\n.current {\n  border-bottom: 2px solid #68B738;\n}\n\n@media (min-width: 768px) {\n  .main-nav {\n    display: inline-block;\n    width: 440px;\n  }\n}\n.main-nav__list {\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n  align-content: center;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  color: #000000;\n  text-align: center;\n  text-transform: uppercase;\n  list-style: none;\n}\n@media (min-width: 768px) {\n  .main-nav__list {\n    flex-direction: row;\n    width: 100%;\n    height: 240px;\n    border-bottom: 0;\n  }\n}\n\n@media (min-width: 768px) {\n  .site-list {\n    font-size: 18px;\n    line-height: 24px;\n  }\n}\n.site-list__item {\n  width: 320px;\n  padding: 22px 0;\n  border-bottom: 1px solid #E6E6E6;\n  font-weight: 500;\n}\n.site-list__item:first-child {\n  border-top: 1px solid #E6E6E6;\n}\n@media (min-width: 768px) {\n  .site-list__item {\n    width: max-content;\n    border-bottom: 0;\n  }\n}\n\n.main-intro {\n  text-align: center;\n  margin-bottom: 22px;\n}\n@media (min-width: 768px) {\n  .main-intro {\n    display: block;\n  }\n}\n\n.main-intro .main-intro--bg {\n  width: 320px;\n  margin-left: -20px;\n  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);\n  background-size: 320px 302px;\n  background-repeat: no-repeat;\n  background-color: #fff;\n}\n\n.main-intro__title {\n  color: #FFFFFF;\n  padding-top: 27px;\n  margin: 0;\n  margin-bottom: 25px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.main-intro__text {\n  color: #FFFFFF;\n  margin-bottom: 29px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 14px;\n  line-height: 14px;\n  text-transform: uppercase;\n}\n\n.catalog {\n  position: relative;\n  padding: 0 20px 18px 20px;\n  background-color: #F2F2F2;\n}\n\n.catalog__title {\n  padding-top: 30px;\n  font-size: 24px;\n  line-height: 37px;\n  font-weight: 400;\n  text-transform: uppercase;\n}\n.catalog__title::before {\n  content: \"\";\n  display: inline-block;\n  width: 70px;\n  height: 53px;\n}\n\n.catalog__title--slim::before {\n  left: 20px;\n  background: url(../img/icon/cat_back--slim.svg) no-repeat;\n}\n\n.catalog__title--pro::before {\n  background: url(../img/icon/cat_back--pro.svg) no-repeat;\n}\n\n.catalog__text {\n  padding-bottom: 23px;\n  margin-bottom: 15px;\n  border-bottom: 1px solid #D9D9D9;\n  font-family: \"Arial\";\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.catalog__link {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n}\n.catalog__link::after {\n  content: \"\";\n  display: inline-block;\n  width: 40px;\n  height: 10px;\n  margin-left: 15px;\n  margin-bottom: 4px;\n  background: url(../img/icon/arrow__right.svg) no-repeat;\n}\n\n.how-it-works {\n  padding-bottom: 4px;\n}\n\n.how-it-works__title {\n  margin-bottom: 38px;\n}\n\n.how-it-works__list {\n  position: relative;\n  list-style: none;\n  padding: 0;\n}\n\n.how-it-works__item {\n  min-height: 60px;\n  margin-bottom: 20px;\n  font-family: \"Arial\";\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.how-it-works__item::before {\n  content: \"\";\n  position: absolute;\n  width: 60px;\n  height: 60px;\n}\n\n.how-it-works__item-description {\n  padding-left: 80px;\n}\n\n.how-it-works__item--useful::before {\n  background: url(\"../img/icon/how-it-works-useful.png\");\n}\n\n.how-it-works__item--form::before {\n  background: url(\"../img/icon/how-it-works-form.png\");\n}\n\n.how-it-works__item--change::before {\n  background: url(\"../img/icon/how-it-works-change.png\");\n}\n\n.how-it-works__item--result::before {\n  background: url(\"../img/icon/how-it-works-result.png\");\n}\n\n.before-after {\n  width: 320px;\n  margin-left: -20px;\n  background-color: #EAEAEA;\n}\n\n.before-after__wrapper {\n  padding: 0 20px;\n}\n\n.before-after__title {\n  padding-top: 27px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 40px;\n}\n\n.fieldset__wrapper {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 25px;\n}\n\n.before-after__text {\n  margin-bottom: 25px;\n  font-family: \"Arial\";\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.before-after__result-box {\n  width: 124px;\n  border: 1px solid #CDCDCD;\n  transform: rotate(180deg);\n}\n\n.before-after__result-title {\n  margin: 0;\n  height: min-content;\n  text-align: center;\n  transform: rotate(180deg);\n  text-transform: uppercase;\n  font-size: 24px;\n  line-height: 24px;\n}\n\n.before-after__result-text {\n  display: inline-block;\n  padding: 0 10px;\n  text-transform: lowercase;\n  transform: rotate(180deg);\n  text-align: center;\n  font-family: \"Arial\";\n  font-size: 12px;\n  line-height: 12px;\n}\n\n.before-after__cost {\n  margin-bottom: 42px;\n  text-align: center;\n  font-size: 14px;\n  text-transform: uppercase;\n}\n\n.before-after--image {\n  position: relative;\n}\n\n.range-controls__wrapper {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  align-content: center;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n\n.range-controls {\n  position: relative;\n  background-color: #F2F2F2;\n  width: 84px;\n  height: 14px;\n  border: 1px solid #CDCDCD;\n  border-radius: 6px;\n  padding: 0 6px;\n}\n\n.range-controls .bar {\n  margin-top: 3px;\n  height: 6px;\n  border-radius: 6px;\n  background: #68B738;\n}\n\n.program-select__title {\n  margin-bottom: 37px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.program-select__text {\n  margin-bottom: 39px;\n  text-transform: uppercase;\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.form-section {\n  margin-bottom: 26px;\n}\n\n.form-section--program {\n  border-top: 1px solid #D9D9D9;\n  border-bottom: 1px solid #D9D9D9;\n}\n\n.form__item {\n  position: relative;\n  display: flex;\n  align-items: center;\n  margin-bottom: 13px;\n}\n\n.form__item:last-child {\n  margin-bottom: 0;\n}\n\n.form__label {\n  flex-shrink: 0;\n  margin-right: 15px;\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.form__input {\n  padding: 13px 0 15px 14px;\n  border: 1px solid #E7E7E7;\n}\n.form__input::placeholder {\n  text-transform: uppercase;\n  color: #444444;\n}\n\n.form-section--program {\n  padding-bottom: 19px;\n}\n\n.radio__wrapper {\n  padding-top: 20px;\n}\n\n.form__radio {\n  margin-left: 40px;\n  padding-bottom: 13px;\n}\n\n.form__item:last-child .form__radio {\n  padding: 0;\n}\n\n.form__input + .form__radio::before {\n  content: \"\";\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid #CDCDCD;\n  border-radius: 50%;\n  top: -5px;\n  left: 0;\n}\n\n.form__input:checked + .form__radio:after {\n  content: \"\";\n  width: 14px;\n  height: 14px;\n  position: absolute;\n  background-color: #68B738;\n  border-radius: 50%;\n  top: 10%;\n  left: 8px;\n}\n\n.form__input:focus + .form__radio::before {\n  outline: 2px solid #222222;\n}\n\n.form__legend {\n  width: 100%;\n  margin-bottom: 35px;\n  font-size: 24px;\n  line-height: 26px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.form__legend span {\n  display: inline-block;\n  padding-right: 14px;\n  background-color: #FFFFFF;\n}\n\n.form-section--comment {\n  width: 100%;\n  margin-bottom: 22px;\n}\n\n.form-section--comment > textarea {\n  resize: none;\n  border: 1px solid #E7E7E7;\n}\n\n.form-section--comment > textarea::placeholder {\n  padding-top: 9px;\n  text-align: center;\n  text-transform: uppercase;\n  font-family: \"Oswald\";\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.additionally {\n  width: auto;\n  height: 30px;\n  margin-left: 40px;\n}\n\n.form__input + .additionally::before {\n  content: \"\";\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid #E7E7E7;\n  top: -8px;\n  left: 0;\n}\n\n.form__input:checked + .additionally::after {\n  content: \"\";\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  background-image: url(../img/icon/check.svg);\n  background-repeat: no-repeat;\n  top: 0;\n  left: 7px;\n}\n\n.form__input:focus + .additionally::before {\n  outline: 2px solid #222222;\n}\n\n.products-title {\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.product__feature--item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.product {\n  padding: 11px;\n}\n\n.products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.products__item {\n  display: grid;\n  grid-template-columns: 50% 1fr 1fr;\n  grid-template-rows: 1fr 1fr 40px;\n  justify-content: center;\n  border-bottom: 1px solid #EBEBEB;\n}\n.products__item:last-child {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  border-bottom: 1px solid #EBEBEB;\n  text-align: center;\n  padding: 0;\n  padding-bottom: 25px;\n}\n.products__item:last-child .product__title {\n  font-size: 16px;\n  line-height: 20px;\n}\n.products__item:last-child .product__text {\n  margin-bottom: 21px;\n  font-family: \"Arial\";\n  font-size: 12px;\n  line-height: 16px;\n}\n\n.product__icon {\n  padding-top: 25px;\n}\n\n.product__img {\n  grid-column: 1/2;\n  grid-row: 1/3;\n  width: 68px;\n  height: 86px;\n  margin: auto;\n}\n\n.product__description {\n  grid-column: 2/4;\n  grid-row: 1/3;\n}\n\n.product__title {\n  text-transform: uppercase;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 20px;\n}\n\n.product__feature {\n  font-family: \"Arial\";\n  font-size: 12px;\n  line-height: 16px;\n}\n\n.product__feature-title,\n.product__feature-text {\n  display: inline-block;\n}\n\n.product__feature-text {\n  margin: 0;\n}\n\n.add-products__title {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 24px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.add-products__title > span {\n  display: inline-block;\n  padding-right: 22px;\n  background-color: #FFFFFF;\n}\n\n.add-products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.add-products__item {\n  display: flex;\n  flex-direction: column;\n}\n\n.add__feature {\n  display: flex;\n  justify-content: space-between;\n}\n\n.add {\n  padding-bottom: 19px;\n  border-bottom: 1px solid #CDCDCD;\n}\n\n.add__title {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n}\n\n.add__feature {\n  font-family: \"Arial\";\n  font-size: 14px;\n  line-height: 14px;\n}\n\n.gift__wrapper {\n  display: flex;\n  flex-direction: column;\n  min-width: 280px;\n  height: 289px;\n  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);\n  background-size: 280px 289px;\n  background-repeat: no-repeat;\n  margin-bottom: 35px;\n}\n\n.gift__img {\n  padding: 48px 0;\n  text-align: center;\n}\n\n.gift__text {\n  text-align: center;\n  font-family: \"Arial\";\n  font-size: 16px;\n  line-height: 20px;\n  color: #FFFFFF;\n}\n\n.footer {\n  margin-top: auto;\n}\n\n.footer-top__contacts {\n  display: flex;\n  gap: 25px;\n  padding-top: 28px;\n  padding-bottom: 26px;\n}\n\n.footer-top__contacts--grey {\n  margin-left: -20px;\n  padding: 26px 20px;\n  width: 320px;\n  background-color: #F2F2F2;\n}\n\n.footer-top__contacts-slogan {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.footer-top__contacts-address {\n  font-family: \"Arial\";\n  font-size: 14px;\n  line-height: 20px;\n}\n\n.footer-top__map {\n  margin-left: -20px;\n}\n\n.footer-bottom {\n  width: 320px;\n  margin-left: -20px;\n  padding-top: 40px;\n  background-color: #F2F2F2;\n}\n\n.footer-bottom__wrapper {\n  text-align: center;\n}\n\n.footer-bottom__item {\n  width: 100%;\n  border-bottom: 1px solid #D9D9D9;\n}\n.footer-bottom__item:last-child {\n  border-bottom: 0;\n}\n\n.social__list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 35px;\n  justify-content: center;\n  align-items: center;\n  list-style: none;\n  padding: 0;\n}\n\n.social__item {\n  width: 23px;\n  height: 23px;\n}\n\n.logo {\n  padding-bottom: 32px;\n}\n\n.footer-bottom__copyright {\n  padding: 32px 0;\n}\n\n.footer-bottom__copyright {\n  text-align: left;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.copyright__link {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: center;\n}","img {\n  max-width: 100%;\n  height: auto;\n}\n\na {\n  color: $basic_color;\n  text-decoration: none;\n}\n\na:visited {\n  color: $basic_color;\n}\n\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  border: 0;\n  padding: 0;\n  white-space: nowrap;\n  clip-path: inset(100%);\n  clip: rect(0 0 0 0);\n  overflow: hidden;\n}\n\n *,\n *::before,\n *::after {\n  box-sizing: border-box;\n}\n\nfieldset {\n  border: 0;\n  margin: 0;\n  padding: 0;\n}\n\nlabel {\n  cursor: pointer;\n}\n\ninput:focus {\n  border: 2 px solid $special_dark-grey;\n}\n","$basic_color: #000000;\n$background: #FFFFFF;\n$basic_green:#68B738;\n$basic_green-2: #5EAA2F;\n$opacity_green: rgba(104, 183, 56, 0.85);\n$basic_white: #FFFFFF;\n$basic_grey: #F2F2F2;\n$basic_grey-2: #EBEBEB;\n$basic_grey-3: #EAEAEA;\n$grey_line: #E6E6E6;\n$catalog_line: #D9D9D9;\n$border_input: #E7E7E7;\n$special_grey: #CDCDCD;\n$special_grey-2: #666666;\n$special_dark-grey: #444444;\n$special_dark-grey-2: #222222;\n$status_error: #FF8282;\n$shadow: #C4C4C4;\n\n",".button {\n  padding: 7px 44px;\n  cursor: pointer;\n  border: 0;\n  background-color: $basic_green;\n  font-size: 14px;\n  line-height: 18px;\n  text-transform: uppercase;\n}\n\na.button--intro {\n  display: block;\n  width: 100%;\n  color: $basic_white;\n}\n\n.main-nav__toogle {\n  background: transparent;\n  border: 0;\n  cursor: pointer;\n}\n\n.form__button {\n  width: 100%;\n  color: $basic_white;\n}\n\n.program-select__need {\n  text-align: center;\n  margin-bottom: 32px;\n}\n\na.button--product {\n  width: 280px;\n  padding-top: 10px;\n  grid-column: 1 / -1;\n  grid-row: 3/ 4;\n  color: $basic_white;\n  text-align: center;\n  font-size: 16px;\n  line-height: 20px;\n}\n\na.button--view-all {\n  background-color: $basic_grey ;\n  width: 280px;\n  padding-top: 10px;\n  font-size: 16px;\n  color: $special_dark-grey;\n}\n",".page {\n  height: 100%;\n  font-family: Oswald;\n  font-size: 20px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\n.page__body {\n  display: flex;\n  flex-direction: column;\n  width: 320px;\n  min-height: 100%;\n  margin: 0 auto;\n  color: $basic_color;\n  padding: 0 20px;\n\n  @media (min-width: $tablet-width) {\n    width: $tablet-width;\n    outline: 5px solid rgba(31, 12, 112, 0.589);\n    outline-offset: -5px;\n  }\n\n  @media (min-width: $desktop-width) {\n    width: $desktop-width;\n    outline: 5px solid rgba(247, 9, 9, 0.589);\n    outline-offset: -5px;\n  }\n}\n","//viewports\n$tablet-width: 768px;\n$desktop-width: 1440px;\n$mobile-width-only: 767px;\n\n//global\n@import 'color';\n@import 'fonts';\n@import 'global';\n@import 'button';\n\n//blocks\n@import 'blocks/page';\n@import 'blocks/header';\n@import 'blocks/main-intro';\n@import 'blocks/catalog';\n@import 'blocks/how-it-works';\n@import 'blocks/before-after';\n@import 'blocks/program-select';\n@import 'blocks/products';\n@import 'blocks/add-products';\n@import 'blocks/footer';\n",".logo__wrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 12px;\n  margin-bottom: 22px;\n\n  @media (min-width: $tablet-width) {\n  width: max-content;\n  gap: 20px;\n  display: inline-flex;\n  }\n}\n\n\n@media (min-width: $tablet-width) {\n  .main-nav__toogle {\n    display: none;\n  }\n}\n\n.current {\n  border-bottom: 2px solid $basic_green;\n}\n\n@media (min-width: $tablet-width) {\n  .main-nav {\n    display: inline-block;\n    width: 440px;\n  }\n}\n\n.main-nav__list {\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n  align-content: center;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  color: $basic_color;\n  text-align: center;\n  text-transform: uppercase;\n  list-style: none;\n\n  @media (min-width: $tablet-width) {\n    flex-direction: row;\n    width: 100%;\n    height: 240px;\n    border-bottom: 0;\n  }\n}\n\n@media (min-width: $tablet-width) {\n  .site-list {\n    font-size: 18px;\n    line-height: 24px;\n  }\n}\n\n.site-list__item {\n  width: 320px;\n  padding: 22px 0;\n  border-bottom: 1px solid $grey_line;\n  font-weight: 500;\n\n  &:first-child {\n    border-top: 1px solid $grey_line;\n  }\n\n  @media (min-width: $tablet-width) {\n    width: max-content;\n    border-bottom: 0;\n  }\n}\n",".main-intro {\n  text-align: center;\n  margin-bottom: 22px;\n\n  @media (min-width: $tablet-width) {\n    display: block;\n  }\n}\n\n.main-intro .main-intro--bg {\n  width: 320px;\n  margin-left: -20px;\n  background-image: linear-gradient($opacity_green, $opacity_green),\n  url(../img/bg/cat.jpg);\n  background-size: 320px 302px;\n  background-repeat: no-repeat;\n  background-color: #fff;\n}\n\n.main-intro__title {\n  color: $basic_white;\n  padding-top: 27px;\n  margin: 0;\n  margin-bottom: 25px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.main-intro__text {\n  color: $basic_white;\n  margin-bottom: 29px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 14px;\n  line-height: 14px;\n  text-transform: uppercase;\n}\n",".catalog {\n  position: relative;\n  padding: 0 20px 18px 20px;\n  background-color: $basic_grey;\n}\n\n.catalog__title {\n  padding-top: 30px;\n  font-size: 24px;\n  line-height: 37px;\n  font-weight: 400;\n  text-transform: uppercase;\n\n  &::before {\n    content: '';\n  display: inline-block;\n  width: 70px;\n  height: 53px;\n  }\n}\n\n.catalog__title--slim::before {\n  left: 20px;\n  background: url(../img/icon/cat_back--slim.svg) no-repeat;\n}\n\n.catalog__title--pro::before {\n  background: url(../img/icon/cat_back--pro.svg) no-repeat;\n}\n\n.catalog__text {\n  padding-bottom: 23px;\n  margin-bottom: 15px;\n  border-bottom: 1px solid $catalog_line;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.catalog__link {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n\n  &::after {\n    content: '';\n    display: inline-block;\n    width: 40px;\n    height: 10px;\n    margin-left: 15px;\n    margin-bottom: 4px;\n    background: url(../img/icon/arrow__right.svg) no-repeat;\n  }\n}\n",".how-it-works {\n  padding-bottom: 4px;\n}\n\n.how-it-works__title {\n  margin-bottom: 38px;\n}\n\n.how-it-works__list {\n  position: relative;\n  list-style: none;\n  padding: 0;\n}\n\n.how-it-works__item {\n  min-height: 60px;\n  margin-bottom: 20px;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n\n.how-it-works__item::before {\n  content: '';\n  position: absolute;\n  width: 60px;\n  height: 60px;\n}\n\n.how-it-works__item-description {\n  padding-left: 80px;\n}\n\n.how-it-works__item--useful::before {\n  background: url(\"../img/icon/how-it-works-useful.png\");\n}\n\n.how-it-works__item--form::before {\n  background: url(\"../img/icon/how-it-works-form.png\");\n}\n\n.how-it-works__item--change::before {\n  background: url(\"../img/icon/how-it-works-change.png\");\n}\n\n.how-it-works__item--result::before {\n  background: url(\"../img/icon/how-it-works-result.png\");\n}\n",".before-after {\n  width: 320px;\n  margin-left: -20px;\n  background-color: $basic_grey-3;\n}\n\n.before-after__wrapper {\n  padding: 0 20px;\n}\n\n.before-after__title {\n  padding-top: 27px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 40px;\n}\n\n.fieldset__wrapper {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 25px;\n}\n\n.before-after__text {\n  margin-bottom: 25px;\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.before-after__result-box {\n  width: 124px;\n  border: 1px solid $special_grey;\n  transform: rotate(180deg);\n}\n\n.before-after__result-title {\n  margin: 0;\n  height: min-content;\n  text-align: center;\n  transform: rotate(180deg);\n  text-transform: uppercase;\n  font-size: 24px;\n    line-height: 24px;\n}\n\n.before-after__result-text {\n  display: inline-block;\n  padding: 0 10px;\n  text-transform: lowercase;\n  transform: rotate(180deg);\n  text-align: center;\n  font-family: 'Arial';\n  font-size: 12px;\n  line-height: 12px;\n}\n\n\n.before-after__cost {\n  margin-bottom: 42px;\n  text-align: center;\n  font-size: 14px;\n  text-transform: uppercase;\n}\n\n.before-after--image{\n  position: relative;\n}\n\n.range-controls__wrapper {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  align-content: center;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n\n.range-controls {\n  position: relative;\n  background-color: $basic_grey;\n  width: 84px;\n  height: 14px;\n  border: 1px solid $special_grey;\n  border-radius: 6px;\n  padding: 0 6px;\n}\n\n.range-controls .bar {\n  margin-top: 3px;\n  height: 6px;\n  border-radius: 6px;\n  background: $basic-green;\n}\n",".program-select__title {\n  margin-bottom: 37px;\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.program-select__text {\n  margin-bottom: 39px;\n  text-transform: uppercase;\n  font-size: 14px;\n  line-height: 18px;\n}\n\n.form-section {\n  margin-bottom: 26px;\n}\n\n.form-section--program {\n  border-top: 1px solid $catalog_line;\n  border-bottom: 1px solid $catalog_line;\n}\n\n\n.form__item {\n  position: relative;\n  display: flex;\n  align-items: center;\n  margin-bottom: 13px;\n}\n\n.form__item:last-child  {\n  margin-bottom: 0;\n}\n\n.form__label {\n  flex-shrink: 0;\n  margin-right: 15px;\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.form__input {\n  padding: 13px 0 15px 14px;\n  border: 1px solid $border_input;\n\n  &::placeholder{\n    text-transform: uppercase;\n    color: $special_dark-grey;\n  }\n}\n\n.form-section--program {\n  padding-bottom: 19px;\n}\n\n.radio__wrapper {\n  padding-top: 20px;\n}\n\n.form__radio {\n  margin-left: 40px;\n  padding-bottom: 13px;\n}\n\n.form__item:last-child .form__radio {\n  padding: 0;\n}\n\n.form__input + .form__radio::before {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid $special_grey;\n  border-radius: 50%;\n  top: -5px;\n  left: 0;\n}\n\n.form__input:checked + .form__radio:after {\n  content: '';\n  width: 14px;\n  height: 14px;\n  position: absolute;\n  background-color: $basic_green;\n  border-radius: 50%;\n  top: 10%;\n  left: 8px;\n}\n\n.form__input:focus+.form__radio::before {\n  outline: 2px solid $special_dark-grey-2;\n}\n\n\n.form__legend {\n  width: 100%;\n  margin-bottom: 35px;\n  font-size: 24px;\n  line-height: 26px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.form__legend span {\n  display: inline-block;\n  padding-right: 14px;\n  background-color: $background;\n}\n\n.form-section--comment {\n  width: 100%;\n  margin-bottom: 22px;\n}\n\n.form-section--comment>textarea {\n  resize: none;\n  border: 1px solid $border_input;\n}\n\n.form-section--comment > textarea::placeholder {\n  padding-top: 9px;\n  text-align: center;\n  text-transform: uppercase;\n  font-family: 'Oswald';\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.additionally {\n  width: auto;\n  height: 30px;\n  margin-left: 40px;\n}\n\n.form__input + .additionally::before {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  border: 1px solid $border_input;\n  top: -8px;\n  left: 0;\n}\n\n.form__input:checked + .additionally::after {\n  content: '';\n  width: 30px;\n  height: 30px;\n  position: absolute;\n  background-image: url(../img/icon/check.svg);\n  background-repeat: no-repeat;\n  top: 0;\n  left: 7px;\n}\n\n.form__input:focus + .additionally::before{\n  outline: 2px solid $special_dark-grey-2;\n}\n",".products-title {\n  font-weight: 400;\n  font-size: 36px;\n  line-height: 36px;\n}\n\n.product__feature--item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.product {\n  padding: 11px;\n}\n\n.products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.products__item {\n  display: grid;\n  grid-template-columns: 50% 1fr 1fr;\n  grid-template-rows: 1fr 1fr 40px;\n  justify-content: center;\n  border-bottom: 1px solid $basic_grey-2;\n\n  &:last-child {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    border-bottom: 1px solid $basic_grey-2;\n    text-align: center;\n    padding: 0;\n    padding-bottom: 25px;\n\n      & .product__title {\n        font-size: 16px;\n        line-height: 20px;\n      }\n\n      & .product__text {\n        margin-bottom: 21px;\n        font-family: 'Arial';\n        font-size: 12px;\n        line-height: 16px;\n      }\n  }\n}\n\n.product__icon {\n  padding-top: 25px;\n}\n\n.product__img {\n  grid-column: 1 / 2;\n  grid-row: 1 / 3;\n  width: 68px;\n  height: 86px;\n  margin: auto;\n}\n\n.product__description {\n  grid-column: 2 / 4;\n  grid-row: 1 / 3;\n}\n\n.product__title {\n  text-transform: uppercase;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 20px;\n}\n\n.product__feature {\n  font-family: 'Arial';\n  font-size: 12px;\n  line-height: 16px;\n}\n\n.product__feature-title,\n.product__feature-text {\n  display: inline-block;\n}\n\n.product__feature-text {\n  margin: 0;\n}\n",".add-products__title {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 24px;\n  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);\n}\n\n.add-products__title > span {\n  display: inline-block;\n  padding-right: 22px;\n  background-color: $background;\n}\n\n.add-products__list {\n  padding: 0;\n  list-style: none;\n}\n\n.add-products__item {\n  display: flex;\n  flex-direction: column;\n\n}\n\n.add__feature {\n  display: flex;\n  justify-content: space-between;\n}\n\n.add {\n  padding-bottom: 19px;\n  border-bottom: 1px solid $special_grey;\n}\n\n.add__title {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 16px;\n}\n\n.add__feature {\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 14px;\n}\n\n.gift__wrapper {\n  display: flex;\n  flex-direction: column;\n  min-width: 280px;\n  height: 289px;\n  background-image: linear-gradient($opacity_green, $opacity_green),\n  url(../img/bg/cat-bag.jpg);\n  background-size: 280px 289px;\n  background-repeat: no-repeat;\n  margin-bottom: 35px;\n}\n\n.gift__img {\n  padding: 48px 0;\n  text-align: center;\n}\n\n.gift__text {\n  text-align: center;\n  font-family: 'Arial';\n  font-size: 16px;\n  line-height: 20px;\n  color: $basic_white\n}\n",".footer {\n  margin-top: auto;\n}\n\n.footer-top__contacts {\n  display: flex;\n  gap: 25px;\n  padding-top: 28px;\n  padding-bottom: 26px;\n}\n\n.footer-top__contacts--grey {\n  margin-left: -20px;\n  padding: 26px 20px;\n  width: 320px;\n  background-color: $basic_grey;\n}\n\n.footer-top__contacts-slogan {\n  text-transform: uppercase;\n  font-size: 16px;\n  line-height: 18px;\n}\n\n.footer-top__contacts-address {\n  font-family: 'Arial';\n  font-size: 14px;\n  line-height: 20px;\n}\n\n.footer-top__map {\n  margin-left: -20px;\n}\n\n.footer-bottom {\n  width: 320px;\n  margin-left: -20px;\n  padding-top: 40px;\n  background-color: $basic_grey;\n}\n\n.footer-bottom__wrapper {\n  text-align: center;\n}\n\n.footer-bottom__item {\n  width: 100%;\n  border-bottom: 1px solid $catalog_line;\n\n  &:last-child{\n    border-bottom: 0;\n  }\n}\n\n.social__list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 35px;\n  justify-content: center;\n  align-items: center;\n  list-style: none;\n  padding: 0;\n}\n\n.social__item {\n  width: 23px;\n  height: 23px;\n}\n\n.logo {\n  padding-bottom: 32px;\n}\n\n.footer-bottom__copyright {\n  padding: 32px 0;\n}\n\n.footer-bottom__copyright {\n  text-align: left;\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.copyright__link {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: center;\n}\n"]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @import url(https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap);
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2 px solid #444444;
+}
+
+.button {
+  padding: 7px 44px;
+  cursor: pointer;
+  border: 0;
+  background-color: #68B738;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+a.button--intro {
+  display: block;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.main-nav__toogle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.form__button {
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.program-select__need {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+a.button--product {
+  width: 280px;
+  padding-top: 10px;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+a.button--view-all {
+  background-color: #F2F2F2;
+  width: 280px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
+.page {
+  height: 100%;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  color: #000000;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .page__body {
+    width: 768px;
+    outline: 5px solid rgba(31, 12, 112, 0.589);
+    outline-offset: -5px;
+  }
+}
+@media (min-width: 1440px) {
+  .page__body {
+    width: 1440px;
+    outline: 5px solid rgba(247, 9, 9, 0.589);
+    outline-offset: -5px;
+  }
+}
+
+.logo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .logo__wrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    gap: 20px;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav__toogle {
+    display: none;
+  }
+}
+.current {
+  border-bottom: 2px solid #68B738;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: inline-block;
+    width: 440px;
+  }
+}
+.main-nav__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .main-nav__list {
+    flex-direction: row;
+    width: 100%;
+    height: 240px;
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-list {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.site-list__item {
+  width: 320px;
+  padding: 22px 0;
+  border-bottom: 1px solid #E6E6E6;
+  font-weight: 500;
+}
+.site-list__item:first-child {
+  border-top: 1px solid #E6E6E6;
+}
+@media (min-width: 768px) {
+  .site-list__item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-bottom: 0;
+  }
+}
+
+.main-intro {
+  text-align: center;
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .main-intro {
+    display: block;
+  }
+}
+
+.main-intro .main-intro--bg {
+  width: 320px;
+  margin-left: -20px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-size: 320px 302px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.main-intro__title {
+  color: #FFFFFF;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-intro__text {
+  color: #FFFFFF;
+  margin-bottom: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.catalog {
+  position: relative;
+  padding: 0 20px 18px 20px;
+  background-color: #F2F2F2;
+}
+
+.catalog__title {
+  padding-top: 30px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.catalog__title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 53px;
+}
+
+.catalog__title--slim::before {
+  left: 20px;
+  background: url(../img/icon/cat_back--slim.svg) no-repeat;
+}
+
+.catalog__title--pro::before {
+  background: url(../img/icon/cat_back--pro.svg) no-repeat;
+}
+
+.catalog__text {
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D9D9D9;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog__link {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+.catalog__link::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-left: 15px;
+  margin-bottom: 4px;
+  background: url(../img/icon/arrow__right.svg) no-repeat;
+}
+
+.how-it-works {
+  padding-bottom: 4px;
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+}
+
+.how-it-works__list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works__item {
+  min-height: 60px;
+  margin-bottom: 20px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.how-it-works__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.how-it-works__item-description {
+  padding-left: 80px;
+}
+
+.how-it-works__item--useful::before {
+  background: url("../img/icon/how-it-works-useful.png");
+}
+
+.how-it-works__item--form::before {
+  background: url("../img/icon/how-it-works-form.png");
+}
+
+.how-it-works__item--change::before {
+  background: url("../img/icon/how-it-works-change.png");
+}
+
+.how-it-works__item--result::before {
+  background: url("../img/icon/how-it-works-result.png");
+}
+
+.before-after {
+  width: 320px;
+  margin-left: -20px;
+  background-color: #EAEAEA;
+}
+
+.before-after__wrapper {
+  padding: 0 20px;
+}
+
+.before-after__title {
+  padding-top: 27px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.fieldset__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.before-after__text {
+  margin-bottom: 25px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.before-after__result-box {
+  width: 124px;
+  border: 1px solid #CDCDCD;
+  transform: rotate(180deg);
+}
+
+.before-after__result-title {
+  margin: 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: center;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.before-after__result-text {
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: lowercase;
+  transform: rotate(180deg);
+  text-align: center;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.before-after__cost {
+  margin-bottom: 42px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.before-after--image {
+  position: relative;
+}
+
+.range-controls__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.range-controls {
+  position: relative;
+  background-color: #F2F2F2;
+  width: 84px;
+  height: 14px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+.range-controls .bar {
+  margin-top: 3px;
+  height: 6px;
+  border-radius: 6px;
+  background: #68B738;
+}
+
+.program-select__title {
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-select__text {
+  margin-bottom: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form-section {
+  margin-bottom: 26px;
+}
+
+.form-section--program {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
+}
+
+.form__label {
+  flex-shrink: 0;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__input {
+  padding: 13px 0 15px 14px;
+  border: 1px solid #E7E7E7;
+}
+.form__input::-moz-placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+.form__input::placeholder {
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.form-section--program {
+  padding-bottom: 19px;
+}
+
+.radio__wrapper {
+  padding-top: 20px;
+}
+
+.form__radio {
+  margin-left: 40px;
+  padding-bottom: 13px;
+}
+
+.form__item:last-child .form__radio {
+  padding: 0;
+}
+
+.form__input + .form__radio::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+}
+
+.form__input:checked + .form__radio:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background-color: #68B738;
+  border-radius: 50%;
+  top: 10%;
+  left: 8px;
+}
+
+.form__input:focus + .form__radio::before {
+  outline: 2px solid #222222;
+}
+
+.form__legend {
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 26px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.form__legend span {
+  display: inline-block;
+  padding-right: 14px;
+  background-color: #FFFFFF;
+}
+
+.form-section--comment {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-section--comment > textarea {
+  resize: none;
+  border: 1px solid #E7E7E7;
+}
+
+.form-section--comment > textarea::-moz-placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-section--comment > textarea::placeholder {
+  padding-top: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.additionally {
+  width: auto;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.form__input + .additionally::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #E7E7E7;
+  top: -8px;
+  left: 0;
+}
+
+.form__input:checked + .additionally::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url(../img/icon/check.svg);
+  background-repeat: no-repeat;
+  top: 0;
+  left: 7px;
+}
+
+.form__input:focus + .additionally::before {
+  outline: 2px solid #222222;
+}
+
+.products-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.product__feature--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  padding: 11px;
+}
+
+.products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.products__item {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+.products__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 25px;
+}
+.products__item:last-child .product__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+.products__item:last-child .product__text {
+  margin-bottom: 21px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__icon {
+  padding-top: 25px;
+}
+
+.product__img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 68px;
+  height: 86px;
+  margin: auto;
+}
+
+.product__description {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+
+.product__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product__feature {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__feature-title,
+.product__feature-text {
+  display: inline-block;
+}
+
+.product__feature-text {
+  margin: 0;
+}
+
+.add-products__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+}
+
+.add-products__title > span {
+  display: inline-block;
+  padding-right: 22px;
+  background-color: #FFFFFF;
+}
+
+.add-products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.add-products__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.add__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.add__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.add__feature {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.gift__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  height: 289px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-bag.jpg);
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.gift__img {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.gift__text {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.footer-top__contacts {
+  display: flex;
+  gap: 25px;
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+
+.footer-top__contacts--grey {
+  margin-left: -20px;
+  padding: 26px 20px;
+  width: 320px;
+  background-color: #F2F2F2;
+}
+
+.footer-top__contacts-slogan {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-top__contacts-address {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-top__map {
+  margin-left: -20px;
+}
+
+.footer-bottom {
+  width: 320px;
+  margin-left: -20px;
+  padding-top: 40px;
+  background-color: #F2F2F2;
+}
+
+.footer-bottom__wrapper {
+  text-align: center;
+}
+
+.footer-bottom__item {
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+.footer-bottom__item:last-child {
+  border-bottom: 0;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social__item {
+  width: 23px;
+  height: 23px;
+}
+
+.logo {
+  padding-bottom: 32px;
+}
+
+.footer-bottom__copyright {
+  padding: 32px 0;
+}
+
+.footer-bottom__copyright {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.copyright__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 {"version":3,"sources":["_fonts.scss","style.css","_global.scss","_color.scss","_button.scss","blocks/_page.scss","style.scss","blocks/_header.scss","blocks/_main-intro.scss","blocks/_catalog.scss","blocks/_how-it-works.scss","blocks/_before-after.scss","blocks/_program-select.scss","blocks/_products.scss","blocks/_add-products.scss","blocks/_footer.scss"],"names":[],"mappings":"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

@@ -234,12 +234,6 @@ a.button--view-all {
     max-width: 1440px;
   }
 }
-@media (min-width: 1440px) {
-  .page__body {
-    max-width: 1220px;
-    margin-inline: 110px;
-  }
-}
 
 .page-header {
   min-width: 280px;
@@ -266,6 +260,23 @@ a.button--view-all {
   }
 }
 
+.page-header__logo--size {
+  width: 33.5px;
+  height: 37.5px;
+}
+@media (min-width: 768px) {
+  .page-header__logo--size {
+    width: 174px;
+    height: 51.5px;
+  }
+}
+@media (min-width: 1440px) {
+  .page-header__logo--size {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .page-header__logo:hover {
   opacity: 0.8;
 }
@@ -274,6 +285,11 @@ a.button--view-all {
   opacity: 0.6;
 }
 
+@media (min-width: 768px) {
+  .page-header__logo-text {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .page-header__logo--tablet,
 .page-header__logo--desktop {
@@ -367,6 +383,7 @@ a.button--view-all {
 @media (min-width: 1440px) {
   .main-nav__list {
     margin-top: 50px;
+    z-index: 2;
   }
 }
 
@@ -442,11 +459,21 @@ a.button--view-all {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat.jpg);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-desktop.jpg);
   background-color: #68B738;
-  background-size: 320px 302px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .main-intro__picture {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-desktop@2x.jpg);
+  }
+}
+@media (max-width: 767px) {
+  .main-intro__picture {
+    background-position: 0 0, -90px 0;
+  }
 }
 @media (min-width: 768px) {
   .main-intro__picture {
@@ -460,9 +487,9 @@ a.button--view-all {
     left: 699px;
     transform: translate(0, 0);
     display: block;
-    width: 50vw;
+    min-width: 720px;
     height: 696px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/cat-desktop.jpg);
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-desktop.jpg);
     background-color: #68B738;
     background-size: cover;
     z-index: -1;
@@ -517,13 +544,16 @@ a.button--view-all {
   background-repeat: no-repeat;
   margin-inline: auto;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .main-intro__picture-chiken-pro {
+    background-image: url("../img/chiken-pro@2x.png");
+  }
+}
 @media (min-width: 768px) {
   .main-intro__picture-chiken-pro {
     display: block;
     width: 100%;
     height: 609px;
-    background-image: url("../img/chiken-pro.png");
-    background-repeat: no-repeat;
     background-size: contain;
     margin: 0 auto;
   }
@@ -846,12 +876,20 @@ a.button--view-all {
   position: relative;
   margin: 0 auto;
   width: 311px;
-  height: 300px;
+  height: 232px;
 }
 
 .before-after__before {
   width: 311px;
   height: 232px;
+  z-index: 2;
+}
+
+.before-after__after {
+  width: 251px;
+  height: 240px;
+  left: 35px;
+  z-index: 1;
 }
 
 .before-after--image {

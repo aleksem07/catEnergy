@@ -108,12 +108,20 @@
   position: relative;
   margin: 0 auto;
   width: 311px;
-  height: 300px;
+  height: 232px;
 }
 
 .before-after__before {
   width: 311px;
   height: 232px;
+  z-index: 2;
+}
+
+.before-after__after {
+  width: 251px;
+  height: 240px;
+  left: 35px;
+  z-index: 1;
 }
 
 .before-after--image{
