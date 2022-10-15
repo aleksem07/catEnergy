@@ -31,3 +31,4 @@
 - адаптив
 - styleguide
 - pixelperfect
+- svg

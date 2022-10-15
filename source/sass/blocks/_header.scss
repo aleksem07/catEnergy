@@ -39,6 +39,10 @@
   }
 }
 
+.page-header__logo {
+  margin-inline: 1px;
+}
+
 .page-header__logo:hover {
   opacity: 0.8;
 }
@@ -167,7 +171,7 @@
 .site-list__item {
   position: relative;
   width: 320px;
-  padding: 22px 0;
+  padding: 21.5px 0;
   border-bottom: 1px solid $grey_line;
   font-weight: 500;
 

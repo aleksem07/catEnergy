@@ -1,9 +1,14 @@
 .how-it-works {
+  margin-bottom: 18px;
   padding-bottom: 4px;
 }
 
 .how-it-works__title {
+  margin-top: 0;
   margin-bottom: 38px;
+    font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -78,6 +83,7 @@
 }
 
 .how-it-works__item-description {
+  padding-top: 2px;
   padding-left: 80px;
 
   @media (min-width: $tablet-width) {

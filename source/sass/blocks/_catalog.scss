@@ -1,9 +1,16 @@
+
+.catalog-selection {
+  margin-bottom: 25px;
+}
+
 .catalog {
   min-width: 280px;
   position: relative;
   padding: 0 20px 18px 20px;
   background-color: $basic_grey;
 }
+
+
 
 @media (min-width: $desktop-width) {
 .catalog-selection__wrapper {
@@ -16,17 +23,24 @@ padding: 0;
 }
 
 .catalog__title {
-  padding-top: 30px;
+  position: relative;
+  padding-top: 29px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  padding-left: 71px;
+
 
 	&::before {
-	content: '';
-	display: inline-block;
-	width: 70px;
-	height: 53px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 53px;
+    top: 20px;
+    left: 2px;
 
   @media (min-width: $tablet-width){
     font-size: 36px;
@@ -34,7 +48,6 @@ padding: 0;
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    position: absolute;
     top: 20px;
     right: 50px;
     width: 270px;
@@ -44,19 +57,24 @@ padding: 0;
 
 }
 
+.catalog__title--pro {
+  padding-top: 24px;
+}
+
 .catalog__title--slim::before {
-  // left: 20px;
   background: url(../img/icon/cat_back--slim.svg) 0 0/contain no-repeat;
 }
 
 .catalog__title--pro::before {
-	left: 50%;
-  background: url(../img/icon/cat_back--pro.svg) 0 0/cover no-repeat;
+  height: 50px;
+  top: 19px;
+  left: -7px;
+  background: url(../img/icon/cat_back--pro.svg) 0 0/contain no-repeat;
 }
 
 .catalog__text {
   position: relative;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   margin-bottom: 15px;
   border-bottom: 1px solid $catalog_line;
   font-family: 'Arial';
@@ -77,6 +95,7 @@ padding: 0;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+  padding-block: 5px;
 
   &::after {
     content: '';

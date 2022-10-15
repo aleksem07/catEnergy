@@ -10,11 +10,11 @@
 .footer-top__contacts {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 5px;
   min-width: 320px;
-  padding-top: 28px;
+  padding-top: 12px;
   padding-inline: 19px;
-  padding-bottom: 26px;
+  padding-bottom: 15px;
 
 
   @media (min-width: $desktop-width) {
@@ -34,25 +34,20 @@
 }
 
 .footer-top__contacts-slogan {
+  min-width: 140px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-
-
-    width: 171px;
-
+  font-weight: 400;
 }
 
 .footer-top__contacts-address {
+
   font-family: 'Arial';
   font-size: 14px;
   line-height: 20px;
 
-    width: 159px;
-
-}
-
-.footer-top__map {
+    // width: 159px;
 
 }
 
@@ -111,7 +106,8 @@
 }
 
 .logo {
-  padding-bottom: 32px;
+  margin-top: -4px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -119,13 +115,12 @@
 }
 
 .footer-bottom__copyright {
-  padding: 32px 0;
-}
-
-.footer-bottom__copyright {
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .copyright__link {
