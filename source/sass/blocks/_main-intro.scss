@@ -105,6 +105,10 @@
     text-align: left;
     color: $basic_color;
   }
+
+  .main-intro__text {
+    margin-bottom: 2px;
+  }
 }
 
 .main-intro__picture-chiken-pro {
@@ -123,10 +127,10 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    width: 100%;
+    width: 709px;
     height: 609px;
+    background-position: 35px 20px;
     background-size: contain;
-    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
