@@ -8,6 +8,7 @@
   position: relative;
   padding: 0 20px 18px 20px;
   background-color: $basic_grey;
+  margin-block: 24px;
 
   @media (min-width: $tablet-width) {
     height: 370px;

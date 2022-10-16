@@ -33,11 +33,30 @@
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
-    padding-block: 40px;
+    margin-bottom: 55px;
+    padding: 9px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
   }
+}
+
+.before-after__text {
+  margin-bottom: 26px;
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 11px;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.before-after__text span{
+  white-space: nowrap;
 }
 
 .fieldset__wrapper {
@@ -47,16 +66,18 @@
 
   @media (min-width: $tablet-width) {
     display: inline-flex;
-    gap: 42px;
-    padding-left: 20px;
+    gap: 37px;
+    padding-left: 11px;
   }
 }
 
-.before-after__text {
-  margin-bottom: 26px;
-  font-family: 'Arial';
-  font-size: 14px;
-  line-height: 18px;
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .before-after__stat-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
 }
 
 .before-after__result-box {
@@ -87,6 +108,15 @@
   line-height: 12px;
 }
 
+@media (min-width: $tablet-width) {
+  .before-after__result-text br{
+    display: none;
+    padding-inline: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
 // legend firefox
 @media screen and (min--moz-device-pixel-ratio:0) {
   fieldset {
@@ -98,19 +128,33 @@
     position: absolute;
     top: -15px;
     left: 15%;
-    /* depends on font size and border */
     background-color: #eaeaea;
-    /* depends on background */
-    // transform: translate(-50%, 0);
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        top: -5px;
+        left: 20px;
+        background-color: white;
+    }
   }
 
   .before-after__result-box {
     height: 56px;
+
+    @media (min-width: $tablet-width) {
+      width: 165px;
+      height: 75px;
+    }
   }
 
   .before-after__result-title {
     padding-bottom: 12px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
+
 }
 
 
@@ -122,10 +166,12 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: inline-flex;
-    width: 174px;
+    max-width: 174px;
+    margin-top: 10px;
+    margin-left: 20px;
     text-align: right;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {

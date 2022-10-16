@@ -66,7 +66,7 @@ iframe {
   min-width: 320px;
 }
 
-h3 {
+h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -601,6 +601,7 @@ a.button--view-all {
   position: relative;
   padding: 0 20px 18px 20px;
   background-color: #F2F2F2;
+  margin-block: 24px;
 }
 @media (min-width: 768px) {
   .catalog {
@@ -756,6 +757,12 @@ a.button--view-all {
   margin-bottom: 18px;
   padding-bottom: 4px;
 }
+@media (min-width: 768px) {
+  .how-it-works {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
 
 .how-it-works__title {
   margin-top: 0;
@@ -766,6 +773,9 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .how-it-works__title {
+    margin-top: 45px;
+    margin-bottom: 75px;
+    margin-left: 10px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -784,7 +794,8 @@ a.button--view-all {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 37px;
+    gap: 17px;
+    padding-left: 10px;
   }
 }
 
@@ -805,7 +816,7 @@ a.button--view-all {
 
 @media (min-width: 768px) {
   .how-it-works__item:nth-child(even) {
-    margin-right: 79px;
+    margin-right: 105px;
   }
 }
 @media (min-width: 1440px) {
@@ -819,6 +830,12 @@ a.button--view-all {
   width: 60px;
   height: 60px;
 }
+@media (min-width: 768px) {
+  .how-it-works__item::before {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 @media (min-width: 768px) {
   .how-it-works__list li::after {
@@ -826,13 +843,16 @@ a.button--view-all {
     counter-increment: point 1; /* увеличваем счетчик на 1 */
     position: absolute;
     top: -40px;
-    right: 0;
+    right: -16px;
     z-index: -1;
     font-family: "Oswald";
     font-weight: 400;
     font-size: 280px;
     line-height: 280px;
     color: #F2F2F2;
+  }
+  .how-it-works__list li:first-child::after {
+    right: 0;
   }
 }
 .how-it-works__item-description {
@@ -842,7 +862,10 @@ a.button--view-all {
 @media (min-width: 768px) {
   .how-it-works__item-description {
     padding: 0;
-    margin-top: 100px;
+    margin-top: 113px;
+    font-family: "Arial";
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -862,6 +885,15 @@ a.button--view-all {
   background: url("../img/icon/how-it-works-result.png");
 }
 
+@media (min-width: 768px) {
+  .how-it-works__item--useful::before,
+.how-it-works__item--form::before,
+.how-it-works__item--change::before,
+.how-it-works__item--result::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 .before-after {
   min-width: 320px;
   margin-inline: -20px;
@@ -899,11 +931,31 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .before-after__title {
-    padding-block: 40px;
+    margin-bottom: 55px;
+    padding: 9px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
   }
+}
+
+.before-after__text {
+  margin-bottom: 26px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .before-after__text {
+    margin-left: 11px;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.before-after__text span {
+  white-space: nowrap;
 }
 
 .fieldset__wrapper {
@@ -914,18 +966,19 @@ a.button--view-all {
 @media (min-width: 768px) {
   .fieldset__wrapper {
     display: inline-flex;
-    gap: 42px;
-    padding-left: 20px;
+    gap: 37px;
+    padding-left: 11px;
   }
 }
 
-.before-after__text {
-  margin-bottom: 26px;
-  font-family: "Arial";
-  font-size: 14px;
-  line-height: 18px;
+@media (min-width: 768px) and (max-width: 1440px) {
+  .before-after__stat-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
 }
-
 .before-after__result-box {
   width: 124px;
   height: 67px;
@@ -954,6 +1007,14 @@ a.button--view-all {
   line-height: 12px;
 }
 
+@media (min-width: 768px) {
+  .before-after__result-text br {
+    display: none;
+    padding-inline: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 @media screen and (min--moz-device-pixel-ratio: 0) {
   fieldset {
     position: relative;
@@ -963,15 +1024,36 @@ a.button--view-all {
     position: absolute;
     top: -15px;
     left: 15%;
-    /* depends on font size and border */
     background-color: #eaeaea;
-    /* depends on background */
   }
+}
+@media screen and (min--moz-device-pixel-ratio: 0) and (min-width: 768px) and (max-width: 1440px) {
+  fieldset > legend {
+    top: -5px;
+    left: 20px;
+    background-color: white;
+  }
+}
+@media screen and (min--moz-device-pixel-ratio: 0) {
   .before-after__result-box {
     height: 56px;
   }
+}
+@media screen and (min--moz-device-pixel-ratio: 0) and (min-width: 768px) {
+  .before-after__result-box {
+    width: 165px;
+    height: 75px;
+  }
+}
+@media screen and (min--moz-device-pixel-ratio: 0) {
   .before-after__result-title {
     padding-bottom: 12px;
+  }
+}
+@media screen and (min--moz-device-pixel-ratio: 0) and (min-width: 768px) {
+  .before-after__result-title {
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 .before-after__cost {
@@ -983,10 +1065,12 @@ a.button--view-all {
 @media (min-width: 768px) and (max-width: 1440px) {
   .before-after__cost {
     display: inline-flex;
-    width: 174px;
+    max-width: 174px;
+    margin-top: 10px;
+    margin-left: 20px;
     text-align: right;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 25px;
   }
 }
 @media (min-width: 1440px) {

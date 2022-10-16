@@ -1,6 +1,11 @@
 .how-it-works {
   margin-bottom: 18px;
   padding-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .how-it-works__title {
@@ -11,6 +16,9 @@
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    margin-bottom: 75px;
+    margin-left: 10px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -29,7 +37,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 37px;
+    gap: 17px;
+    padding-left: 10px;
   }
 }
 
@@ -49,7 +58,7 @@
 
 @media (min-width: $tablet-width) {
   .how-it-works__item:nth-child(even) {
-    margin-right: 79px;
+    margin-right: 105px;
   }
 }
 
@@ -64,6 +73,11 @@
   position: absolute;
   width: 60px;
   height: 60px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -72,14 +86,17 @@
   counter-increment: point 1; /* увеличваем счетчик на 1 */
   position: absolute;
   top: -40px;
-  right: 0;
+  right: -16px;
   z-index: -1;
   font-family: 'Oswald';
   font-weight: 400;
   font-size: 280px;
   line-height: 280px;
   color: $basic_grey;
-}
+  }
+  .how-it-works__list li:first-child::after {
+    right: 0;
+  }
 }
 
 .how-it-works__item-description {
@@ -88,7 +105,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    margin-top: 100px;
+    margin-top: 113px;
+    font-family: 'Arial';
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -106,4 +126,14 @@
 
 .how-it-works__item--result::before {
   background: url("../img/icon/how-it-works-result.png");
+}
+
+@media (min-width: $tablet-width) {
+  .how-it-works__item--useful::before,
+  .how-it-works__item--form::before,
+  .how-it-works__item--change::before,
+  .how-it-works__item--result::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
