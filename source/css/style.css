@@ -93,10 +93,11 @@ a.button--intro {
     position: relative;
     top: -600px;
     left: 0;
-    width: 244px;
+    width: 245px;
+    min-width: 245px;
     height: 54px;
-    margin-left: 112px;
-    padding: 14px;
+    margin-left: 92px;
+    padding: 18px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -530,12 +531,20 @@ a.button--view-all {
   line-height: 14px;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .main-intro__text {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
 
 @media (min-width: 768px) {
   .main-intro__title,
 .main-intro__text {
     display: block;
     margin-left: 97px;
+    margin-bottom: 41px;
     min-width: 414px;
     text-align: left;
     color: #000000;

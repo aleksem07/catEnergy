@@ -23,10 +23,11 @@ a.button--intro {
     position: relative;
     top: -600px;
     left: 0;
-    width: 244px;
+    width: 245px;
+    min-width: 245px;
     height: 54px;
-    margin-left: 112px;
-    padding: 14px;
+    margin-left: 92px;
+    padding: 18px;
     font-size: 20px;
     line-height: 20px;
   }
