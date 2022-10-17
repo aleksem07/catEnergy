@@ -915,12 +915,18 @@ a.button--view-all {
   }
 }
 
+@media (min-width: 768px) {
+  .before-after__text-box {
+    margin-bottom: 10px;
+  }
+}
 @media (min-width: 1440px) {
   .before-after__text-box {
     width: 436px;
     margin-right: 134px;
   }
 }
+
 .before-after__title {
   margin-top: 0;
   margin-bottom: 33px;
@@ -1090,12 +1096,11 @@ a.button--view-all {
   height: 232px;
   margin-bottom: 17px;
 }
-
-.before-after--image {
-  position: absolute;
-  margin-left: -20px;
-  top: -10px;
-  left: 0px;
+@media (min-width: 768px) {
+  .before-after__image-box {
+    width: 100%;
+    height: 600px;
+  }
 }
 
 .before-after__before {
@@ -1111,6 +1116,31 @@ a.button--view-all {
   left: 35px;
   z-index: 1;
 }
+@media (min-width: 768px) {
+  .before-after__after {
+    top: 0px;
+    left: 25px;
+  }
+}
+
+.before-after--image {
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .before-after--image {
+    margin-left: -20px;
+    top: -10px;
+    left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .before-after--image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: none;
+       object-fit: none;
+  }
+}
 
 .range-controls__wrapper {
   display: flex;
@@ -1121,7 +1151,21 @@ a.button--view-all {
   text-transform: uppercase;
   font-size: 16px;
 }
+@media (min-width: 768px) {
+  .range-controls__wrapper {
+    position: relative;
+    top: -65px;
+    margin-inline: 79px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 
+@media (min-width: 768px) {
+  .range-controls__wrapper p {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+}
 .range-controls {
   position: relative;
   background-color: #F2F2F2;
@@ -1131,6 +1175,13 @@ a.button--view-all {
   border-radius: 6px;
   padding: 0 6px;
 }
+@media (min-width: 768px) {
+  .range-controls {
+    width: 100%;
+    height: 6px;
+    border: none;
+  }
+}
 
 .range-controls .bar {
   margin-top: 3px;
@@ -1138,7 +1189,31 @@ a.button--view-all {
   border-radius: 6px;
   background: #68B738;
 }
+@media (min-width: 768px) {
+  .range-controls .bar {
+    top: -15px;
+    position: relative;
+    width: 34px !important;
+    height: 34px;
+    margin: 0 auto;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+}
 
+@media (min-width: 768px) {
+  .range-controls .bar::before {
+    content: "";
+    top: 40%;
+    left: 40%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #68B738;
+  }
+}
 @media (min-width: 1440px) {
   .form-section--desktop__wrapper {
     display: flex;
@@ -1700,6 +1775,13 @@ a.button--view-all {
   padding-inline: 19px;
   padding-bottom: 15px;
 }
+@media (min-width: 768px) {
+  .footer-top__contacts {
+    padding-top: 31px;
+    padding-inline: 72px;
+    margin-bottom: 28px;
+  }
+}
 @media (min-width: 1440px) {
   .footer-top__contacts {
     position: absolute;
@@ -1724,13 +1806,40 @@ a.button--view-all {
   line-height: 18px;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  .footer-top__contacts-slogan {
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+  }
+}
 
 .footer-top__contacts-address {
   font-family: "Arial";
   font-size: 14px;
   line-height: 20px;
 }
+@media (min-width: 768px) {
+  .footer-top__contacts-address {
+    max-width: 159px;
+    text-align: end;
+    font-family: "Arial";
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
+@media (min-width: 768px) {
+  .footer-top__contacts-address span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-top__map iframe {
+    height: 400px;
+  }
+}
 .footer-bottom {
   min-width: 320px;
   padding-top: 40px;
@@ -1738,7 +1847,8 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .footer-bottom {
-    padding: 0 20px;
+    height: 150px;
+    padding: 0 30px;
   }
 }
 
@@ -1748,6 +1858,7 @@ a.button--view-all {
 @media (min-width: 768px) {
   .footer-bottom__wrapper {
     display: flex;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
     align-content: flex-start;
@@ -1805,6 +1916,12 @@ a.button--view-all {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+}
+@media (min-width: 768px) {
+  .footer-bottom__copyright {
+    padding: 0;
+    margin-top: -18px;
+  }
 }
 
 .copyright__link {
