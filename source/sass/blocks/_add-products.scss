@@ -15,7 +15,12 @@
 }
 
 .add-products {
-  min-width: 320px;
+  min-width: 280px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 44px;
+  }
+
 }
 
 .add-products__title {
@@ -34,6 +39,10 @@
 .add-products__list {
   padding: 0;
   list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 32px;
+  }
 }
 
 .add-products__item {
@@ -66,7 +75,7 @@
 }
 
 .add {
-  padding-bottom: 19px;
+  padding-bottom: 14px;
   border-bottom: 1px solid $special_grey;
 }
 
@@ -84,12 +93,16 @@
   font-family: 'Arial';
   font-size: 14px;
   line-height: 14px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 15px;
+  }
 }
 
 .gift__wrapper {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: 280px;
   height: 289px;
   background-image: linear-gradient($opacity_green, $opacity_green),
   url(../img/bg/cat-bag.jpg);
@@ -107,7 +120,8 @@
 }
 
 .gift__img {
-  padding: 48px 0;
+  padding-top: 58px;
+  padding-bottom: 30px;
   text-align: center;
 }
 

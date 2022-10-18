@@ -1,6 +1,23 @@
 .page-header {
+  position: relative;
   min-width: 280px;
 
+  @media (max-width: $mobile-width-only) {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    width: 100vh;
+    margin-left: -20px;
+    border-bottom: 1px solid $catalog_line;
+  }
+  }
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.page-header--index {
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -208,6 +225,10 @@
     line-height: 30px;
     font-weight: 400;
   }
+}
+
+.site-list__item:last-child {
+  border-bottom: none;
 }
 
   @media (min-width: $tablet-width) {
