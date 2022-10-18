@@ -28,6 +28,13 @@
   font-size: 24px;
   line-height: 24px;
   background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 45px;
+    margin-bottom: 85px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .add-products__title > span {
@@ -42,6 +49,11 @@
 
   @media (max-width: $mobile-width-only) {
     margin-top: 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    padding-inline: 50px;
   }
 }
 
@@ -67,8 +79,12 @@
   display: flex;
   justify-content: space-between;
 
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @media (min-width: $desktop-width) {
-    // width: 285px;
     flex-basis: 285px;
     justify-content: space-between;;
   }
@@ -77,12 +93,22 @@
 .add {
   padding-bottom: 14px;
   border-bottom: 1px solid $special_grey;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    margin-bottom: 13px;
+  }
 }
 
 .add__title {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     flex-grow: 1;
@@ -97,6 +123,16 @@
   @media (max-width: $mobile-width-only) {
     margin-bottom: 15px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.add-product__feature-text {
+  margin-left: 55px;
 }
 
 .gift__wrapper {
@@ -112,9 +148,12 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    height: 200px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-inline: 10px;
+    margin-bottom: 90px;
   }
 
 }

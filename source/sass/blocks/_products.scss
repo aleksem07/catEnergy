@@ -35,6 +35,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
     border-bottom: 1px solid $special_grey;
   }
 
@@ -54,11 +55,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-        justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 80px;
+    gap: 30px;
   }
 }
 
@@ -104,9 +106,18 @@
       border: none;
     }
 
+      @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+    }
+
       & .product__title {
         font-size: 16px;
         line-height: 20px;
+
+        @media (min-width: $tablet-width) {
+          font-size: 20px;
+          line-height: 22px;
+        }
       }
 
       & .product__text {
@@ -114,6 +125,14 @@
         font-family: 'Arial';
         font-size: 12px;
         line-height: 16px;
+
+        @media (min-width: $tablet-width) {
+          max-width: 200px;
+          margin: 0 auto;
+          margin-bottom: 100px;
+          font-size: 16px;
+          line-height: 18px;
+          }
       }
   }
 
@@ -123,9 +142,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 324px;
-    height: 511px;
+    height: 513px;
+    margin-inline: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -142,6 +163,11 @@
   @media (max-width: $mobile-width-only) {
     margin-bottom: 29px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 120px;
+    height: 429px;
+  }
 }
 
 .product__icon {
@@ -150,6 +176,10 @@
   @media (max-width: $mobile-width-only) {
     padding-top: 0;
     flex: 1 0 auto;
+  }
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -161,6 +191,12 @@
   @media (max-width: $mobile-width-only) {
     width: 78px;
     height: 86px;
+    object-fit: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex: 1 0;
+    margin-top: 45px;
     object-fit: contain;
   }
 
@@ -194,6 +230,11 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 150px;
+    margin: 25px auto;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
     text-align: center;
   }
 
@@ -204,11 +245,23 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .product__title br {
+    display: none;
+  }
+}
+
 .product__feature {
   font-family: 'Arial';
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 35px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product__feature-title,
