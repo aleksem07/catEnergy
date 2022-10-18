@@ -24,10 +24,12 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 50px;
+    top: 95px;
     width: 570px;
+    height: 201px;
+    margin-left: 110px;
+    padding: 66px 69.5px 51px 78px;
     background-color: $background;
-    padding: 66px 99.5px 51px 76px;
   }
 }
 
@@ -50,6 +52,11 @@
     line-height: 23px;
     text-transform: uppercase;
   }
+  @media (min-width: $desktop-width) {
+    flex: 1 1 auto;
+    margin: 0;
+    padding-top: 3px;
+  }
 }
 
 .footer-top__contacts-address {
@@ -64,10 +71,17 @@
     font-size: 16px;
     line-height: 20px;
   }
+  @media (min-width: $desktop-width) {
+    max-width: 200px;
+    flex: 1 1 auto;
+    margin: 0;
+    padding-left: 25px;
+    text-align: left;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .footer-top__contacts-address span{
+.footer-top__contacts-address span  {
+  @media (min-width: $tablet-width) {
     display: inline-block;
     margin-top: 20px;
   }
@@ -87,6 +101,9 @@
   @media (min-width: $tablet-width) {
     height: 150px;
     padding: 0 30px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-inline: 110px;
   }
 }
 
@@ -142,6 +159,9 @@
   @media (min-width: $tablet-width) {
     padding: 0;
   }
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
+  }
 }
 
 .footer-bottom__copyright {
@@ -155,6 +175,9 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     margin-top: -18px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
   }
 }
 

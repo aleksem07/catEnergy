@@ -23,6 +23,9 @@
     line-height: 60px;
     font-weight: 400;
   }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .how-it-works__list {
@@ -40,6 +43,10 @@
     gap: 17px;
     padding-left: 10px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 23px;
+  }
 }
 
 .how-it-works__item {
@@ -54,9 +61,13 @@
     width: 230px;
     height: 280px;
   }
+  @media (min-width: $desktop-width) {
+    height: 228px;
+    margin-bottom: 10px;
+  }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .how-it-works__item:nth-child(even) {
     margin-right: 105px;
   }

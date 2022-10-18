@@ -22,3 +22,9 @@
   }
 
 }
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    margin-inline: 80px;
+  }
+}
