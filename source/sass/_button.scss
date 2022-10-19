@@ -109,14 +109,16 @@ a.button--product {
   font-size: 16px;
   line-height: 20px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 248px;
-    margin: 10px auto 0;
-
+    margin: 0 auto;
   }
+}
 
+.products__item .button--product {
   @media (min-width: $desktop-width) {
-    width: 244px;
+    width: auto;
+    margin-inline: 40px;
   }
 }
 
@@ -136,5 +138,11 @@ a.button--view-all {
   @media (min-width: $tablet-width) {
     width: 249px;
     margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-inline: 40px;
+    padding: 10px;
   }
 }

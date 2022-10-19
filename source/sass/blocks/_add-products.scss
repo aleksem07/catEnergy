@@ -2,6 +2,10 @@
 
   .add-products__wrapper {
     width: 896px;
+
+    @media (min-width: $desktop-width) {
+      width: 904px;
+    }
   }
 
   .gift {
@@ -11,8 +15,13 @@
     margin-bottom: -100px;
     width: 245px;
     height: 289px;
+
+    @media (min-width: $desktop-width) {
+        // top: -300px;
+        left: 987px;
+      }
+    }
   }
-}
 
 .add-products {
   min-width: 280px;
@@ -35,6 +44,9 @@
     font-size: 36px;
     line-height: 36px;
   }
+  @media (min-width: $desktop-width) {
+    margin-left: 10px;
+  }
 }
 
 .add-products__title > span {
@@ -54,6 +66,11 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
     padding-inline: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-inline: 10px 0;
   }
 }
 
@@ -95,8 +112,12 @@
   border-bottom: 1px solid $special_grey;
 
   @media (min-width: $tablet-width) {
+    gap: 15px;
     align-items: center;
     margin-bottom: 13px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
   }
 }
 
@@ -111,6 +132,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0px;
     flex-grow: 1;
   }
 }
@@ -125,9 +147,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 80px;
     font-size: 16px;
     line-height: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -154,6 +178,10 @@
     align-items: center;
     margin-inline: 10px;
     margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 242px;
   }
 
 }

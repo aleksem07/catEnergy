@@ -186,15 +186,17 @@ a.button--product {
   font-size: 16px;
   line-height: 20px;
 }
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   a.button--product {
     width: 248px;
-    margin: 10px auto 0;
+    margin: 0 auto;
   }
 }
+
 @media (min-width: 1439px) {
-  a.button--product {
-    width: 244px;
+  .products__item .button--product {
+    width: auto;
+    margin-inline: 40px;
   }
 }
 
@@ -214,6 +216,13 @@ a.button--view-all {
   a.button--view-all {
     width: 249px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1439px) {
+  a.button--view-all {
+    width: auto;
+    margin-inline: 40px;
+    padding: 10px;
   }
 }
 
@@ -1640,9 +1649,17 @@ a.button--view-all {
   outline: 2px solid #222222;
 }
 
-.product {
-  margin-bottom: 63px;
+@media (min-width: 768px) {
+  .products {
+    margin-bottom: 66px;
+  }
 }
+@media (min-width: 1439px) {
+  .products {
+    margin-bottom: 78px;
+  }
+}
+
 @media (max-width: 767px) {
   .product {
     margin-bottom: 47px;
@@ -1671,6 +1688,11 @@ a.button--view-all {
     margin-left: 9px;
     font-size: 60px;
     line-height: 60px;
+  }
+}
+@media (min-width: 1439px) {
+  .products-title {
+    margin-top: 50px;
   }
 }
 
@@ -1703,13 +1725,9 @@ a.button--view-all {
   .products__list {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 63px;
     justify-content: space-between;
     margin-bottom: 0;
-  }
-}
-@media (min-width: 1439px) {
-  .products__list {
-    gap: 30px;
   }
 }
 
@@ -1727,7 +1745,7 @@ a.button--view-all {
 @media (min-width: 768px) and (min-width: 1439px) {
   .product:not(:last-child):before {
     width: 245px;
-    top: 100px;
+    top: 120px;
   }
 }
 .products__item {
@@ -1795,16 +1813,17 @@ a.button--view-all {
     justify-content: space-between;
     flex-direction: column;
     width: 324px;
-    height: 513px;
+    height: 509px;
     margin-inline: 10px;
   }
 }
 @media (min-width: 1439px) {
   .products__item {
+    justify-content: flex-end;
     width: 245px;
     min-width: 245px;
     height: 431px;
-    min-height: 511px;
+    min-height: 515px;
   }
 }
 
@@ -1860,11 +1879,6 @@ a.button--view-all {
        object-fit: contain;
   }
 }
-@media (min-width: 1439px) {
-  .product__img {
-    margin-bottom: 46px;
-  }
-}
 
 @media (max-width: 767px) {
   .products__img--1kg {
@@ -1877,6 +1891,11 @@ a.button--view-all {
   grid-column: 2/4;
   grid-row: 1/3;
   width: 100%;
+}
+@media (min-width: 1439px) {
+  .product__description {
+    margin-bottom: 10px;
+  }
 }
 
 .product__title {
@@ -1941,6 +1960,13 @@ a.button--view-all {
   .add-products__wrapper {
     width: 896px;
   }
+}
+@media (min-width: 1439px) and (min-width: 1439px) {
+  .add-products__wrapper {
+    width: 904px;
+  }
+}
+@media (min-width: 1439px) {
   .gift {
     position: relative;
     top: -300px;
@@ -1948,6 +1974,11 @@ a.button--view-all {
     margin-bottom: -100px;
     width: 245px;
     height: 289px;
+  }
+}
+@media (min-width: 1439px) and (min-width: 1439px) {
+  .gift {
+    left: 987px;
   }
 }
 .add-products {
@@ -1973,6 +2004,11 @@ a.button--view-all {
     line-height: 36px;
   }
 }
+@media (min-width: 1439px) {
+  .add-products__title {
+    margin-left: 10px;
+  }
+}
 
 .add-products__title > span {
   display: inline-block;
@@ -1993,6 +2029,12 @@ a.button--view-all {
   .add-products__list {
     margin-bottom: 80px;
     padding-inline: 50px;
+  }
+}
+@media (min-width: 1439px) {
+  .add-products__list {
+    margin: 0;
+    padding-inline: 10px 0;
   }
 }
 
@@ -2039,8 +2081,14 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .add {
+    gap: 15px;
     align-items: center;
     margin-bottom: 13px;
+  }
+}
+@media (min-width: 1439px) {
+  .add {
+    padding-top: 9px;
   }
 }
 
@@ -2057,6 +2105,7 @@ a.button--view-all {
 }
 @media (min-width: 1439px) {
   .add__title {
+    margin: 0px;
     flex-grow: 1;
   }
 }
@@ -2073,9 +2122,13 @@ a.button--view-all {
 }
 @media (min-width: 768px) {
   .add__feature {
-    margin-bottom: 80px;
     font-size: 16px;
     line-height: 20px;
+  }
+}
+@media (min-width: 1439px) {
+  .add__feature {
+    margin: 0;
   }
 }
 
@@ -2104,6 +2157,11 @@ a.button--view-all {
     margin-bottom: 90px;
   }
 }
+@media (min-width: 1439px) {
+  .gift__wrapper {
+    min-width: 242px;
+  }
+}
 
 .gift__img {
   padding-top: 58px;
@@ -2121,6 +2179,11 @@ a.button--view-all {
 
 .footer {
   margin: 0 -20px;
+}
+@media (min-width: 1439px) {
+  .footer {
+    margin-top: -115px;
+  }
 }
 
 .footer-top__wrapper {
