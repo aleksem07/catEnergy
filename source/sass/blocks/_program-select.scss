@@ -2,6 +2,7 @@
   .form-section--desktop__wrapper {
     display: flex;
     gap: 80px;
+    margin-bottom: 70px;
   }
   .form-section--desktop__wrapper .form-section {
     flex-basis: 50%;
@@ -14,10 +15,23 @@
 }
 
 .program-select__title {
+  margin-top: 19px;
   margin-bottom: 37px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 52px;
+    padding-left: 50px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    margin-bottom: 59px;
+  }
 }
 
 .program-select__text {
@@ -25,10 +39,31 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+    padding-left: 50px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
+
+.form {
+  @media (min-width: $tablet-width) {
+  padding-left: 50px;
+  }
 }
 
 .form-section {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .form-section--program {
@@ -40,6 +75,11 @@
   }
 }
 
+.form-section--cat .form__item {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+}
 
 .form__item {
   position: relative;
@@ -49,6 +89,11 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -56,22 +101,62 @@
   margin-bottom: 0;
 }
 
-@media (min-width: $tablet-width) {
-  .program-select__need {
-  width: 50%;
-  text-align: left;
-  font-family: 'Arial';
-  font-size: 16px;
-  line-height: 16px;
+.form-section--additionally .form__item:first-of-type {
+  margin-top: 3px;
 }
+
+.form-section--additionally .form__item {
+  margin-bottom: 12px;
+  padding-left: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.form-section--additionally .form__item:last-of-type {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+  @media (min-width: $desktop-width) {
+    flex: 1 1 auto;
+  }
+}
+
+.radio__wrapper .form__item {
+  margin-bottom: 12px;
+}
+
+.program-select__need {
+  text-align: center;
+  margin-bottom: 7px;
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-top: 32px;
+    font-family: 'Arial';
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .form__label {
   flex-shrink: 0;
-  margin-right: 15px;
+  margin-right: 10px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 21px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__input {
@@ -82,6 +167,14 @@
   &::placeholder{
     text-transform: uppercase;
     color: $special_dark-grey;
+    font-family: 'Oswald';
+    font-size: 16px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -92,33 +185,38 @@
   right: 20px;
 }
 
-// svg line,
-// svg path {
-//     stroke: red;
-//     fill: red;
-// }
-
-
-@media (min-width: $desktop-width) {
   .form-section--owner {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 69px;
+    }
+    @media (min-width: $desktop-width) {
     display: flex;
     gap: 78px;
   }
+}
 
   .form-section--owner .form__item {
+    @media (min-width: $desktop-width) {
     flex-grow: 1;
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .form-section--additionally {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    row-gap: 42px;
   }
+}
 
   .form-section--additionally .form__item {
-    width: 50%;
+  @media (min-width: $tablet-width) {
+  width: 50%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    margin-right: 20px;
   }
 }
 
@@ -127,31 +225,47 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      margin-bottom: 90px;
     }
 
   .form__item {
-
     flex-basis: 25%;
   }
 }
 
 
 .form-section--program {
-  padding-bottom: 19px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 12px;
+  }
 }
 
 .radio__wrapper {
   padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: -31px;
+  }
 }
 
 .form__radio {
   margin-top: 5px;
   margin-left: 40px;
-  padding-bottom: 13px;
+  padding-bottom: 6px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .form__item:last-child .form__radio {
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .form__input + .form__radio::before {
@@ -163,6 +277,12 @@
   border-radius: 50%;
   top: 0;
   left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: 30px;
+  }
 }
 
 .form__input:checked + .form__radio:after {
@@ -174,6 +294,13 @@
   border-radius: 50%;
   top: 8px;
   left: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 40px;
+  }
 }
 
 .form__input:focus + .form__radio::before {
@@ -188,13 +315,28 @@
   font-size: 24px;
   line-height: 26px;
   background-image: linear-gradient(to bottom, transparent 0, transparent 16px, #68b738 16px, #68b738 18px, transparent 18px, transparent 100%);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
+
+.form-section--additionally .form__legend {
+  margin-bottom: 59px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 34px;
+  }
+}
+
+
 
 .form__legend span {
   display: inline-block;
   padding-right: 14px;
   background-color: $background;
-
 }
 
 @media (min-width: $tablet-width) {
@@ -205,7 +347,11 @@
 
 .form-section--comment {
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
 }
 
 .form-section--comment>textarea {
@@ -214,39 +360,60 @@
   border: 1px solid $border_input;
 }
 
-.form-section--comment > textarea::placeholder {
-  padding-top: 9px;
+.form-section--comment textarea::placeholder {
+  padding-top: 10px;
+  padding-left: 10px;
   text-transform: uppercase;
   font-family: 'Oswald';
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .additionally {
   width: auto;
   height: 30px;
   margin-left: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 13px;
+  }
 }
 
 .form__input + .additionally::before {
   content: '';
+  top: -8px;
+  left: 0;
   width: 30px;
   height: 30px;
   position: absolute;
   border: 1px solid $border_input;
-  top: -8px;
-  left: 0;
+
+  @media (min-width: $tablet-width) {
+    top: -5px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__input:checked + .additionally::after {
   content: '';
+  top: 0;
+  left: 7px;
   width: 30px;
   height: 30px;
   position: absolute;
   background-image: url(../img/icon/check.svg);
   background-repeat: no-repeat;
-  top: 0;
-  left: 7px;
+
+  @media (min-width: $tablet-width) {
+      top: 6px;
+      left: 11px;
+  }
 }
 
 .form__input:focus + .additionally::before{

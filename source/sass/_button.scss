@@ -80,23 +80,26 @@ a.button--intro {
 
 .form__button {
   width: 100%;
+  margin-bottom: 9px;
+  padding-block: 10px;
   color: $basic_white;
+  font-family: 'Oswald';
+  font-size: 16px;
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    margin-top: 18px;
+    padding-block: 16px;
     max-width: 282px;
-    max-height: 52px;
+    max-height: 60px;
+    font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 568px;
+    margin-top: 30px;
     margin-right: 81px;
   }
-}
-
-.program-select__need {
-  text-align: center;
-  margin-bottom: 32px;
 }
 
 a.button--product {
