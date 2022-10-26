@@ -543,7 +543,7 @@ a.button--view-all {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(img/bg/cat-desktop.jpg);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../img/bg/cat-desktop.webp);
   background-color: #68B738;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1520,6 +1520,11 @@ a.button--view-all {
     line-height: 16px;
   }
 }
+@media (min-width: 1439px) {
+  .program-select__need {
+    width: auto;
+  }
+}
 
 .form__label {
   flex-shrink: 0;
@@ -1616,7 +1621,7 @@ a.button--view-all {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 187px;
   }
   .form__item {
     flex-basis: 25%;

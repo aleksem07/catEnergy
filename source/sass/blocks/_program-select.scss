@@ -143,6 +143,9 @@
     font-size: 16px;
     line-height: 16px;
   }
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .form__label {
@@ -225,7 +228,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 90px;
+      margin-bottom: 187px;
     }
 
   .form__item {

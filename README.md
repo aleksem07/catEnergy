@@ -30,5 +30,7 @@
 - width
 - адаптив
 - styleguide
-- pixelperfect
+- pixelperfect ~~90%~~ 100%
 - svg
+- w3c
+- build
