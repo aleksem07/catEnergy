@@ -136,11 +136,11 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
-// sprite
+// sprites
 
 const sprite = () => {
   return gulp
-    .src("source/img/icon/*.svg")
+    .src("source/img/icons/*.svg")
     .pipe(
       svgstore({
         inlineSvg: true,
@@ -180,6 +180,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 

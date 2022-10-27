@@ -156,6 +156,24 @@
   height: 23px;
 }
 
+.social__link svg,
+.copyright__link svg,
+.copyright__link-name{
+color: $special_dark-grey-2;
+}
+
+.social__link:hover svg,
+.copyright__link:hover svg{
+  color: $basic_green;
+}
+
+.social__link:active svg,
+.copyright__link:active svg,
+.copyright__link-name:active {
+  opacity: 0.3;
+}
+
+
 .logo {
   margin-top: -4px;
   padding-bottom: 30px;

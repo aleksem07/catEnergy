@@ -193,6 +193,14 @@
   }
 }
 
+.product__icon--gift {
+  @media (min-width: $tablet-width) {
+  width: 60px;
+  height: 60px;
+  border: 2px;
+  }
+}
+
 .product__img {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
