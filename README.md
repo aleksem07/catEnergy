@@ -30,7 +30,7 @@
 - width
 - адаптив
 - styleguide
-- svg
+- ~~svg~~
 - build
 - ::hover
 - pixelperfect ~~90%~~ 100%
