@@ -28,6 +28,7 @@ const styles = () => {
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 };
 
@@ -53,7 +54,25 @@ const clean = () => {
 exports.clean = clean;
 
 // copy
-const copy = (done) => {
+
+const copyBuild = (done) => {
+  gulp
+    .src(
+      [
+        "source/fonts/*.{woff2,woff}",
+        "source/*.ico",
+        "source/img/**/*.svg",
+        "!source/img/icons/*.svg",
+      ],
+      {
+        base: "source",
+      }
+    )
+    .pipe(gulp.dest("build"));
+  done();
+};
+
+const copyDev = (done) => {
   gulp
     .src(
       [
@@ -159,7 +178,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
@@ -170,7 +189,7 @@ const watcher = () => {
 
 const build = gulp.series(
   clean,
-  copy,
+  copyBuild,
   optimizeImages,
   gulp.parallel(styles, html, scripts, sprite, createWebp)
 );
@@ -180,7 +199,7 @@ exports.build = build;
 //default
 exports.default = gulp.series(
   clean,
-  copy,
+  copyDev,
   copyImages,
   gulp.parallel(styles, html, scripts, sprite, createWebp),
   gulp.series(server, watcher)

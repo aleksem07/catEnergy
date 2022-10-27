@@ -4,7 +4,7 @@
   background-color: $basic_grey-3;
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 45px;
+    margin-bottom: 150px;
   }
 }
 
@@ -133,49 +133,6 @@
     line-height: 14px;
   }
 }
-
-// legend firefox
-// @media screen and (min--moz-device-pixel-ratio:0) {
-//   fieldset {
-//     position: relative;
-// 		height: 10px;
-//   }
-
-//   fieldset>legend {
-//     position: absolute;
-//     top: -15px;
-//     left: 15%;
-//     background-color: #eaeaea;
-
-//       @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-//         top: -5px;
-//         left: 20px;
-//         background-color: white;
-//     }
-//   }
-
-//   .before-after__result-box {
-//     height: 56px;
-
-//     @media (min-width: $tablet-width) {
-//       width: 165px;
-//       height: 75px;
-//     }
-
-//     @media (min-width: $desktop-width) {
-//       margin-bottom: 8px;
-//     }
-//   }
-
-//   .before-after__result-title {
-//     padding-bottom: 12px;
-
-//     @media (min-width: $tablet-width) {
-//       font-size: 30px;
-//       line-height: 37px;
-//     }
-//   }
-// }
 
 .before-after__cost {
   margin-bottom: 42px;

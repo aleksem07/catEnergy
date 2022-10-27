@@ -30,7 +30,9 @@
 - width
 - адаптив
 - styleguide
-- pixelperfect ~~90%~~ 100%
 - svg
-- w3c
 - build
+- ::hover
+- pixelperfect ~~90%~~ 100%
+- lighthouse
+- w3c
