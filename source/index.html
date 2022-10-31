@@ -1,164 +1,112 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
-  @@include("html/_head.htm", { "title": "Cat Energy. Главная" })
-
+<html class="page" lang="ru">@@include("html/_head.htm", { "title": "Cat Energy. Главная" })
   <body class="page__body">
-    <header class="page-header--index">
-      @@include("html/_page-header__logo.htm")
-
+    <header class="page-header">@@include("html/_page-header__logo.htm")
       <nav class="main-nav main-nav__wrapper">
         <ul class="main-nav__list site-list main-nav--index">
-          <li class="site-list__item site-list__item--active">
-            <a class="current current--index">Главная</a>
+          <li class="site-list__item site-list__item--active"><a class="current current--index">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
-
-      <section class="main-intro">
-        <div class="main-intro__wrapper main-intro--bg">
-          <div class="main-intro__picture"></div>
-          <h1 class="main-intro__title">
-            Функциональное <br />
-            питание для котов
-          </h1>
-          <p class="main-intro__text">Занялся собой? Займись котом!</p>
-          <div class="main-intro__picture-chiken-pro"></div>
-          <a class="button button--intro" href=""><span>Подобрать программу</span></a>
-        </div>
-      </section>
     </header>
-
-    <main class="page-main">
+    <section class="main-intro">
+      <div class="main-intro__wrapper main-intro--bg">
+        <div class="main-intro__picture"></div>
+        <h1 class="main-intro__title">Функциональное<br>            питание для котов</h1>
+        <p class="main-intro__text">Занялся собой? Займись котом!</p>
+        <div class="main-intro__picture-chiken-pro"></div><a class="button button--intro" href=""><span>Подобрать программу</span></a>
+      </div>
+    </section>
+    <main class="page-main index-page">
       <section class="catalog-selection">
         <div class="catalog-selection__wrapper">
           <h2 class="visually-hidden">Выбор программы</h2>
-
           <div class="catalog catalog-slim">
             <h3 class="catalog__title catalog__title--slim">Похудение</h3>
             <p class="catalog__text">
-              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
-              диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-            </p>
-            <a class="catalog__link" href="catalog.html"
-              >Каталог slim
+              Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+              сбросить лишний вес.
+            </p><a class="catalog__link" href="catalog.html">Каталог slim
               <svg width="24" height="12" viewBox="0 0 24 12">
                 <use xlink:href="img/sprite.svg#arrow__right"></use>
-              </svg>
-            </a>
+              </svg></a>
           </div>
-
           <div class="catalog catalog-pro">
             <h3 class="catalog__title catalog__title--pro">Набор массы</h3>
-            <p class="catalog__text">
-              Заработать авторитет среди дворовых котов <br />
-              и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br />
-              мышцы!
-            </p>
-            <a class="catalog__link" href="catalog.html"
-              >Каталог pro
+            <p class="catalog__text">Заработать авторитет среди дворовых котов<br>              и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+                            необходимые<br>              мышцы!
+            </p><a class="catalog__link" href="catalog.html">Каталог pro
               <svg width="24" height="12" viewBox="0 0 24 12">
                 <use xlink:href="img/sprite.svg#arrow__right"></use>
-              </svg>
-            </a>
+              </svg></a>
           </div>
         </div>
       </section>
-
       <section class="how-it-works">
         <h2 class="how-it-works__title">Как это работает</h2>
         <div class="how-it-works__wrapper">
           <ol class="how-it-works__list">
             <li class="how-it-works__item how-it-works__item--useful">
               <p class="how-it-works__item-description">
-                Функциональное питание содержит только полезные питательные вещества.
+                Функциональное питание содержит только полезные питательные
+                вещества.
               </p>
             </li>
-
             <li class="how-it-works__item how-it-works__item--form">
               <p class="how-it-works__item-description">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
               </p>
             </li>
-
             <li class="how-it-works__item how-it-works__item--change">
               <p class="how-it-works__item-description">
-                Замените один-два приема обычной еды на наше функциональное питание.
+                Замените один-два приема обычной еды на наше функциональное
+                питание.
               </p>
             </li>
-
             <li class="how-it-works__item how-it-works__item--result">
               <p class="how-it-works__item-description">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                питомца!
               </p>
             </li>
           </ol>
         </div>
       </section>
-
       <section class="before-after">
         <div class="before-after__wrapper">
           <div class="before-after__text-box">
             <h2 class="before-after__title">Живой пример</h2>
             <p class="before-after__text">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-              <span>по-прежнему</span> спит по 16 часов в день.
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и<span>по-прежнему</span> спит по 16 часов в день.
             </p>
             <div class="before-after__stat-wrapper">
               <div class="fieldset__wrapper">
                 <fieldset class="before-after__result-box">
-                  <legend class="before-after__result-text">
-                    Снижение&nbsp;<br />
-                    веса
-                  </legend>
+                  <legend class="before-after__result-text">Снижение<br>                    веса</legend>
                   <p class="before-after__result-title">5 кг</p>
                 </fieldset>
                 <fieldset class="before-after__result-box">
-                  <legend class="before-after__result-text">
-                    Затрачено&nbsp;<br />
-                    времени
-                  </legend>
+                  <legend class="before-after__result-text">Затрачено<br>                    времени</legend>
                   <p class="before-after__result-title">60 дней</p>
                 </fieldset>
               </div>
-              <p class="before-after__cost">Затраты на питание: <span>15000 руб.</span></p>
+              <p class="before-after__cost">Затраты на питание:<span>15000 руб.</span></p>
             </div>
           </div>
           <div class="before-after__example">
-            <div class="before-after__image-box">
-              <img
-                class="before-after__before before-after--image"
-                src="img/before-after/before-cat--mobile.png"
-                srcset="
-                  img/before-after/before-cat--mobile.webp    1x,
-                  img/before-after/before-cat--mobile@2x.webp 2x
-                "
-                width="311"
-                height="232"
-                alt="Пример кота до снижения веса"
-              />
-              <img
-                class="before-after__after before-after--image"
-                src="img/before-after/after-cat--mobile.png"
-                srcset="
-                  img/before-after/after-cat--mobile.webp    1x,
-                  img/before-after/after-cat--mobile@2x.webp 2x
-                "
-                width="251"
-                height="240"
-                alt="Пример кота после снижения веса"
-              />
-            </div>
+            <div class="before-after__image-box"><img class="before-after__before before-after--image" src="img/before-after/before-cat--mobile.png" srcset="              img/before-after/before-cat--mobile.webp    1x,              img/before-after/before-cat--mobile@2x.webp 2x              " width="311" height="232" alt="Пример кота до снижения веса"><img class="before-after__after before-after--image" src="img/before-after/after-cat--mobile.png" srcset="              img/before-after/after-cat--mobile.webp    1x,              img/before-after/after-cat--mobile@2x.webp 2x              " width="251" height="240" alt="Пример кота после снижения веса"></div>
             <div class="range-controls__wrapper">
               <p>было</p>
               <div class="range-controls">
-                <div class="scale" style="width: 50%">
+                <div class="scale" style="width: 50%;">
                   <div class="bar"></div>
                 </div>
               </div>
@@ -168,7 +116,5 @@
         </div>
       </section>
     </main>
-
-    @@include("html/_footer.htm")
-  </body>
+  </body>@@include("html/_footer.htm")
 </html>

@@ -1,0 +1,79 @@
+- var pageClass = 'form-page'
+doctype html
+html.page(lang='ru')
+  | @@include("html/_head.htm", { "title": "Cat Energy. Подбор программы" })
+  body.page__body
+    include modules/header
+
+    main.page-main(class= pageClass)
+      section.program-select
+        .program-select__wrapper
+          h1.program-select__title Подбор программы
+          p.program-select__text
+            | Заполните анкету, и мы подберем
+            br
+            |             программу питания для вашего кота
+          form.form(action='https://echo.htmlacademy.ru' method='post')
+            .form-section--desktop__wrapper
+              fieldset.form-section.form-section--cat
+                legend.visually-hidden Информация о коте
+                label.form__item
+                  span.form__label Имя:*
+                  input.form__input(type='text' name='cat-name' placeholder='Барсик' required='' autofocus='')
+                label.form__item
+                  span.form__label Вес (кг):*
+                  input.form__input(type='text' name='cat-weight' placeholder='7' pattern='^[ 0-9]+$' required='')
+                label.form__item
+                  span.form__label Возраст (лет):
+                  input.form__input(type='text' name='cat-age' placeholder='7')
+              fieldset.form-section.form-section--program
+                legend.visually-hidden Программа
+                .radio__wrapper
+                  label.form__item
+                    input.form__input.visually-hidden(type='radio' name='program' value='slim' checked='')
+                    span.form__label.form__radio Похудение
+                  label.form__item
+                    input.form__input.visually-hidden(type='radio' name='program' value='pro' disabled='')
+                    span.form__label.form__radio Набор массы
+                  label.form__item
+                    input.form__input.visually-hidden(type='radio' name='program' value='need-help')
+                    span.form__label.form__radio Не знаю (Нужен ваш совет)
+            fieldset.form-section.form-section--owner
+              legend.form__legend
+                span.form__legend--title
+                  | Контактные данные
+                  br
+                  |                   (владельца кота)
+              label.form__item
+                span.form__label E-mail:*
+                input.form__input(type='email' name='contact-email' placeholder='kuklachev@gmail.com' required='')
+                svg.form__input--email(width='19' height='14' viewBox='0 0 19 14')
+                  use(xlink:href='img/sprite.svg#email')
+              label.form__item
+                span.form__label Телефон:*
+                input.form__input(type='tel' name='contact-phone' placeholder='8 (960) 900-60-90' required='')
+                svg.form__input--phone(width='20' height='20' viewBox='0 0 20 20')
+                  use(xlink:href='img/sprite.svg#phone')
+            fieldset.form-section.form-section--comment
+              legend.form__legend
+                span Комментарий
+              textarea(name='comment' cols='35' rows='10' placeholder='Расскажите обо всех повадках кота')
+            fieldset.form-section.form-section--additionally
+              legend.form__legend
+                span Дополнительно
+              label.form__item
+                input.form__input.visually-hidden(type='checkbox' name='add' value='sweetener' checked='')
+                span.form__label.additionally сахарозаменитель
+              label.form__item
+                input.form__input.visually-hidden(type='checkbox' name='add' value='water')
+                span.form__label.additionally питьевая вода
+              label.form__item
+                input.form__input.visually-hidden(type='checkbox' name='add' value='milk' disabled='')
+                span.form__label.additionally молоко
+              label.form__item
+                input.form__input.visually-hidden(type='checkbox' name='add' value='vitamins')
+                span.form__label.additionally витамины
+              button.form__button.button.button--green(type='submit')
+                | отправить заявку
+              p.program-select__need * — Обязательные поля
+    |     @@include("html/_footer.htm")

@@ -1,0 +1,20 @@
+header.page-header
+  | @@include("html/_page-header__logo.htm")
+  nav.main-nav.main-nav__wrapper
+    ul.main-nav__list.site-list(class=((pageClass === 'index-page') ? 'main-nav--index' : false))
+      li.site-list__item.site-list__item--active
+        if (pageClass === 'index-page')
+          a.current.current--index Главная
+        else
+          a(href='index.html') Главная
+      li.site-list__item
+        if (pageClass === 'catalog-page')
+          a.current Каталог продукции
+        else
+          a(href='catalog.html') Каталог продукции
+      li.site-list__item
+        if (pageClass === 'form-page')
+          a.current Подбор программы
+        else
+          a(href='form.html') Подбор программы
+

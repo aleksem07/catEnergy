@@ -1,20 +1,13 @@
+- var pageClass = 'catalog-page'
+
 include mixins/product-item
 doctype html
 html.page(lang='ru')
-  head
+  | @@include("html/_head.htm", { "title": "Cat Energy. Каталог продукции" })
   body.page__body
-    | @@include("html/_head.htm", { "title": "Cat Energy. Каталог продукции" })
-    header.page-header
-      | @@include("html/_page-header__logo.htm")
-      nav.main-nav.main-nav__wrapper
-        ul.main-nav__list.site-list
-          li.site-list__item.site-list__item--active
-            a(href='index.html') Главная
-          li.site-list__item
-            a.current Каталог продукции
-          li.site-list__item
-            a(href='form.html') Подбор программы
-    main.page-main
+    include modules/header
+
+    main.page-main(class= pageClass)
       h1.products-title Каталог продукции
       section.products
         h2.visually-hidden Основные товары

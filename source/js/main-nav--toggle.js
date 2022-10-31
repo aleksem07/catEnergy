@@ -13,7 +13,10 @@ navMain.classList.add("main-nav--close");
 //     navToggle.classList.add("main-nav--closed");
 //     navMain.classList.add("main-nav--close");
 //   }
-navToggle.addEventListener("click", (event) => {
-  event.preventDefault();
+// });
+navToggle.addEventListener("click", (evt) => {
+  evt.preventDefault();
   navMain.classList.toggle("main-nav--close");
+  navToggle.classList.toggle("main-nav--opened");
+  navToggle.classList.toggle("main-nav--closed");
 });
