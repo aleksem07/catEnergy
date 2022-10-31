@@ -15,14 +15,6 @@ const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const fileinclude = require("gulp-file-include");
 const sync = require("browser-sync").create();
-const ghPages = require("gulp-gh-pages");
-
-//deploy
-
-const deploy = () => {
-  return gulp.src("build").pipe(ghPages());
-};
-exports.deploy = deploy;
 
 // Styles
 
