@@ -13,6 +13,7 @@ const del = require("del");
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
+const fileinclude = require("gulp-file-include");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -39,6 +40,12 @@ exports.styles = styles;
 const html = () => {
   return gulp
     .src("source/**/*.html")
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 };
@@ -182,6 +189,7 @@ const watcher = () => {
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/html/*.htm", gulp.series(html, reload));
 };
 
 //include

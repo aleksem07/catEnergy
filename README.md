@@ -26,7 +26,8 @@
 
 ### ToDo
 
-- fonts
+- ~~include~~
+- ~~fonts~~
 - width
 - адаптив
 - styleguide
