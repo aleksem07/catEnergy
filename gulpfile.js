@@ -29,7 +29,6 @@ const styles = () => {
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 };
 
@@ -84,7 +83,7 @@ const copyDev = (done) => {
     .src(
       [
         "source/fonts/*.{woff2,woff}",
-        "source/css/*.*",
+        // "source/css/*.*",
         "source/*.ico",
         "source/img/**/*.svg",
         "!source/img/icons/*.svg",

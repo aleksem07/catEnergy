@@ -19,13 +19,13 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 73px;
-    padding-top: 84px;
+    padding-top: 42px;
   }
 }
 
 .main-intro__picture {
   position: absolute;
-  width: 320px;
+  width: 100vh;
   height: 302px;
   top: 0;
   left: 50%;
@@ -43,7 +43,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    background-position: 0 0, -90px 0;
+    background-position: 0 0, 0px -50px;
   }
 
   @media (min-width: $tablet-width) {
@@ -51,7 +51,7 @@
   }
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: -52px;
+    top: -95px;
     left: 699px;
     transform: translate(0, -60px);
     display: block;
@@ -62,8 +62,6 @@
           url(../img/bg/cat-desktop.webp);
           background-color: $basic_green;
     background-size: cover;
-    z-index: -1;
-
   }
 }
 

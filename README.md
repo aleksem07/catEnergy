@@ -27,10 +27,11 @@
 - ~~include~~
 - ~~fonts~~
 - width
+- js
 - адаптив
 - styleguide
 - ~~svg~~
-- build
+- ~~build~~
 - ::hover
 - pixelperfect ~~90%~~ 100%
 - lighthouse
