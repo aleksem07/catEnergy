@@ -503,6 +503,7 @@ a.button--product:active span {
 }
 
 .site-list__item:last-child {
+  padding-bottom: 30px;
   border-bottom: none;
 }
 
