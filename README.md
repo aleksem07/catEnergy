@@ -24,15 +24,17 @@
 
 ### ToDo
 
-- ~~include~~
-- ~~fonts~~
-- width
 - js
-- адаптив
-- styleguide
-- ~~svg~~
-- ~~build~~
-- ::hover
 - pixelperfect ~~90%~~ 100%
 - lighthouse
 - w3c
+- ~~npm test~~
+- ~~styleguide~~
+- ~~include~~
+- ~~fonts~~
+- ~~переполнение~~
+- ~~width~~
+- ~~адаптив~~
+- ~~svg~~
+- ~~build~~
+- ~~::hover~~

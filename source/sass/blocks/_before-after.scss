@@ -26,10 +26,11 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
   }
+
   @media (min-width: $desktop-width) {
-      width: 436px;
-      margin-right: 134px;
-    }
+    width: 436px;
+    margin-right: 134px;
+  }
 }
 
 .before-after__title {
@@ -47,6 +48,7 @@
     line-height: 60px;
     font-weight: 400;
   }
+
   @media (min-width: $desktop-width) {
     margin-top: 42px;
     margin-bottom: 135px;
@@ -55,7 +57,7 @@
 
 .before-after__text {
   margin-bottom: 26px;
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 
@@ -72,7 +74,7 @@
   }
 }
 
-.before-after__text span{
+.before-after__text span {
   white-space: nowrap;
 }
 
@@ -104,6 +106,10 @@
   border-radius: 3px;
   transform: rotate(180deg);
   padding-block: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+  }
 }
 
 .before-after__result-title {
@@ -120,13 +126,17 @@
   text-transform: lowercase;
   transform: rotate(180deg);
   text-align: center;
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .before-after__result-text br{
+  .before-after__result-text br {
     display: none;
     padding-inline: 0;
     font-size: 14px;
@@ -142,6 +152,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
     max-width: 174px;
     margin-top: 10px;
     margin-left: 20px;
@@ -192,8 +204,8 @@
   z-index: 2;
 
   @media (min-width: $desktop-width) {
-      left: 10px;
-    }
+    left: 10px;
+  }
 }
 
 .before-after__after {
@@ -204,9 +216,10 @@
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-    top: 0px;
+    top: 0;
     left: 25px;
   }
+
   @media (min-width: $desktop-width) {
     left: 40px;
   }
@@ -218,13 +231,15 @@
   @media (max-width: $mobile-width-only) {
     margin-left: -20px;
     top: -10px;
-    left: 0px;
+    left: 0;
   }
+
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 100%;
     object-fit: none;
   }
+
   @media (min-width: $desktop-width) {
     height: 85%;
   }
@@ -246,6 +261,7 @@
     font-size: 20px;
     line-height: 30px;
   }
+
   @media (min-width: $desktop-width) {
     top: -89px;
     margin-right: 7px;
@@ -254,7 +270,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .range-controls__wrapper p{
+  .range-controls__wrapper p {
     border-bottom: 1px dotted rgba($color: #000000, $alpha: 0.24);
   }
 }
@@ -284,25 +300,25 @@
   @media (min-width: $tablet-width) {
     top: -15px;
     position: relative;
-    width: 34px !important;
+    width: 34px;
     height: 34px;
     margin: 0 auto;
     border: 1px solid $special_grey;
     border-radius: 50%;
     background: $background;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media (min-width: $tablet-width) {
-
-    .range-controls .bar::before {
-        content: '';
-        top: 40%;
-        left: 40%;
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: $basic-green;
-      }
+  .range-controls .bar::before {
+    content: "";
+    top: 40%;
+    left: 40%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $basic-green;
+  }
 }

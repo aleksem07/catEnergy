@@ -6,6 +6,10 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
 }
 
 a.button--intro {
@@ -25,7 +29,7 @@ a.button--intro {
     left: 0;
     width: 245px;
     min-width: 245px;
-    height: 54px;
+    min-height: 54px;
     margin-left: 92px;
     padding: 18px;
     font-size: 20px;
@@ -36,7 +40,6 @@ a.button--intro {
     top: -500px;
     left: 5px;
   }
-
 }
 
 .main-nav__toogle {
@@ -52,7 +55,7 @@ a.button--intro {
 }
 
 .main-nav--closed::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -64,18 +67,18 @@ a.button--intro {
 
 .main-nav--opened::before,
 .main-nav--opened::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 25px;
-    height: 1.5px;
-    transform: rotate(45deg);
-    background-color: $basic_color;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 1.5px;
+  transform: rotate(45deg);
+  background-color: $basic_color;
 }
 
 .main-nav--opened::after {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .form__button {
@@ -83,7 +86,7 @@ a.button--intro {
   margin-bottom: 9px;
   padding-block: 10px;
   color: $basic_white;
-  font-family: 'Oswald';
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
 
   @media (min-width: $tablet-width) {
@@ -91,7 +94,6 @@ a.button--intro {
     margin-top: 18px;
     padding-block: 16px;
     max-width: 282px;
-    max-height: 60px;
     font-size: 20px;
   }
 
@@ -125,18 +127,22 @@ a.button--product {
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width){
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .add .button--product {
     width: 100%;
   }
 }
 
 a.button--view-all {
-  background-color: $basic_grey ;
+  background-color: $basic_grey;
   width: 100%;
   padding-top: 10px;
   font-size: 16px;
   color: $special_dark-grey;
+
+  &:hover {
+    background-color: $basic_grey-2;
+  }
 
   @media (min-width: $tablet-width) {
     width: 249px;
@@ -145,7 +151,14 @@ a.button--view-all {
 
   @media (min-width: $desktop-width) {
     width: auto;
+    margin-top: 55px;
     margin-inline: 40px;
     padding: 10px;
   }
+}
+
+a.button--intro:active span,
+a.button--view-all:active span,
+a.button--product:active span {
+  opacity: 0.3;
 }

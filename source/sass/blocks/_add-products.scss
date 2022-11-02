@@ -1,5 +1,4 @@
 @media (min-width: $desktop-width) {
-
   .add-products__wrapper {
     width: 896px;
 
@@ -17,11 +16,10 @@
     height: 289px;
 
     @media (min-width: $desktop-width) {
-        // top: -300px;
-        left: 987px;
-      }
+      left: 987px;
     }
   }
+}
 
 .add-products {
   min-width: 280px;
@@ -29,7 +27,6 @@
   @media (max-width: $mobile-width-only) {
     margin-bottom: 44px;
   }
-
 }
 
 .add-products__title {
@@ -44,6 +41,7 @@
     font-size: 36px;
     line-height: 36px;
   }
+
   @media (min-width: $desktop-width) {
     margin-left: 10px;
   }
@@ -95,6 +93,13 @@
 .add__feature {
   display: flex;
   justify-content: space-between;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 15px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -103,7 +108,8 @@
 
   @media (min-width: $desktop-width) {
     flex-basis: 285px;
-    justify-content: space-between;;
+    justify-content: space-between;
+    margin: 0;
   }
 }
 
@@ -116,6 +122,7 @@
     align-items: center;
     margin-bottom: 13px;
   }
+
   @media (min-width: $desktop-width) {
     padding-top: 9px;
   }
@@ -132,26 +139,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0px;
-    flex-grow: 1;
-  }
-}
-
-.add__feature {
-  font-family: 'Arial';
-  font-size: 14px;
-  line-height: 14px;
-
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 15px;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  @media (min-width: $desktop-width) {
     margin: 0;
+    flex-grow: 1;
   }
 }
 
@@ -165,8 +154,7 @@
   min-width: 280px;
   height: 289px;
   background-image: linear-gradient($opacity_green, $opacity_green),
-  url(../img/bg/cat-bag.jpg);
-  background-size: 280px 289px;
+    url("../img/bg/cat-bag.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 35px;
@@ -183,7 +171,6 @@
   @media (min-width: $desktop-width) {
     min-width: 242px;
   }
-
 }
 
 .gift__img {
@@ -194,8 +181,8 @@
 
 .gift__text {
   text-align: center;
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: $basic_white
+  color: $basic_white;
 }

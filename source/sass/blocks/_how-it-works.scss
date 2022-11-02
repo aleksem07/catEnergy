@@ -8,10 +8,17 @@
   }
 }
 
+.how-it-works__wrapper {
+  @media (max-width: $desktop-width) {
+    max-width: $tablet-width;
+    margin: 0 auto;
+  }
+}
+
 .how-it-works__title {
   margin-top: 0;
   margin-bottom: 38px;
-    font-weight: 400;
+  font-weight: 400;
   font-size: 36px;
   line-height: 40px;
 
@@ -23,6 +30,7 @@
     line-height: 60px;
     font-weight: 400;
   }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
   }
@@ -35,7 +43,6 @@
   counter-reset: point; /* задаем переменную для счетчика */
   padding: 0;
 
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -45,6 +52,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: flex-start;
     margin-right: 23px;
   }
 }
@@ -53,7 +61,8 @@
   position: relative;
   min-height: 60px;
   margin-bottom: 20px;
-  font-family: 'Arial';
+  flex: 0 1 auto;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 
@@ -61,9 +70,16 @@
     width: 230px;
     height: 280px;
   }
+
   @media (min-width: $desktop-width) {
+    flex: 0 250px;
     height: 228px;
+    margin-right: 62px;
     margin-bottom: 10px;
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -75,12 +91,12 @@
 
 @media (min-width: $desktop-width) {
   .how-it-works__item:last-child {
-  margin-right: 0;
+    margin-right: 0;
   }
 }
 
 .how-it-works__item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 60px;
   height: 60px;
@@ -92,19 +108,20 @@
 }
 
 @media (min-width: $tablet-width) {
-.how-it-works__list li::after {
-  content: counter(point); /* выводим значение переменной */
-  counter-increment: point 1; /* увеличваем счетчик на 1 */
-  position: absolute;
-  top: -40px;
-  right: -16px;
-  z-index: -1;
-  font-family: 'Oswald';
-  font-weight: 400;
-  font-size: 280px;
-  line-height: 280px;
-  color: $basic_grey;
+  .how-it-works__list li::after {
+    content: counter(point); /* выводим значение переменной */
+    counter-increment: point 1; /* увеличваем счетчик на 1 */
+    position: absolute;
+    top: -40px;
+    right: -16px;
+    z-index: -1;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic_grey;
   }
+
   .how-it-works__list li:first-child::after {
     right: 0;
   }
@@ -117,7 +134,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     margin-top: 113px;
-    font-family: 'Arial';
+    font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
   }

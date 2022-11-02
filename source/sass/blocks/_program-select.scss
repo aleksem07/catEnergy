@@ -4,14 +4,15 @@
     gap: 80px;
     margin-bottom: 70px;
   }
+
   .form-section--desktop__wrapper .form-section {
     flex-basis: 50%;
   }
 
-    .form-section--desktop__wrapper .form-section--program {
-      padding-left: 30px;
-      border-left: 1px solid $catalog_line;
-    }
+  .form-section--desktop__wrapper .form-section--program {
+    padding-left: 30px;
+    border-left: 1px solid $catalog_line;
+  }
 }
 
 .program-select__title {
@@ -28,6 +29,7 @@
     font-size: 60px;
     line-height: 60px;
   }
+
   @media (min-width: $desktop-width) {
     margin-top: 50px;
     margin-bottom: 59px;
@@ -50,7 +52,7 @@
 
 .form {
   @media (min-width: $tablet-width) {
-  padding-left: 50px;
+    padding-left: 50px;
   }
 }
 
@@ -69,9 +71,11 @@
 .form-section--program {
   border-top: 1px solid $catalog_line;
   border-bottom: 1px solid $catalog_line;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     border-right: 1px solid $catalog_line;
+    padding-bottom: 12px;
   }
 }
 
@@ -97,7 +101,7 @@
   }
 }
 
-.form__item:last-child  {
+.form__item:last-child {
   margin-bottom: 0;
 }
 
@@ -111,6 +115,12 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    margin-right: 20px;
   }
 }
 
@@ -120,6 +130,7 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
   @media (min-width: $desktop-width) {
     flex: 1 1 auto;
   }
@@ -132,17 +143,17 @@
 .program-select__need {
   text-align: center;
   margin-bottom: 7px;
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
 
   @media (min-width: $tablet-width) {
     width: 50%;
     margin-top: 32px;
-    font-family: 'Arial';
     font-size: 16px;
     line-height: 16px;
   }
+
   @media (min-width: $desktop-width) {
     width: auto;
   }
@@ -164,13 +175,23 @@
 
 .form__input {
   width: 100%;
-  padding: 15px 0 13px 14px;
+  height: 50px;
+  padding-left: 20px;
   border: 1px solid $border_input;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special_dark-grey;
 
-  &::placeholder{
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::placeholder {
     text-transform: uppercase;
     color: $special_dark-grey;
-    font-family: 'Oswald';
+    font-family: "Oswald", sans-serif;
     font-size: 16px;
     line-height: 18px;
 
@@ -182,28 +203,25 @@
 }
 
 .form__input--email,
-.form__input--phone{
+.form__input--phone {
   min-width: 20px;
   position: absolute;
   right: 20px;
 }
 
-.form__item:invalid svg {
-  color: tomato;
-}
+.form-section--owner {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
 
-  .form-section--owner {
-    @media (min-width: $tablet-width) {
-      margin-bottom: 69px;
-    }
-    @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: flex;
     gap: 78px;
   }
 }
 
-  .form-section--owner .form__item {
-    @media (min-width: $desktop-width) {
+.form-section--owner .form__item {
+  @media (min-width: $desktop-width) {
     flex-grow: 1;
   }
 }
@@ -217,35 +235,16 @@
   }
 }
 
-  .form-section--additionally .form__item {
-  @media (min-width: $tablet-width) {
-  width: 50%;
-  }
-  @media (min-width: $desktop-width) {
-    width: 100px;
-    margin-right: 20px;
-  }
-}
-
 @media (min-width: $desktop-width) {
   .form-section--additionally {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 187px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 187px;
+  }
 
   .form__item {
     flex-basis: 25%;
-  }
-}
-
-
-.form-section--program {
-  padding-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 12px;
   }
 }
 
@@ -258,6 +257,7 @@
 }
 
 .form__radio {
+  max-width: 90%;
   margin-top: 5px;
   margin-left: 40px;
   padding-bottom: 6px;
@@ -276,7 +276,7 @@
 }
 
 .form__input + .form__radio::before {
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   position: absolute;
@@ -292,8 +292,8 @@
   }
 }
 
-.form__input:checked + .form__radio:after {
-  content: '';
+.form__input:checked + .form__radio::after {
+  content: "";
   width: 14px;
   height: 14px;
   position: absolute;
@@ -338,8 +338,6 @@
   }
 }
 
-
-
 .form__legend span {
   display: inline-block;
   padding-right: 14px;
@@ -347,8 +345,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__legend--title br{
-  display: none;
+  .form__legend--title br {
+    display: none;
   }
 }
 
@@ -361,7 +359,7 @@
   }
 }
 
-.form-section--comment>textarea {
+.form-section--comment > textarea {
   width: 100%;
   resize: none;
   border: 1px solid $border_input;
@@ -371,7 +369,7 @@
   padding-top: 10px;
   padding-left: 10px;
   text-transform: uppercase;
-  font-family: 'Oswald';
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
 
@@ -388,11 +386,12 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 13px;
+    flex: 1;
   }
 }
 
 .form__input + .additionally::before {
-  content: '';
+  content: "";
   top: -8px;
   left: 0;
   width: 30px;
@@ -408,7 +407,7 @@
 }
 
 .form__input:checked + .additionally::after {
-  content: '';
+  content: "";
   top: -5px;
   left: 0;
   width: 30px;
@@ -419,11 +418,24 @@
   background-size: contain;
 
   @media (min-width: $tablet-width) {
-      top: 5px;
-      left: 5px;
+    top: 5px;
+    left: 5px;
   }
 }
 
-.form__input:focus + .additionally::before{
+.form__input:focus {
+  outline: 2px solid $special_dark-grey;
+}
+
+.form__input:focus + .additionally::before {
   outline: 2px solid $special_dark-grey-2;
+}
+
+.form__input:disabled + .form__label {
+  cursor: auto;
+  opacity: 0.3;
+}
+
+.form__input:focus + svg {
+  color: $basic_green;
 }

@@ -20,14 +20,15 @@ const sync = require("browser-sync").create();
 
 const styles = () => {
   return gulp
-    .src("source/sass/*.scss")
+    .src("source/sass/**/*.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
     .pipe(cssmin())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
@@ -184,7 +185,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles, reload));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));

@@ -29,38 +29,35 @@
   height: 302px;
   top: 0;
   left: 50%;
-  transform:translate(-50%, 0);
-  background-image: linear-gradient($opacity_green, $opacity_green),
-                    url(../img/bg/cat-desktop.webp);
+  transform: translate(-50%, 0);
+  background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop.webp");
   background-color: $basic_green;
-                    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient($opacity_green, $opacity_green),
-                      url(../img/bg/cat-desktop@2x.webp);
+    background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop@2x.webp");
   }
 
   @media (max-width: $mobile-width-only) {
-    background-position: 0 0, 0px -50px;
+    background-position: 0 0, 0 -50px;
   }
 
   @media (min-width: $tablet-width) {
-          display: none;
+    display: none;
   }
+
   @media (min-width: $desktop-width) {
     position: absolute;
     top: -95px;
     left: 699px;
     transform: translate(0, -60px);
     display: block;
-    // width: 50vw;
     min-width: 720px;
     height: 696px;
-      background-image: linear-gradient($opacity_green, $opacity_green),
-          url(../img/bg/cat-desktop.webp);
-          background-color: $basic_green;
+    background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop.webp");
+    background-color: $basic_green;
     background-size: cover;
   }
 }
@@ -114,11 +111,11 @@
   }
 }
 
-  @media (min-width: $desktop-width) {
-    .main-intro__text {
-      margin-bottom: 52px;
-    }
+@media (min-width: $desktop-width) {
+  .main-intro__text {
+    margin-bottom: 52px;
   }
+}
 
 .main-intro__picture-chiken-pro {
   position: relative;
@@ -132,7 +129,7 @@
 
   @media (min-resolution: 1.5dppx) {
     background-image: url("../img/chiken-pro@2x.webp");
-    }
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -151,4 +148,3 @@
     background-position: 65% 50%;
   }
 }
-

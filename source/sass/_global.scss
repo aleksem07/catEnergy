@@ -6,7 +6,6 @@ img {
 a {
   color: $basic_color;
   text-decoration: none;
-
 }
 
 a:visited {
@@ -26,9 +25,9 @@ a:visited {
   overflow: hidden;
 }
 
- *,
- *::before,
- *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -48,10 +47,11 @@ input:focus {
 }
 
 iframe {
-  min-width: 320px;
+  min-width: 100%;
 }
 
-h2,h3 {
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
