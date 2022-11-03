@@ -4,6 +4,7 @@
   background-color: $basic_grey-3;
 
   @media (min-width: $desktop-width) {
+    margin-inline: 0;
     margin-bottom: 150px;
   }
 }
@@ -43,7 +44,8 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
-    padding: 9px;
+    padding: 10px;
+    padding-top: 0;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -81,7 +83,7 @@
 .fieldset__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     display: inline-flex;
@@ -200,7 +202,7 @@
 
 .before-after__before {
   width: 311px;
-  height: 242px;
+  height: 240px;
   z-index: 2;
 
   @media (min-width: $desktop-width) {

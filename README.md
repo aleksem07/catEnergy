@@ -26,8 +26,8 @@
 
 - js
 - pixelperfect ~~90%~~ 100%
-- lighthouse
-- w3c
+- ~~lighthouse~~
+- ~~w3c~~
 - ~~npm test~~
 - ~~styleguide~~
 - ~~include~~
