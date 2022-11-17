@@ -68,6 +68,7 @@ const copyBuild = (done) => {
       [
         "source/fonts/*.{woff2,woff}",
         "source/*.ico",
+        "source/img/favicon/manifest.webmanifest",
         "source/img/**/*.svg",
         "!source/img/icons/*.svg",
       ],
@@ -87,6 +88,7 @@ const copyDev = (done) => {
         // "source/css/*.*",
         "source/*.ico",
         "source/img/**/*.svg",
+        "source/img/favicon/manifest.webmanifest",
         "!source/img/icons/*.svg",
       ],
       {

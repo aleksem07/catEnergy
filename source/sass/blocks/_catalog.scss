@@ -44,6 +44,16 @@
   text-transform: uppercase;
   padding-left: 71px;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding-top: 68px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 76px;
     padding-bottom: 30px;
@@ -91,18 +101,6 @@
     height: 210px;
     top: 77px;
     left: 395px;
-  }
-}
-
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
-  .catalog__title {
-    max-width: 70%;
-    margin-bottom: 10px;
-    padding-top: 74px;
-    padding-left: 0;
-    font-size: 36px;
-    line-height: 36px;
-    text-transform: uppercase;
   }
 }
 
