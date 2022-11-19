@@ -1,0 +1,61 @@
+include mixins/product-item
+doctype html
+html.page(lang='ru')
+  head
+  body.page__body
+    | @@include("html/_head.htm", { "title": "Cat Energy. Каталог продукции" })
+    header.page-header
+      | @@include("html/_page-header__logo.htm")
+      nav.main-nav.main-nav__wrapper
+        ul.main-nav__list.site-list
+          li.site-list__item.site-list__item--active
+            a(href='index.html') Главная
+          li.site-list__item
+            a.current Каталог продукции
+          li.site-list__item
+            a(href='form.html') Подбор программы
+    main.page-main
+      h1.products-title Каталог продукции
+      section.products
+        h2.visually-hidden Основные товары
+        .products__wrapper
+          ul.products__list
+            +product-item('chiken-500.webp','Курица', '500')
+            +product-item('chiken-1000.webp','Курица', '1000')
+            +product-item('chiken-1000.webp','Курица', '1500')
+            +product-item('fish-500.webp','Рыба', '500')
+            +product-item('fish-1000.webp','Рыба', '1000')
+            +product-item('buckwheat-500.webp','Гречка', '500')
+            +product-item('buckwheat-1000.webp','Гречка', '1000')
+            +product-item('rice-500.webp','Рис', '500')
+            li.products__item.product.products__item--view-all
+              .product__icon
+                svg.product__icon--gift(width='30' height='30' viewBox='0 0 30 30')
+                  use(xlink:href='img/sprite.svg#plus')
+              .product__description
+                h3.product__title Показать еще 100500 товаров
+                p.product__text На самом деле вкусов гораздо больше!
+              a.button.button--view-all(href='')
+                span Показать все
+      section.add-products
+        h2.add-products__title
+          span Дополнительные товары
+        .add-products__wrapper
+          ul.add-products__list
+            +add-product('Cахарозаменитель', '1 упаковка (100 г)', '200')
+            +add-product('питьевая вода', '5 литров', '50')
+            +add-product('молоко', '1 литров', '100')
+            +add-product('витамины', '1 упаковка (30 г)', '300')
+      section.gift
+        h2.gift__title.visually-hidden Подарок
+        .gift__wrapper
+          .gift__img
+            svg(width='78' height='80' viewBox='0 0 78 80')
+              use(xlink:href='img/sprite.svg#gift')
+          p.gift__text
+            | Закажите все
+            br
+            | и получите чехол для
+            br
+            | кота в подарок!
+    | @@include("html/_footer.htm")

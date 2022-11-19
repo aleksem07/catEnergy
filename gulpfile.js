@@ -15,6 +15,7 @@ const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const fileinclude = require("gulp-file-include");
 const sync = require("browser-sync").create();
+const pug = require("pug");
 
 // Styles
 

@@ -31,7 +31,9 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "startp": "gulp && pug ./source/pug/*.pug --pretty -w -o ./source",
+    "pug": "pug ./source/pug/*.pug --pretty -w -o ./source"
   },
   "browserslist": [
     "last 2 versions",
@@ -52,6 +54,8 @@
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",
     "imagemin": "^8.0.1",
+    "pug": "^3.0.2",
+    "pug-cli": "1.0.0-alpha6",
     "sass": "^1.53.0"
   }
 }
