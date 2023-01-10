@@ -92,21 +92,18 @@ html.page(lang='ru')
               p.before-after__cost
                 | Затраты на питание:
                 span 15000 руб.
+
           .before-after__example
             .before-after__image-box
-              img.before-after__before.before-after--image(src='img/before-after/before-cat--mobile.png' srcset='\
-              img/before-after/before-cat--mobile.webp    1x,\
-              img/before-after/before-cat--mobile@2x.webp 2x\
-              ' width='311' height='232' alt='Пример кота до снижения веса')
-              img.before-after__after.before-after--image(src='img/before-after/after-cat--mobile.png' srcset='\
-              img/before-after/after-cat--mobile.webp    1x,\
-              img/before-after/after-cat--mobile@2x.webp 2x\
-              ' width='251' height='240' alt='Пример кота после снижения веса')
+              div.before-after__after.before-after__item
+              div.before-after__before.before-after__item
+
             .range-controls__wrapper
-              p было
+              p.afterMax стало
               .range-controls
-                .scale(style='width: 50%;')
-                  .bar
-              p стало
+              p.beforeMin было
+
   | @@include("html/_footer.htm")
   script(src="js/main-nav--toggle.min.js")
+  script(src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js")
+  script(src="js/slider_b-a.min.js")

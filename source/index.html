@@ -102,15 +102,14 @@
             </div>
           </div>
           <div class="before-after__example">
-            <div class="before-after__image-box"><img class="before-after__before before-after--image" src="img/before-after/before-cat--mobile.png" srcset="              img/before-after/before-cat--mobile.webp    1x,              img/before-after/before-cat--mobile@2x.webp 2x              " width="311" height="232" alt="Пример кота до снижения веса"><img class="before-after__after before-after--image" src="img/before-after/after-cat--mobile.png" srcset="              img/before-after/after-cat--mobile.webp    1x,              img/before-after/after-cat--mobile@2x.webp 2x              " width="251" height="240" alt="Пример кота после снижения веса"></div>
+            <div class="before-after__image-box">
+              <div class="before-after__after before-after__item"></div>
+              <div class="before-after__before before-after__item"></div>
+            </div>
             <div class="range-controls__wrapper">
-              <p>было</p>
-              <div class="range-controls">
-                <div class="scale" style="width: 50%;">
-                  <div class="bar"></div>
-                </div>
-              </div>
-              <p>стало</p>
+              <p class="afterMax">стало</p>
+              <div class="range-controls"></div>
+              <p class="beforeMin">было</p>
             </div>
           </div>
         </div>
@@ -118,4 +117,6 @@
     </main>
   </body>@@include("html/_footer.htm")
   <script src="js/main-nav--toggle.min.js"></script>
+  <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+  <script src="js/slider_b-a.min.js"></script>
 </html>

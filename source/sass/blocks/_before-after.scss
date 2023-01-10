@@ -189,41 +189,50 @@
 
 .before-after__image-box {
   position: relative;
-  width: 311px;
+  width: 300px;
   margin: 0 auto;
-  height: 232px;
+  height: 277px;
   margin-bottom: 17px;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    margin-bottom: 50px;
+    width: 660px;
     height: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
-.before-after__before {
-  width: 311px;
-  height: 240px;
-  z-index: 2;
-
-  @media (min-width: $desktop-width) {
-    left: 10px;
+.before-after__item {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  // background-size: auto;
+  @media (max-width: $mobile-width-only) {
+    background-size: cover;
   }
 }
 
 .before-after__after {
-  width: 251px;
-  height: 240px;
-  top: 0;
-  left: 35px;
-  z-index: 1;
+  background-image: url('/img/before-after/after-cat--mobile.png');
+  background-position: 100% 0;
 
-  @media (min-width: $tablet-width) {
-    top: 0;
-    left: 25px;
+    @media (max-width: $mobile-width-only) {
+    background-position: 30px 0;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    left: 40px;
+.before-after__before {
+  position: absolute;
+  top: 0;
+
+  background-image: url('/img/before-after/before-cat--mobile.png');
+  background-color: $background;
+
+  @media (max-width: $mobile-width-only) {
+    background-color: $basic_grey-3;
   }
 }
 
@@ -278,49 +287,16 @@
 }
 
 .range-controls {
-  position: relative;
-  background-color: $basic_grey;
-  width: 84px;
+  width: 100px;
+  max-width: 335px;
   height: 14px;
-  border: 1px solid $special_grey;
-  border-radius: 6px;
   padding: 0 6px;
-
   @media (min-width: $tablet-width) {
     width: 100%;
-    height: 6px;
-    border: none;
   }
 }
 
-.range-controls .bar {
-  margin-top: 3px;
-  height: 6px;
-  border-radius: 6px;
-  background: $basic-green;
-
-  @media (min-width: $tablet-width) {
-    top: -15px;
-    position: relative;
-    width: 34px;
-    height: 34px;
-    margin: 0 auto;
-    border: 1px solid $special_grey;
-    border-radius: 50%;
-    background: $background;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .range-controls .bar::before {
-    content: "";
-    top: 40%;
-    left: 40%;
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: $basic-green;
-  }
+.beforeMin,
+.afterMax {
+  cursor: pointer;
 }

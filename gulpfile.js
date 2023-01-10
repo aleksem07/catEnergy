@@ -71,6 +71,7 @@ const copyBuild = (done) => {
         "source/*.ico",
         "source/img/favicon/manifest.webmanifest",
         "source/img/**/*.svg",
+        "source/css/*.css",
         "!source/img/icons/*.svg",
       ],
       {
@@ -86,7 +87,7 @@ const copyDev = (done) => {
     .src(
       [
         "source/fonts/*.{woff2,woff}",
-        // "source/css/*.*",
+        "source/css/*.*",
         "source/*.ico",
         "source/img/**/*.svg",
         "source/img/favicon/manifest.webmanifest",
@@ -189,7 +190,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles, reload));
-  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/css/*.css", gulp.series(styles, reload));
+  gulp.watch("source/js/**/*.js", gulp.series(scripts));
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/html/*.htm", gulp.series(html, reload));
