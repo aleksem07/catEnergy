@@ -86,6 +86,10 @@ h3 {
   background-color: #5eaa2f;
 }
 
+.button__toggle {
+  padding: 20px 15px;
+}
+
 a.button--intro {
   display: block;
   min-width: 280px;
@@ -271,6 +275,7 @@ a.button--product:active span {
 @media (min-width: 1439px) {
   .page-main {
     margin-inline: 41px 88px;
+    overflow-x: clip;
   }
 }
 .page-header {
@@ -430,6 +435,7 @@ a.button--product:active span {
     margin-top: 27px;
     margin-right: 95px;
     padding-inline: 20px;
+    background-color: #68b738;
   }
 }
 
@@ -538,6 +544,11 @@ a.button--product:active span {
     grid-column-end: -1;
   }
 }
+@media (min-width: 1439px) {
+  .main-intro {
+    max-height: 600px;
+  }
+}
 
 .main-intro .main-intro--bg {
   position: relative;
@@ -587,9 +598,7 @@ a.button--product:active span {
     display: block;
     min-width: 720px;
     height: 696px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bg/cat-desktop.webp");
-    background-color: #68b738;
-    background-size: cover;
+    background-size: contain;
   }
 }
 

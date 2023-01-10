@@ -6,6 +6,10 @@
     grid-column-end: -1;
     // margin-inline: auto;
   }
+
+  @media (min-width: $desktop-width) {
+    max-height: 600px;
+  }
 }
 
 .main-intro .main-intro--bg {
@@ -51,9 +55,7 @@
     display: block;
     min-width: 720px;
     height: 696px;
-    background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop.webp");
-    background-color: $basic_green;
-    background-size: cover;
+    background-size: contain;
   }
 }
 

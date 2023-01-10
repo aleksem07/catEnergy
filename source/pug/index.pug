@@ -6,7 +6,8 @@ html.page(lang='ru')
 
     include modules/header
 
-    section.main-intro
+    main.page-main(class= pageClass)
+      section.main-intro
         .main-intro__wrapper.main-intro--bg
           .main-intro__picture
           h1.main-intro__title
@@ -17,7 +18,7 @@ html.page(lang='ru')
           .main-intro__picture-chiken-pro
           a.button.button--intro(href='')
             span Подобрать программу
-    main.page-main(class= pageClass)
+
       section.catalog-selection
         .catalog-selection__wrapper
           h2.visually-hidden Выбор программы
@@ -108,3 +109,4 @@ html.page(lang='ru')
                   .bar
               p стало
   | @@include("html/_footer.htm")
+  script(src="js/main-nav--toggle.min.js")
