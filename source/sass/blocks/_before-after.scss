@@ -216,7 +216,7 @@
 }
 
 .before-after__after {
-  background-image: url('/img/before-after/after-cat--mobile.png');
+  background-image: url('../img/before-after/after-cat--mobile.png');
   background-position: 100% 0;
 
     @media (max-width: $mobile-width-only) {
@@ -228,7 +228,7 @@
   position: absolute;
   top: 0;
 
-  background-image: url('/img/before-after/before-cat--mobile.png');
+  background-image: url('../img/before-after/before-cat--mobile.png');
   background-color: $background;
 
   @media (max-width: $mobile-width-only) {

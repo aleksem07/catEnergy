@@ -435,7 +435,6 @@ a.button--product:active span {
     margin-top: 27px;
     margin-right: 95px;
     padding-inline: 20px;
-    background-color: #68b738;
   }
 }
 
@@ -1294,7 +1293,7 @@ a.button--product:active span {
 }
 
 .before-after__after {
-  background-image: url("/img/before-after/after-cat--mobile.png");
+  background-image: url("../img/before-after/after-cat--mobile.png");
   background-position: 100% 0;
 }
 @media (max-width: 767px) {
@@ -1306,7 +1305,7 @@ a.button--product:active span {
 .before-after__before {
   position: absolute;
   top: 0;
-  background-image: url("/img/before-after/before-cat--mobile.png");
+  background-image: url("../img/before-after/before-cat--mobile.png");
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
