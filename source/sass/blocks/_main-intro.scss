@@ -32,7 +32,6 @@
   width: 100%;
   height: 302px;
   top: 0;
-  left: 0;
   background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop.webp");
   background-color: $basic_green;
   background-size: cover;
@@ -43,8 +42,10 @@
     background-image: linear-gradient($opacity_green, $opacity_green), url("../img/bg/cat-desktop@2x.webp");
   }
 
-  @media (min-width: $tablet-width) {
-    display: none;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 50%;
+    height: 812px;
+    right: 0;
   }
 
   @media (min-width: $desktop-width) {
