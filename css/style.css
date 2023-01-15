@@ -2228,6 +2228,7 @@ a.button--product:active span {
 }
 
 .footer-top__contacts {
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   gap: 5px;
